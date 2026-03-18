@@ -5,8 +5,8 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           {/* Contact - Left */}
           <div className="flex items-center gap-4 text-sm shrink-0">
-            <a href="mailto:hello@nicolamason.co.uk" className="hover:text-[#C4A882] transition-colors">
-              hello@nicolamason.co.uk
+            <a href="mailto:info@theclooneys.co.uk" className="hover:text-[#C4A882] transition-colors">
+              info@theclooneys.co.uk
             </a>
             <span className="text-stone-600">|</span>
             <a href="tel:+447740360678" className="hover:text-[#C4A882] transition-colors">
@@ -16,16 +16,16 @@ export default function Footer() {
 
           {/* SEO Text - Middle */}
           <p className="text-sm leading-relaxed text-center max-w-2xl">
-            Nicola Mason is an award-winning professional wedding singer
-            providing live music across Central Scotland, including Glasgow,
-            Lanarkshire, Edinburgh, Ayrshire, and The Lothians, bringing years
-            of experience to every ceremony and reception.
+            The Clooneys are a professional wedding and events band providing
+            live music with signature vocal harmonies across Scotland and the UK,
+            bringing unforgettable entertainment to every celebration from
+            ceremony to dance floor.
           </p>
 
           {/* Social Links - Right */}
           <div className="flex gap-4 shrink-0">
             <a
-              href="https://instagram.com/nicolamasonvocalist"
+              href="https://www.instagram.com/theclooneys"
               target="_blank"
               rel="noopener noreferrer"
               className="text-stone-400 hover:text-[#C4A882] transition-colors"
@@ -36,7 +36,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://facebook.com/nicolamasonvocalist"
+              href="https://www.facebook.com/profile.php?id=61552003414629"
               target="_blank"
               rel="noopener noreferrer"
               className="text-stone-400 hover:text-[#C4A882] transition-colors"
@@ -47,7 +47,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://tiktok.com/@nicolamasonvocalist"
+              href="https://www.tiktok.com/@theclooneys"
               target="_blank"
               rel="noopener noreferrer"
               className="text-stone-400 hover:text-[#C4A882] transition-colors"
@@ -58,7 +58,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://youtube.com/@nicolamasonvocalist"
+              href="https://www.youtube.com/channel/UCVXe27VHQ7ILNg5CF0bplQQ"
               target="_blank"
               rel="noopener noreferrer"
               className="text-stone-400 hover:text-[#C4A882] transition-colors"
@@ -73,8 +73,8 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-stone-700 mt-6 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-stone-400">
-          <p>&copy; {new Date().getFullYear()} Nicola Mason. All rights reserved.</p>
-          <p>Scottish Wedding Awards 2026 Winner &bull; Ceremony Entertainer of the Year</p>
+          <p>&copy; {new Date().getFullYear()} The Clooneys. All rights reserved.</p>
+          <p>Professional Wedding &amp; Events Band &bull; Scotland &amp; UK</p>
         </div>
       </div>
     </footer>

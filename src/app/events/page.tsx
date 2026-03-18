@@ -3,16 +3,16 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Event Singer Services | Nicola Mason",
+  title: "Event Band Services | The Clooneys",
   description:
-    "Professional event singer for corporate functions, private parties, and celebrations. Based in Glasgow, serving Central Scotland.",
+    "Professional event band for corporate functions, private parties, and celebrations. Based in Scotland, serving the UK with stunning vocal harmonies.",
 };
 
 const eventTypes = [
   {
     title: "Corporate Events",
     description:
-      "From awards ceremonies to company celebrations, I provide sophisticated entertainment that elevates your corporate event. Professional, punctual, and adaptable to your brand's tone.",
+      "From awards ceremonies to company celebrations, we provide sophisticated entertainment that elevates your corporate event. Professional, punctual, and adaptable to your brand's tone.",
     image: "https://images.squarespace-cdn.com/content/v1/641787c199b0b17ed0758ebc/1682725500724-WEFCWRLBWG777INITVNI/unsplash-image-rxpThOwuVgE.jpg",
     features: [
       "Awards ceremonies & gala dinners",
@@ -26,7 +26,7 @@ const eventTypes = [
   {
     title: "Private Celebrations",
     description:
-      "Whether it's a milestone birthday, anniversary celebration, or garden party, I'll create the perfect atmosphere for your gathering with a tailored setlist.",
+      "Whether it's a milestone birthday, anniversary celebration, or garden party, we'll create the perfect atmosphere for your gathering with a tailored setlist.",
     image: "https://images.squarespace-cdn.com/content/v1/641787c199b0b17ed0758ebc/1679789846255-8OD4II6DBW7J2TANSHK0/unsplash-image-fIHozNWfcvs.jpg",
     features: [
       "Milestone birthdays (30th, 40th, 50th+)",
@@ -40,7 +40,7 @@ const eventTypes = [
   {
     title: "Funeral & Memorial Services",
     description:
-      "I bring sensitivity and professionalism to life's most difficult moments, providing comfort through music at services and gatherings.",
+      "We bring sensitivity and professionalism to life's most difficult moments, providing comfort through music at services and gatherings.",
     image: "https://images.squarespace-cdn.com/content/v1/641787c199b0b17ed0758ebc/6843d2c1-7bde-455d-ab91-b3f4fc4ed9d1/unsplash-image-iSyyY1GfYSw.jpg",
     features: [
       "Church or civil ceremonies",
@@ -66,9 +66,9 @@ export default function EventsPage() {
             Entertainment for Every Occasion
           </h1>
           <p className="text-xl text-[#444444] leading-relaxed">
-            From corporate galas to intimate celebrations, I bring versatility,
-            professionalism, and a touch of magic to events of all sizes across
-            Central Scotland.
+            From corporate galas to intimate celebrations, we bring versatility,
+            professionalism, and stunning vocal harmonies to events of all sizes
+            across Scotland and the UK.
           </p>
         </div>
       </section>
@@ -180,16 +180,16 @@ export default function EventsPage() {
             Serving Central Scotland
           </h2>
           <p className="text-[#444444] mb-8">
-            Based in Glasgow, I regularly perform at venues across:
+            Based in Scotland, we regularly perform at venues across the UK:
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             {[
+              "Scotland",
               "Glasgow",
               "Edinburgh",
-              "Lanarkshire",
-              "Stirling",
-              "Ayrshire",
-              "The Lothians",
+              "England",
+              "Wales",
+              "Northern Ireland",
             ].map((area) => (
               <span
                 key={area}
@@ -213,7 +213,7 @@ export default function EventsPage() {
             Planning an Event?
           </h2>
           <p className="text-stone-300 text-lg mb-10 max-w-2xl mx-auto">
-            I&apos;d love to discuss how I can make your event memorable. Get in
+            We&apos;d love to discuss how we can make your event memorable. Get in
             touch with details about your occasion for a personalised quote.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -223,7 +223,7 @@ export default function EventsPage() {
               rel="noopener noreferrer"
               className="inline-flex flex-col items-center bg-[#C4A882] hover:bg-[#A68B5B] text-white px-10 py-4 text-sm uppercase tracking-wider transition-colors rounded-[4px]"
             >
-              <span className="font-medium">Check My Availability</span>
+              <span className="font-medium">Check Our Availability</span>
               <span className="text-xs normal-case tracking-normal mt-1 opacity-90">
                 via WhatsApp (1-2 hour response)
               </span>
@@ -232,7 +232,7 @@ export default function EventsPage() {
               href="/enquire"
               className="inline-flex flex-col items-center border border-white text-white hover:bg-white hover:text-[#2C2C2C] px-10 py-4 text-sm uppercase tracking-wider transition-colors rounded-[4px]"
             >
-              <span className="font-medium">Check My Availability</span>
+              <span className="font-medium">Check Our Availability</span>
               <span className="text-xs normal-case tracking-normal mt-1 opacity-90">
                 via Contact Form
               </span>

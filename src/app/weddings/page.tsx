@@ -3,9 +3,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Wedding Singer Packages | Nicola Mason",
+  title: "Wedding Band Packages | The Clooneys",
   description:
-    "Wedding singer packages for ceremonies, drinks receptions, and evening entertainment. Serving Glasgow, Edinburgh, and Central Scotland. Packages from £325.",
+    "Wedding band packages for ceremonies, drinks receptions, and evening entertainment. Serving Scotland and the UK with stunning vocal harmonies. Premium live entertainment.",
 };
 
 const packages = [
@@ -174,8 +174,8 @@ export default function WeddingsPage() {
             </div>
             <div className="relative aspect-square rounded-lg overflow-hidden">
               <Image
-                src="https://images.squarespace-cdn.com/content/v1/641787c199b0b17ed0758ebc/6c01f360-286b-489c-9b3f-9fdd489ee1e6/tempImager91yGE.jpg"
-                alt="Nicola Mason performing"
+                src="https://images.squarespace-cdn.com/content/v1/65f8c528b5449106e4650e68/1710802284645-PQGXCV9J82V8FYKN98KL/The+Clooneys+Wedding+Band.jpg"
+                alt="The Clooneys performing"
                 fill
                 className="object-cover"
               />

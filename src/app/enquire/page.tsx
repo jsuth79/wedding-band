@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import EnquiryForm from "@/components/EnquiryForm";
 
 export const metadata: Metadata = {
-  title: "Get in Touch | Nicola Mason",
+  title: "Get in Touch | The Clooneys",
   description:
-    "Contact Nicola Mason to discuss your wedding or event entertainment. Check availability and receive a personalised quote.",
+    "Contact The Clooneys to discuss your wedding or event entertainment. Check availability and receive a personalised quote.",
 };
 
 export default function EnquirePage() {
@@ -20,7 +20,7 @@ export default function EnquirePage() {
             Let&apos;s Talk About Your Event
           </h1>
           <p className="text-xl text-[#444444] leading-relaxed">
-            Fill out the form below and I&apos;ll get back to you within 1-2 hours
+            Fill out the form below and we&apos;ll get back to you within 1-2 hours
             to discuss your requirements and check availability.
           </p>
         </div>
@@ -40,16 +40,16 @@ export default function EnquirePage() {
               {/* Contact Info */}
               <div className="bg-[#F5F5F5] rounded-lg p-8">
                 <h3 className="text-xl font-serif text-[#2C2C2C] mb-6">
-                  Other Ways to Reach Me
+                  Other Ways to Reach Us
                 </h3>
                 <ul className="space-y-4 text-[#444444]">
                   <li>
                     <p className="text-sm text-[#888888] mb-1">Email</p>
                     <a
-                      href="mailto:hello@nicolamason.co.uk"
+                      href="mailto:info@theclooneys.co.uk"
                       className="text-[#C4A882] hover:text-[#A68B5B]"
                     >
-                      hello@nicolamason.co.uk
+                      info@theclooneys.co.uk
                     </a>
                   </li>
                   <li>
@@ -63,9 +63,9 @@ export default function EnquirePage() {
                   </li>
                   <li>
                     <p className="text-sm text-[#888888] mb-1">Location</p>
-                    <p>Based in Glasgow, Scotland</p>
+                    <p>Based in Scotland</p>
                     <p className="text-sm">
-                      Serving Glasgow, Edinburgh &amp; Central Scotland
+                      Serving Scotland, UK &amp; Destination Weddings
                     </p>
                   </li>
                 </ul>
@@ -75,7 +75,7 @@ export default function EnquirePage() {
                   rel="noopener noreferrer"
                   className="mt-6 inline-flex flex-col items-center bg-[#C4A882] hover:bg-[#A68B5B] text-white px-6 py-3 rounded-[4px] transition-colors w-full"
                 >
-                  <span className="font-medium text-sm uppercase tracking-wider">Check My Availability</span>
+                  <span className="font-medium text-sm uppercase tracking-wider">Check Our Availability</span>
                   <span className="text-xs normal-case tracking-normal mt-1 opacity-90">
                     via WhatsApp (1-2 hour response)
                   </span>
@@ -90,11 +90,10 @@ export default function EnquirePage() {
                 <div className="space-y-4 text-sm">
                   <div>
                     <p className="font-medium text-[#2C2C2C] mb-1">
-                      How far in advance should I book?
+                      How far in advance should we book?
                     </p>
                     <p className="text-[#444444]">
-                      As early as possible! I&apos;m now booking for 2027, with
-                      limited 2026 dates still available.
+                      As early as possible! We&apos;re now booking for 2026 and 2027.
                     </p>
                   </div>
                   <div>
@@ -102,8 +101,8 @@ export default function EnquirePage() {
                       What areas do you cover?
                     </p>
                     <p className="text-[#444444]">
-                      I&apos;m based in Glasgow and serve Central Scotland. 40 miles
-                      travel included; additional at 45p/mile.
+                      We&apos;re based in Scotland and perform across the UK and
+                      destination weddings.
                     </p>
                   </div>
                   <div>
@@ -111,8 +110,8 @@ export default function EnquirePage() {
                       Can you learn a specific song?
                     </p>
                     <p className="text-[#444444]">
-                      Absolutely! I love learning songs that are meaningful to
-                      my clients (subject to availability).
+                      Absolutely! We love learning songs that are meaningful to
+                      our clients (subject to availability).
                     </p>
                   </div>
                 </div>
@@ -121,7 +120,7 @@ export default function EnquirePage() {
               {/* Social Proof */}
               <div className="text-center">
                 <p className="text-[#888888] text-sm mb-2">
-                  Scottish Wedding Awards 2026 Winner
+                  Professional Wedding &amp; Events Band
                 </p>
                 <div className="flex justify-center gap-1">
                   {[...Array(5)].map((_, i) => (

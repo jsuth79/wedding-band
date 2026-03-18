@@ -6,8 +6,8 @@ export default function HeroSection() {
     <section className="relative h-[75vh] min-h-[550px] max-h-[850px] flex flex-col justify-between bg-stone-100">
       {/* Background image */}
       <Image
-        src="https://images.squarespace-cdn.com/content/v1/641787c199b0b17ed0758ebc/e6ff22c4-f244-4fae-b9ef-19092b2f3d5d/nicola-mason-wedding-singer.jpg"
-        alt="Nicola Mason performing at a wedding"
+        src="/images/the_clooneys_hero.webp"
+        alt="The Clooneys performing at a wedding"
         fill
         className="object-cover object-top"
         priority
@@ -18,10 +18,10 @@ export default function HeroSection() {
       <div className="relative z-10 px-6 pt-32 max-w-6xl mx-auto w-full">
         <div className="text-center md:text-left md:max-w-2xl">
           <h1 className="text-4xl md:text-6xl font-serif text-white mb-6 leading-tight">
-            Award-Winning Vocals. Unforgettable Atmosphere.
+            Show Stopping Vocals, Stunning Harmonies
           </h1>
           <p className="text-lg md:text-xl text-stone-200 leading-relaxed">
-            Tailored live music for elegant Scottish celebrations.
+            Premium wedding entertainment from ceremony to dance floor across Scotland and the UK.
           </p>
         </div>
       </div>
@@ -33,10 +33,10 @@ export default function HeroSection() {
             href="/weddings"
             className="inline-block bg-[#2C2C2C] hover:bg-[#1a1a1a] text-white px-8 py-4 text-sm uppercase tracking-wider transition-colors rounded-[4px]"
           >
-            View My Wedding Packages
+            View Our Wedding Packages
           </Link>
           <p className="mt-6 text-stone-300 text-sm">
-            Now booking for 2027 &bull; Limited 2026 dates available
+            Now booking for 2026 &amp; 2027
           </p>
         </div>
       </div>

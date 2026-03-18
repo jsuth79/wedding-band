@@ -19,22 +19,22 @@ const faqs = [
   {
     question: "Where are you based and where can you perform?",
     answer:
-      "I am based in Central Scotland and regularly perform across Glasgow, Edinburgh, Lanarkshire, and Stirling. I am always happy to travel further afield. Just let me know your venue when you enquire.",
+      "We are based in Scotland and regularly perform across Glasgow, Edinburgh, and throughout Scotland and the UK. We're also available for destination weddings. Just let us know your venue when you enquire.",
   },
   {
-    question: "Can we choose our own songs for the ceremony?",
+    question: "Can we choose our own songs?",
     answer:
-      "Absolutely. You can choose from my extensive repertoire of acoustic classics and modern hits. I may also be able to learn a special song (subject to availability) to make your walk down the aisle or first dance truly personal.",
+      "Absolutely. You can choose from our extensive repertoire of classics and modern hits featuring our signature harmonies. We may also be able to learn special songs (subject to availability) to make your celebration truly personal.",
   },
   {
     question: "Do you provide your own equipment and insurance?",
     answer:
-      "Yes. I provide a professional, compact PA system suitable for both indoor and outdoor settings. For your venue's peace of mind, all my equipment is PAT-tested, and I hold full Public Liability Insurance (PLI).",
+      "Yes. We provide professional PA system and lighting suitable for both indoor and outdoor settings. For your venue's peace of mind, all our equipment is PAT-tested, and we hold full Public Liability Insurance (PLI).",
   },
   {
-    question: "What happens when you aren't singing?",
+    question: "What happens during breaks?",
     answer:
-      "There's never any 'dead air'. I provide tailored background music during my short breaks to keep the atmosphere seamless, so you don't need to worry about managing a separate playlist.",
+      "There's never any 'dead air'. We provide tailored background music during our breaks to keep the atmosphere seamless, so you don't need to worry about managing a separate playlist.",
   },
 ];
 
@@ -48,23 +48,23 @@ export default function Home() {
         <div className="max-w-6xl mx-auto flex flex-wrap justify-center items-center gap-8 text-center">
           <div className="text-white">
             <p className="text-[#C4A882] text-xs uppercase tracking-wider mb-1">
-              Scottish Wedding Awards 2026
+              Premium Live Entertainment
             </p>
-            <p className="font-serif text-lg">Ceremony Entertainer of the Year</p>
+            <p className="font-serif text-lg">Scotland &amp; UK Wide</p>
           </div>
           <div className="hidden md:block w-px h-12 bg-stone-600" />
           <div className="text-white">
             <p className="text-[#C4A882] text-xs uppercase tracking-wider mb-1">
-              Confetti Awards 2025
+              Professional Band
             </p>
-            <p className="font-serif text-lg">Finalist &bull; Best Ceremony Entertainer</p>
+            <p className="font-serif text-lg">Full PA &amp; Lighting Included</p>
           </div>
           <div className="hidden md:block w-px h-12 bg-stone-600" />
           <div className="text-white">
             <p className="text-[#C4A882] text-xs uppercase tracking-wider mb-1">
-              UKbride
+              Trusted by Venues
             </p>
-            <p className="font-serif text-lg">Approved Wedding Supplier</p>
+            <p className="font-serif text-lg">Fully Insured &amp; PAT Tested</p>
           </div>
         </div>
       </section>
@@ -75,25 +75,25 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-[#C4A882] text-sm uppercase tracking-[0.2em] mb-4">
-                About Me
+                About The Clooneys
               </p>
               <h2 className="text-4xl md:text-5xl font-serif text-[#2C2C2C] mb-6">
-                Your Vocal Soundtrack for Life&apos;s Special Moments
+                Elevate Your Event with Signature Vocal Harmonies
               </h2>
               <p className="text-[#444444] leading-relaxed mb-6">
-                Trained at Napier University and Berklee College of Music in
-                Boston, I&apos;ve dedicated my career to creating the perfect musical
-                atmosphere for weddings and events across Scotland.
+                The Clooneys bring professional excellence to every stage with
+                polished live music and signature vocal harmonies that captivate
+                audiences across Scotland and the UK.
               </p>
               <p className="text-[#444444] leading-relaxed mb-6">
-                Whether you&apos;re planning an intimate ceremony, a lively drinks
-                reception, or an unforgettable evening celebration, I work
-                closely with you to curate a repertoire that tells your story
-                and moves your guests.
+                From intimate wedding ceremonies to corporate galas and lively
+                evening celebrations, we create unforgettable musical experiences
+                with our unique arrangements and show-stopping performances.
               </p>
               <p className="text-[#444444] leading-relaxed mb-8">
-                I handle all bookings personally, ensuring you receive dedicated
-                attention from your first enquiry to your last dance.
+                Based in Scotland, we&apos;re available for events throughout the UK
+                and destination weddings, bringing state-of-the-art sound and
+                lighting to make your celebration truly special.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -102,7 +102,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex flex-col items-center bg-[#C4A882] hover:bg-[#A68B5B] text-white px-8 py-4 text-sm uppercase tracking-wider transition-colors rounded-[4px]"
                 >
-                  <span className="font-medium">Check My Availability</span>
+                  <span className="font-medium">Check Our Availability</span>
                   <span className="text-xs normal-case tracking-normal mt-1 opacity-90">
                     via WhatsApp (1-2 hour response)
                   </span>
@@ -111,7 +111,7 @@ export default function Home() {
                   href="/enquire"
                   className="inline-flex flex-col items-center bg-[#2C2C2C] hover:bg-[#1a1a1a] text-white px-8 py-4 text-sm uppercase tracking-wider transition-colors rounded-[4px]"
                 >
-                  <span className="font-medium">Check My Availability</span>
+                  <span className="font-medium">Check Our Availability</span>
                   <span className="text-xs normal-case tracking-normal mt-1 opacity-90">
                     via Contact Form
                   </span>
@@ -120,8 +120,8 @@ export default function Home() {
             </div>
             <div className="aspect-[4/5] relative rounded-lg overflow-hidden">
               <Image
-                src="https://images.squarespace-cdn.com/content/v1/641787c199b0b17ed0758ebc/5acddd01-44e6-4e2e-b7e5-e41df6af1e9d/tempImageCmiaaB.jpg"
-                alt="Nicola Mason"
+                src="https://images.squarespace-cdn.com/content/v1/65f8c528b5449106e4650e68/1710802284645-PQGXCV9J82V8FYKN98KL/The+Clooneys+Wedding+Band.jpg"
+                alt="The Clooneys Band"
                 fill
                 className="object-cover"
               />
@@ -175,8 +175,8 @@ export default function Home() {
               Tailored to Your Occasion
             </h2>
             <p className="text-[#444444] max-w-2xl mx-auto">
-              From wedding ceremonies to corporate events, I provide professional
-              live entertainment with state-of-the-art audio equipment.
+              From wedding ceremonies to corporate events, we provide professional
+              live entertainment with state-of-the-art audio and lighting equipment.
             </p>
           </div>
 
@@ -185,8 +185,8 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg">
                 <div className="aspect-[16/10] relative">
                   <Image
-                    src="https://images.squarespace-cdn.com/content/v1/641787c199b0b17ed0758ebc/4611dfff-10dc-4704-b047-81633afcc4d5/tempImagetCYvTS.jpg"
-                    alt="Nicola Mason singing at a wedding"
+                    src="https://images.squarespace-cdn.com/content/v1/65f8c528b5449106e4650e68/1710802284645-PQGXCV9J82V8FYKN98KL/The+Clooneys+Wedding+Band.jpg"
+                    alt="The Clooneys performing at a wedding"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -210,8 +210,8 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg">
                 <div className="aspect-[16/10] relative">
                   <Image
-                    src="https://images.squarespace-cdn.com/content/v1/641787c199b0b17ed0758ebc/60d8b844-bedb-433d-9c34-97e87f72946e/tempImagekF7sSa.jpg"
-                    alt="Nicola Mason at an event"
+                    src="https://images.squarespace-cdn.com/content/v1/65f8c528b5449106e4650e68/1710802284645-PQGXCV9J82V8FYKN98KL/The+Clooneys+Wedding+Band.jpg"
+                    alt="The Clooneys at an event"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -238,14 +238,14 @@ export default function Home() {
             Kind Words
           </p>
           <h2 className="text-4xl md:text-5xl font-serif text-[#2C2C2C] mb-16">
-            What Couples Say
+            What Clients Say
           </h2>
 
           <div className="space-y-12">
             <blockquote className="text-xl md:text-2xl text-[#444444] italic leading-relaxed">
-              &ldquo;Nicola is a phenomenal singer with a beautiful voice. Nothing
-              was too big an ask &mdash; she went above and beyond to make our day
-              truly special.&rdquo;
+              &ldquo;The Clooneys are phenomenal performers with stunning harmonies.
+              Nothing was too big an ask &mdash; they went above and beyond to make
+              our celebration truly special.&rdquo;
             </blockquote>
             <div className="flex justify-center gap-1 mb-4">
               {[...Array(5)].map((_, i) => (
@@ -265,11 +265,11 @@ export default function Home() {
       <section className="py-24 px-6 bg-[#2C2C2C]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">
-            Let&apos;s Create Something Beautiful
+            Let&apos;s Create Something Unforgettable
           </h2>
           <p className="text-stone-300 text-lg mb-10 max-w-2xl mx-auto">
-            I&apos;d love to hear about your upcoming celebration. Get in touch to
-            check availability and discuss how we can make your day unforgettable.
+            We&apos;d love to hear about your upcoming celebration. Get in touch to
+            check availability and discuss how we can make your event unforgettable.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -278,7 +278,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex flex-col items-center bg-[#C4A882] hover:bg-[#A68B5B] text-white px-10 py-4 text-sm uppercase tracking-wider transition-colors rounded-[4px]"
             >
-              <span className="font-medium">Check My Availability</span>
+              <span className="font-medium">Check Our Availability</span>
               <span className="text-xs normal-case tracking-normal mt-1 opacity-90">
                 via WhatsApp (1-2 hour response)
               </span>
@@ -287,7 +287,7 @@ export default function Home() {
               href="/enquire"
               className="inline-flex flex-col items-center border border-white text-white hover:bg-white hover:text-[#2C2C2C] px-10 py-4 text-sm uppercase tracking-wider transition-colors rounded-[4px]"
             >
-              <span className="font-medium">Check My Availability</span>
+              <span className="font-medium">Check Our Availability</span>
               <span className="text-xs normal-case tracking-normal mt-1 opacity-90">
                 via Contact Form
               </span>
@@ -304,7 +304,7 @@ export default function Home() {
               Experience
             </p>
             <h2 className="text-3xl md:text-4xl font-serif text-[#2C2C2C]">
-              Trusted at Scotland&apos;s Finest Venues
+              Trusted at Scotland&apos;s Premier Venues
             </h2>
           </div>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[#888888]">
@@ -322,10 +322,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-[#C4A882] text-sm uppercase tracking-[0.2em] mb-4">
-              See & Hear Nicola in Action
+              See & Hear The Clooneys in Action
             </p>
             <h2 className="text-3xl md:text-4xl font-serif text-[#2C2C2C]">
-              A selection of videos from my YouTube channel
+              A selection of videos from our YouTube channel
             </h2>
           </div>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[#888888]">
@@ -339,10 +339,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-[#C4A882] text-sm uppercase tracking-[0.2em] mb-4">
-              Behind the Scenes — Follow Nicola on Instagram
+              Behind the Scenes — Follow The Clooneys on Instagram
             </p>
             <h2 className="text-3xl md:text-4xl font-serif text-[#2C2C2C]">
-              A selection of content from my Instagram
+              A selection of content from our Instagram
             </h2>
           </div>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[#888888]">

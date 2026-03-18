@@ -19,8 +19,8 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="text-base md:text-xl font-serif text-[#2C2C2C]">
-            <span className="md:hidden">Nicola Mason</span>
-            <span className="hidden md:inline">Nicola Mason Wedding &amp; Events Singer</span>
+            <span className="md:hidden">The Clooneys</span>
+            <span className="hidden md:inline">The Clooneys</span>
           </Link>
 
           {/* Desktop nav */}

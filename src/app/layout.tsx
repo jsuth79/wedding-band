@@ -18,15 +18,16 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Nicola Mason | Award-Winning Wedding & Events Singer",
+  title: "The Clooneys | Premium Wedding & Events Band",
   description:
-    "Award-winning wedding and events singer based in Glasgow, Scotland. Tailored live music for ceremonies, receptions, and celebrations across Central Scotland.",
+    "Professional wedding and events band based in Scotland. Stunning vocal harmonies and live entertainment for ceremonies, receptions, and celebrations across Scotland and the UK.",
   keywords: [
-    "wedding singer Glasgow",
-    "wedding singer Scotland",
-    "events singer",
-    "ceremony singer",
+    "wedding band Scotland",
+    "wedding band UK",
+    "events band",
+    "ceremony band",
     "Scottish wedding entertainment",
+    "The Clooneys band",
   ],
 };
 
