@@ -3,16 +3,9 @@ import Image from "next/image";
 import HeroSection from "@/components/HeroSection";
 
 const venues = [
-  "Carlowrie Castle",
-  "Fasque Castle",
-  "Atholl Palace",
-  "The Balmoral Hotel",
-  "Norton House Hotel",
-  "Lodge on Loch Lomond",
-  "Balbirnie House",
-  "Oran Mor",
-  "The Corinthian",
-  "Edinburgh City Chambers",
+  "Norton House Hotel & Spa, Edinburgh",
+  "Below Canvas",
+  "Inglewood House",
 ];
 
 const faqs = [
@@ -120,113 +113,12 @@ export default function Home() {
             </div>
             <div className="aspect-[4/5] relative rounded-lg overflow-hidden">
               <Image
-                src="https://images.squarespace-cdn.com/content/v1/65f8c528b5449106e4650e68/1710802284645-PQGXCV9J82V8FYKN98KL/The+Clooneys+Wedding+Band.jpg"
+                src="/images/the-clooneys-ceremony2.webp"
                 alt="The Clooneys Band"
                 fill
                 className="object-cover"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Common Questions */}
-      <section className="py-24 px-6 bg-[#FCFCFC]">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-[#C4A882] text-sm uppercase tracking-[0.2em] mb-4">
-              Common Questions &amp; Planning
-            </p>
-            <h2 className="text-3xl md:text-4xl font-serif text-[#2C2C2C]">
-              Everything You Need to Know
-            </h2>
-          </div>
-
-          <div className="space-y-8">
-            {faqs.map((faq) => (
-              <div key={faq.question} className="border-b border-stone-200 pb-8">
-                <h3 className="text-lg font-medium text-[#2C2C2C] mb-3">
-                  {faq.question}
-                </h3>
-                <p className="text-[#444444] leading-relaxed">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/enquire"
-              className="inline-block text-[#C4A882] border-b-2 border-[#C4A882] pb-1 hover:text-[#A68B5B] hover:border-[#A68B5B] transition-colors uppercase text-sm tracking-wider"
-            >
-              View All Frequently Asked Questions →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Preview */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-[#C4A882] text-sm uppercase tracking-[0.2em] mb-4">
-              Services
-            </p>
-            <h2 className="text-4xl md:text-5xl font-serif text-[#2C2C2C] mb-4">
-              Tailored to Your Occasion
-            </h2>
-            <p className="text-[#444444] max-w-2xl mx-auto">
-              From wedding ceremonies to corporate events, we provide professional
-              live entertainment with state-of-the-art audio and lighting equipment.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Link href="/weddings" className="group">
-              <div className="relative overflow-hidden rounded-lg">
-                <div className="aspect-[16/10] relative">
-                  <Image
-                    src="https://images.squarespace-cdn.com/content/v1/65f8c528b5449106e4650e68/1710802284645-PQGXCV9J82V8FYKN98KL/The+Clooneys+Wedding+Band.jpg"
-                    alt="The Clooneys performing at a wedding"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h3 className="text-2xl font-serif text-white mb-2 group-hover:text-[#C4A882] transition-colors">
-                    Weddings
-                  </h3>
-                  <p className="text-stone-200 text-sm mb-2">
-                    Ceremonies, drinks receptions &amp; evening entertainment
-                  </p>
-                  <p className="text-[#C4A882] text-sm font-medium">
-                    Packages from £325
-                  </p>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/events" className="group">
-              <div className="relative overflow-hidden rounded-lg">
-                <div className="aspect-[16/10] relative">
-                  <Image
-                    src="https://images.squarespace-cdn.com/content/v1/65f8c528b5449106e4650e68/1710802284645-PQGXCV9J82V8FYKN98KL/The+Clooneys+Wedding+Band.jpg"
-                    alt="The Clooneys at an event"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h3 className="text-2xl font-serif text-white mb-2 group-hover:text-[#C4A882] transition-colors">
-                    Events
-                  </h3>
-                  <p className="text-stone-200 text-sm">
-                    Corporate functions, private parties &amp; celebrations
-                  </p>
-                </div>
-              </div>
-            </Link>
           </div>
         </div>
       </section>
@@ -296,6 +188,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Video */}
+      <section className="py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-[#C4A882] text-sm uppercase tracking-[0.2em] mb-4">
+              See & Hear The Clooneys in Action
+            </p>
+            <h2 className="text-3xl md:text-4xl font-serif text-[#2C2C2C] mb-4">
+              Live Performance Videos
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div>
+                <div className="aspect-video">
+                  <iframe className="w-full h-full rounded-lg" src="https://www.youtube.com/embed/XKc-6xf8_mQ?si=iMyOUelsS_nWbC7u" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                </div>
+                <p className="text-center text-sm text-[#444444] mt-3">Video Title Here</p>
+              </div>
+              <div>
+                <div className="aspect-video">
+                  <iframe className="w-full h-full rounded-lg" src="https://www.youtube.com/embed/ElDXQQPltmU?si=hZmKMT1EG9RTGVzq" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                </div>
+                <p className="text-center text-sm text-[#444444] mt-3">Video Title Here</p>
+              </div>
+              <div>
+                <div className="aspect-video">
+                  <iframe className="w-full h-full rounded-lg" src="https://www.youtube.com/embed/4cXKL3oPLNA?si=IsV_cejOqEqUm-Sv" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                </div>
+                <p className="text-center text-sm text-[#444444] mt-3">Video Title Here</p>
+              </div>
+              <div>
+                <div className="aspect-video">
+                  <iframe className="w-full h-full rounded-lg" src="https://www.youtube.com/embed/Ay7eYAzIUSk?si=SX1j6HasfLpxJV7n" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                </div>
+                <p className="text-center text-sm text-[#444444] mt-3">Video Title Here</p>
+              </div>
+          </div>
+        </div>
+      </section>
+
       {/* Venues */}
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
@@ -313,40 +245,6 @@ export default function Home() {
                 {venue}
               </span>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Video */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-[#C4A882] text-sm uppercase tracking-[0.2em] mb-4">
-              See & Hear The Clooneys in Action
-            </p>
-            <h2 className="text-3xl md:text-4xl font-serif text-[#2C2C2C]">
-              A selection of videos from our YouTube channel
-            </h2>
-          </div>
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[#888888]">
-
-          </div>
-        </div>
-      </section>
-
-            {/* Social */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-[#C4A882] text-sm uppercase tracking-[0.2em] mb-4">
-              Behind the Scenes — Follow The Clooneys on Instagram
-            </p>
-            <h2 className="text-3xl md:text-4xl font-serif text-[#2C2C2C]">
-              A selection of content from our Instagram
-            </h2>
-          </div>
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[#888888]">
-
           </div>
         </div>
       </section>
