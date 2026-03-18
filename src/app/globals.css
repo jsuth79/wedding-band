@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --font-family-sans: var(--font-garamond), Georgia, serif;
+  --font-family-serif: var(--font-garamond), Georgia, serif;
+
+  /* Custom brand colours */
+  --color-brand-gold: #C4A882;
+  --color-brand-gold-light: #D4BE9C;
+  --color-brand-gold-dark: #A68B5B;
+  --color-brand-charcoal: #2C2C2C;
+  --color-brand-charcoal-light: #444444;
+}
+
+body {
+  font-family: var(--font-garamond), Georgia, serif;
+  background-color: #ffffff;
+  color: #2C2C2C;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-garamond), Georgia, serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom selection color */
+::selection {
+  background-color: #C4A882;
+  color: #ffffff;
+}
