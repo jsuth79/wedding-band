@@ -66,7 +66,7 @@ export default function EnquiryForm() {
 
   if (status === "success") {
     return (
-      <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
+      <div className="rounded-[30px] border border-green-200 bg-green-50 p-8 text-center">
         <svg
           className="w-16 h-16 text-green-500 mx-auto mb-4"
           fill="none"
@@ -80,14 +80,14 @@ export default function EnquiryForm() {
             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
-        <h3 className="text-xl font-serif text-[#2C2C2C] mb-2">Thank You!</h3>
+        <h3 className="mb-2 text-xl font-serif text-[#2C2C2C]">Thank You</h3>
         <p className="text-[#444444]">
-          Your enquiry has been sent successfully. I&apos;ll be in touch within 1-2
-          hours to discuss your event.
+          Your enquiry has been sent successfully. We&apos;ll be back in touch within
+          1-2 hours to talk through the details.
         </p>
         <button
           onClick={() => setStatus("idle")}
-          className="mt-6 text-[#C4A882] hover:text-[#A68B5B] text-sm underline"
+          className="mt-6 text-sm text-[#6f7c8c] underline hover:text-[#586474]"
         >
           Send another enquiry
         </button>
@@ -97,8 +97,17 @@ export default function EnquiryForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      <div>
+        <p className="eyebrow mb-3">Availability Form</p>
+        <h2 className="section-subheading text-[1.6rem]">Check your date</h2>
+        <p className="mt-3 max-w-2xl text-[#666666]">
+          A few details are all we need to confirm availability and point you
+          towards the best package.
+        </p>
+      </div>
+
       {status === "error" && (
-        <div className="bg-red-50 border border-red-200 rounded-[4px] p-4 text-red-700 text-sm">
+        <div className="rounded-[20px] border border-red-200 bg-red-50 p-4 text-sm text-red-700">
           {errorMessage}
         </div>
       )}
@@ -114,7 +123,7 @@ export default function EnquiryForm() {
             required
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="w-full px-4 py-3 border border-stone-300 rounded-[4px] focus:ring-2 focus:ring-[#C4A882] focus:border-transparent transition-shadow"
+            className="w-full rounded-[18px] border border-stone-300 bg-white px-4 py-3 focus:border-transparent focus:ring-2 focus:ring-[#6f7c8c] transition-shadow"
             placeholder="Your name"
           />
         </div>
@@ -129,7 +138,7 @@ export default function EnquiryForm() {
             required
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="w-full px-4 py-3 border border-stone-300 rounded-[4px] focus:ring-2 focus:ring-[#C4A882] focus:border-transparent transition-shadow"
+            className="w-full rounded-[18px] border border-stone-300 bg-white px-4 py-3 focus:border-transparent focus:ring-2 focus:ring-[#6f7c8c] transition-shadow"
             placeholder="your@email.com"
           />
         </div>
@@ -144,7 +153,7 @@ export default function EnquiryForm() {
             required
             value={formData.eventDate}
             onChange={(e) => setFormData({ ...formData, eventDate: e.target.value })}
-            className="w-full px-4 py-3 border border-stone-300 rounded-[4px] focus:ring-2 focus:ring-[#C4A882] focus:border-transparent transition-shadow"
+            className="w-full rounded-[18px] border border-stone-300 bg-white px-4 py-3 focus:border-transparent focus:ring-2 focus:ring-[#6f7c8c] transition-shadow"
           />
         </div>
 
@@ -157,7 +166,7 @@ export default function EnquiryForm() {
             required
             value={formData.eventType}
             onChange={(e) => setFormData({ ...formData, eventType: e.target.value })}
-            className="w-full px-4 py-3 border border-stone-300 rounded-[4px] focus:ring-2 focus:ring-[#C4A882] focus:border-transparent transition-shadow bg-white"
+            className="w-full rounded-[18px] border border-stone-300 bg-white px-4 py-3 focus:border-transparent focus:ring-2 focus:ring-[#6f7c8c] transition-shadow"
           >
             <option value="">Select event type...</option>
             {eventTypes.map((type) => (
@@ -179,22 +188,22 @@ export default function EnquiryForm() {
           rows={5}
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          className="w-full px-4 py-3 border border-stone-300 rounded-[4px] focus:ring-2 focus:ring-[#C4A882] focus:border-transparent transition-shadow resize-none"
-          placeholder="Please include details about your venue, approximate number of guests, and any specific songs or packages you're interested in..."
+          className="w-full resize-none rounded-[18px] border border-stone-300 bg-white px-4 py-3 focus:border-transparent focus:ring-2 focus:ring-[#6f7c8c] transition-shadow"
+          placeholder="Tell us about your venue, the atmosphere you want, approximate guest numbers, and whether you are interested in ceremony music, drinks reception or a full daytime package."
         />
       </div>
 
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full bg-[#2C2C2C] hover:bg-[#1a1a1a] disabled:bg-[#888888] text-white py-4 text-sm uppercase tracking-wider transition-colors rounded-[4px]"
+        className="w-full rounded-full bg-[#2C2C2C] py-4 text-sm uppercase tracking-wider text-white transition-colors hover:bg-[#1a1a1a] disabled:bg-[#888888]"
       >
         {status === "loading" ? "Sending..." : "Send Enquiry"}
       </button>
 
-      <p className="text-sm text-[#888888] text-center">
-        I typically respond within 1-2 hours. For urgent enquiries, please
-        WhatsApp or call directly.
+      <p className="text-center text-sm text-[#888888]">
+        We typically reply within 1-2 hours. For urgent enquiries, WhatsApp is
+        the quickest option.
       </p>
     </form>
   );

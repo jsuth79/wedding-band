@@ -5,134 +5,147 @@ export const metadata: Metadata = {
   title: "Get in Touch | The Clooneys",
   description:
     "Contact The Clooneys to discuss your wedding or event entertainment. Check availability and receive a personalised quote.",
+  alternates: {
+    canonical: "/enquire",
+  },
+  openGraph: {
+    title: "Get in Touch | The Clooneys",
+    description:
+      "Contact The Clooneys to discuss your wedding or event entertainment. Check availability and receive a personalised quote.",
+    url: "https://www.theclooneys.co.uk/enquire",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Get in Touch | The Clooneys",
+    description:
+      "Contact The Clooneys to discuss your wedding or event entertainment. Check availability and receive a personalised quote.",
+  },
 };
+
+const guidance = [
+  "Your wedding date or event date",
+  "Venue or area",
+  "The parts of the day you want music for",
+  "Any songs or moments that matter to you",
+];
+
+const answers = [
+  {
+    question: "How quickly do you reply?",
+    answer: "Usually within 1-2 hours during the day, and often sooner on WhatsApp.",
+  },
+  {
+    question: "What areas do you cover?",
+    answer: "We are based in Scotland and perform across the UK and for destination weddings.",
+  },
+  {
+    question: "Can you learn a specific song?",
+    answer: "Yes, we are always happy to talk through meaningful song requests where timings allow.",
+  },
+];
 
 export default function EnquirePage() {
   return (
     <div className="pt-20">
-      {/* Hero */}
-      <section className="py-24 px-6 bg-[#F5F5F5]">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-[#C4A882] text-sm uppercase tracking-[0.2em] mb-4">
-            Get in Touch
-          </p>
-          <h1 className="text-4xl md:text-6xl font-serif text-[#2C2C2C] mb-6">
-            Let&apos;s Talk About Your Event
-          </h1>
-          <p className="text-xl text-[#444444] leading-relaxed">
-            Fill out the form below and we&apos;ll get back to you within 1-2 hours
-            to discuss your requirements and check availability.
-          </p>
+      <section className="bg-[var(--page-ivory)] py-14 md:py-24">
+        <div className="section-shell page-gutter grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+          <div>
+            <p className="eyebrow mb-4">Get In Touch</p>
+            <h1 className="section-title section-heading">
+              Tell us about your date and we will help with the rest.
+            </h1>
+            <p className="section-copy mt-6 max-w-2xl text-lg">
+              Whether you are still exploring options or already know exactly what
+              you want, send over the details and we will come back with
+              availability, next steps and the package that feels right.
+            </p>
+          </div>
+          <div className="panel-luxe rounded-[32px] p-8">
+            <p className="text-xs uppercase tracking-[0.22em] text-[#586474]">
+              Helpful to include
+            </p>
+            <ul className="mt-4 space-y-3 text-[#444444]">
+              {guidance.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="mt-1 text-[#6f7c8c]">●</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
-      {/* Form Section */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-            {/* Form */}
-            <div className="lg:col-span-2">
-              <EnquiryForm />
+      <section className="bg-[var(--page-stone)] py-8 md:py-12">
+        <div className="section-shell page-gutter grid gap-16 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="panel-luxe rounded-[36px] p-6 md:p-8">
+            <EnquiryForm />
+          </div>
+
+          <div className="space-y-6">
+            <div className="panel-luxe rounded-[30px] p-8">
+              <h2 className="section-subheading">Other Ways to Reach Us</h2>
+              <div className="mt-6 space-y-5 text-[#444444]">
+                <div>
+                  <p className="text-sm uppercase tracking-[0.16em] text-[#888888]">Email</p>
+                  <a
+                    href="mailto:info@theclooneys.co.uk"
+                    className="mt-1 inline-block text-[#6f7c8c] hover:text-[#586474]"
+                  >
+                    info@theclooneys.co.uk
+                  </a>
+                </div>
+                <div>
+                  <p className="text-sm uppercase tracking-[0.16em] text-[#888888]">Phone / WhatsApp</p>
+                  <a
+                    href="tel:+447740360678"
+                    className="mt-1 inline-block text-[#6f7c8c] hover:text-[#586474]"
+                  >
+                    +44 7740 360678
+                  </a>
+                </div>
+                <div>
+                  <p className="text-sm uppercase tracking-[0.16em] text-[#888888]">Based In</p>
+                  <p className="mt-1">Scotland</p>
+                  <p className="mt-1 text-sm">Serving Scotland, the UK and destination weddings</p>
+                </div>
+              </div>
+              <a
+                href="https://wa.me/447740360678"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary mt-8 w-full"
+              >
+                WhatsApp Availability Check
+              </a>
             </div>
 
-            {/* Sidebar */}
-            <div className="space-y-8">
-              {/* Contact Info */}
-              <div className="bg-[#F5F5F5] rounded-lg p-8">
-                <h3 className="text-xl font-serif text-[#2C2C2C] mb-6">
-                  Other Ways to Reach Us
-                </h3>
-                <ul className="space-y-4 text-[#444444]">
-                  <li>
-                    <p className="text-sm text-[#888888] mb-1">Email</p>
-                    <a
-                      href="mailto:info@theclooneys.co.uk"
-                      className="text-[#C4A882] hover:text-[#A68B5B]"
-                    >
-                      info@theclooneys.co.uk
-                    </a>
-                  </li>
-                  <li>
-                    <p className="text-sm text-[#888888] mb-1">Phone / WhatsApp</p>
-                    <a
-                      href="tel:+447740360678"
-                      className="text-[#C4A882] hover:text-[#A68B5B]"
-                    >
-                      +44 7740 360678
-                    </a>
-                  </li>
-                  <li>
-                    <p className="text-sm text-[#888888] mb-1">Location</p>
-                    <p>Based in Scotland</p>
-                    <p className="text-sm">
-                      Serving Scotland, UK &amp; Destination Weddings
-                    </p>
-                  </li>
-                </ul>
-                <a
-                  href="https://wa.me/447740360678"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex flex-col items-center bg-[#C4A882] hover:bg-[#A68B5B] text-white px-6 py-3 rounded-[4px] transition-colors w-full"
-                >
-                  <span className="font-medium text-sm uppercase tracking-wider">Check Our Availability</span>
-                  <span className="text-xs normal-case tracking-normal mt-1 opacity-90">
-                    via WhatsApp (1-2 hour response)
+            <div className="rounded-[30px] bg-[var(--page-stone)] p-8">
+              <h2 className="section-subheading">Quick Answers</h2>
+              <div className="mt-6 space-y-5">
+                {answers.map((item) => (
+                  <div key={item.question}>
+                    <p className="font-medium text-[#2C2C2C]">{item.question}</p>
+                    <p className="section-copy mt-2 text-sm">{item.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="text-center">
+              <p className="text-sm uppercase tracking-[0.16em] text-[#888888]">
+                Professional Wedding &amp; Events Band
+              </p>
+              <div className="mt-3 flex justify-center gap-1 text-[#6f7c8c]">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-xl">
+                    ★
                   </span>
-                </a>
+                ))}
               </div>
-
-              {/* FAQ */}
-              <div className="bg-[#C4A882]/10 rounded-lg p-8">
-                <h3 className="text-xl font-serif text-[#2C2C2C] mb-6">
-                  Quick Answers
-                </h3>
-                <div className="space-y-4 text-sm">
-                  <div>
-                    <p className="font-medium text-[#2C2C2C] mb-1">
-                      How far in advance should we book?
-                    </p>
-                    <p className="text-[#444444]">
-                      As early as possible! We&apos;re now booking for 2026 and 2027.
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-medium text-[#2C2C2C] mb-1">
-                      What areas do you cover?
-                    </p>
-                    <p className="text-[#444444]">
-                      We&apos;re based in Scotland and perform across the UK and
-                      destination weddings.
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-medium text-[#2C2C2C] mb-1">
-                      Can you learn a specific song?
-                    </p>
-                    <p className="text-[#444444]">
-                      Absolutely! We love learning songs that are meaningful to
-                      our clients (subject to availability).
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Social Proof */}
-              <div className="text-center">
-                <p className="text-[#888888] text-sm mb-2">
-                  Professional Wedding &amp; Events Band
-                </p>
-                <div className="flex justify-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-[#C4A882] text-xl">
-                      ★
-                    </span>
-                  ))}
-                </div>
-                <p className="text-[#444444] text-sm mt-1">
-                  5-star reviews on Google &amp; Facebook
-                </p>
-              </div>
+              <p className="mt-2 text-sm text-[#444444]">
+                5-star reviews on Google &amp; Facebook
+              </p>
             </div>
           </div>
         </div>

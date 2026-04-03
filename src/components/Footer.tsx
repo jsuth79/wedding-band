@@ -1,15 +1,15 @@
 export default function Footer() {
   return (
     <footer className="bg-[#2C2C2C] text-stone-300">
-      <div className="px-6 py-8">
+      <div className="section-shell page-gutter py-8">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           {/* Contact - Left */}
           <div className="flex items-center gap-4 text-sm shrink-0">
-            <a href="mailto:info@theclooneys.co.uk" className="hover:text-[#C4A882] transition-colors">
+            <a href="mailto:info@theclooneys.co.uk" className="hover:text-[#6f7c8c] transition-colors">
               info@theclooneys.co.uk
             </a>
             <span className="text-stone-600">|</span>
-            <a href="tel:+447740360678" className="hover:text-[#C4A882] transition-colors">
+            <a href="tel:+447740360678" className="hover:text-[#6f7c8c] transition-colors">
               +44 7740 360678
             </a>
           </div>
@@ -28,7 +28,7 @@ export default function Footer() {
               href="https://www.instagram.com/theclooneys"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-stone-400 hover:text-[#C4A882] transition-colors"
+              className="text-stone-400 hover:text-[#6f7c8c] transition-colors"
               aria-label="Instagram"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -39,7 +39,7 @@ export default function Footer() {
               href="https://www.facebook.com/profile.php?id=61552003414629"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-stone-400 hover:text-[#C4A882] transition-colors"
+              className="text-stone-400 hover:text-[#6f7c8c] transition-colors"
               aria-label="Facebook"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -50,7 +50,7 @@ export default function Footer() {
               href="https://www.tiktok.com/@theclooneys"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-stone-400 hover:text-[#C4A882] transition-colors"
+              className="text-stone-400 hover:text-[#6f7c8c] transition-colors"
               aria-label="TikTok"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -61,7 +61,7 @@ export default function Footer() {
               href="https://www.youtube.com/channel/UCVXe27VHQ7ILNg5CF0bplQQ"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-stone-400 hover:text-[#C4A882] transition-colors"
+              className="text-stone-400 hover:text-[#6f7c8c] transition-colors"
               aria-label="YouTube"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

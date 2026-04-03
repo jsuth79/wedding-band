@@ -3,41 +3,31 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[75vh] min-h-[550px] max-h-[850px] flex flex-col justify-between bg-stone-100">
-      {/* Background image */}
+    <section className="relative isolate min-h-[700px] overflow-hidden bg-stone-100">
       <Image
         src="/images/the_clooneys_hero.webp"
         alt="The Clooneys performing at a wedding"
         fill
-        className="object-cover object-top"
+        className="object-cover object-top scale-[1.02]"
         priority
       />
-      <div className="absolute inset-0 bg-black/25" />
+      <div className="absolute inset-0 bg-[linear-gradient(105deg,rgba(20,18,16,0.78)_8%,rgba(20,18,16,0.42)_46%,rgba(20,18,16,0.3)_100%)]" />
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#191715] to-transparent" />
 
-      {/* Top content - heading and subheading */}
-      <div className="relative z-10 px-6 pt-32 max-w-6xl mx-auto w-full">
-        <div className="text-center md:text-left md:max-w-2xl">
-          <h1 className="text-4xl md:text-6xl font-serif text-white mb-6 leading-tight">
-            Show Stopping Vocals, Stunning Harmonies
+      <div className="section-shell page-gutter relative z-10 flex min-h-[700px] flex-col justify-between pb-10 pt-32">
+        <div className="max-w-3xl">
+          <h1 className="text-4xl font-serif leading-[0.96] text-white md:text-6xl">
+            Show-stopping vocals for the most meaningful moments of the day.
           </h1>
-          <p className="text-lg md:text-xl text-stone-200 leading-relaxed">
-            Premium wedding entertainment from ceremony to dance floor across Scotland and the UK.
+          <p className="mt-5 max-w-2xl text-base leading-7 text-stone-200 md:text-xl md:leading-8">
+            The Clooneys bring warm, modern harmonies and polished live energy to
+            weddings across Scotland, the UK and beyond.
           </p>
-        </div>
-      </div>
-
-      {/* Bottom content - button and booking notes */}
-      <div className="relative z-10 px-6 pb-12 max-w-6xl mx-auto w-full">
-        <div className="text-center md:text-right">
-          <Link
-            href="/weddings"
-            className="inline-block bg-[#2C2C2C] hover:bg-[#1a1a1a] text-white px-8 py-4 text-sm uppercase tracking-wider transition-colors rounded-[4px]"
-          >
-            View Our Wedding Packages
-          </Link>
-          <p className="mt-6 text-stone-300 text-sm">
-            Now booking for 2026 &amp; 2027
-          </p>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <Link href="/weddings" className="btn-primary px-6 py-3 text-[0.82rem]">
+              Wedding singer packages from £325
+            </Link>
+          </div>
         </div>
       </div>
     </section>
