@@ -6,6 +6,7 @@ interface FormData {
   name: string;
   email: string;
   eventDate: string;
+  venue: string;
   eventType: string;
   message: string;
 }
@@ -25,6 +26,7 @@ export default function EnquiryForm() {
     name: "",
     email: "",
     eventDate: "",
+    venue: "",
     eventType: "",
     message: "",
   });
@@ -55,6 +57,7 @@ export default function EnquiryForm() {
         name: "",
         email: "",
         eventDate: "",
+        venue: "",
         eventType: "",
         message: "",
       });
@@ -154,6 +157,20 @@ export default function EnquiryForm() {
             value={formData.eventDate}
             onChange={(e) => setFormData({ ...formData, eventDate: e.target.value })}
             className="w-full rounded-[18px] border border-stone-300 bg-white px-4 py-3 focus:border-transparent focus:ring-2 focus:ring-[#6f7c8c] transition-shadow"
+          />
+        </div>
+
+        <div>
+          <label htmlFor="venue" className="block text-sm font-medium text-[#2C2C2C] mb-2">
+            Venue or Area
+          </label>
+          <input
+            type="text"
+            id="venue"
+            value={formData.venue}
+            onChange={(e) => setFormData({ ...formData, venue: e.target.value })}
+            className="w-full rounded-[18px] border border-stone-300 bg-white px-4 py-3 focus:border-transparent focus:ring-2 focus:ring-[#6f7c8c] transition-shadow"
+            placeholder="Venue name or city"
           />
         </div>
 

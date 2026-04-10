@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import EnquiryForm from "@/components/EnquiryForm";
 
 export const metadata: Metadata = {
-  title: "Get in Touch | The Clooneys",
+  title: "Check Availability | The Clooneys",
   description:
-    "Contact The Clooneys to discuss your wedding or event entertainment. Check availability and receive a personalised quote.",
+    "Check availability for your date. Contact The Clooneys to discuss your wedding or event entertainment — we respond within 24 hours.",
   alternates: {
     canonical: "/enquire",
   },
   openGraph: {
-    title: "Get in Touch | The Clooneys",
+    title: "Check Availability | The Clooneys",
     description:
-      "Contact The Clooneys to discuss your wedding or event entertainment. Check availability and receive a personalised quote.",
+      "Check availability for your date. Contact The Clooneys to discuss your wedding or event entertainment — we respond within 24 hours.",
     url: "https://www.theclooneys.co.uk/enquire",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Get in Touch | The Clooneys",
+    title: "Check Availability | The Clooneys",
     description:
-      "Contact The Clooneys to discuss your wedding or event entertainment. Check availability and receive a personalised quote.",
+      "Check availability for your date. Contact The Clooneys to discuss your wedding or event entertainment — we respond within 24 hours.",
   },
 };
 
@@ -50,14 +50,27 @@ export default function EnquirePage() {
       <section className="bg-[var(--page-ivory)] py-14 md:py-24">
         <div className="section-shell page-gutter grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
           <div>
-            <p className="eyebrow mb-4">Get In Touch</p>
+            <p className="eyebrow mb-4">Enquire</p>
             <h1 className="section-title section-heading">
-              Tell us about your date and we will help with the rest.
+              Check availability for your date.
             </h1>
             <p className="section-copy mt-6 max-w-2xl text-lg">
               Whether you are still exploring options or already know exactly what
-              you want, send over the details and we will come back with
+              you want, get in touch and we will come back within 24 hours with
               availability, next steps and the package that feels right.
+            </p>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="https://wa.me/447740360678"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                WhatsApp — Fastest Response
+              </a>
+            </div>
+            <p className="mt-4 text-sm text-[#888888]">
+              Or use the form below for a structured enquiry — we reply within 24 hours.
             </p>
           </div>
           <div className="panel-luxe rounded-[32px] p-8">
@@ -72,6 +85,14 @@ export default function EnquirePage() {
                 </li>
               ))}
             </ul>
+            <div className="mt-6 rounded-[20px] bg-[var(--page-stone)] p-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6f7c8c]">
+                Response time
+              </p>
+              <p className="mt-1 text-sm text-[#444444]">
+                We respond within 24 hours — usually much sooner on WhatsApp.
+              </p>
+            </div>
           </div>
         </div>
       </section>
