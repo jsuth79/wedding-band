@@ -83,7 +83,7 @@ export default function EnquiryForm() {
             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
-        <h3 className="mb-2 text-xl font-serif text-[#2C2C2C]">Thank You</h3>
+        <h3 className="mb-2 text-xl text-[#2C2C2C]">Thank You</h3>
         <p className="text-[#444444]">
           Your enquiry has been sent successfully. We&apos;ll be back in touch within
           1-2 hours to talk through the details.

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import YouTubeGrid from "@/components/YouTubeGrid";
-import { allVideos } from "@/lib/videos";
+import FeatureIcon from "@/components/FeatureIcon";
 
 export const metadata: Metadata = {
   title: "Events Band Scotland | The Clooneys",
@@ -26,16 +25,19 @@ export const metadata: Metadata = {
 
 const qualities = [
   {
+    icon: "events" as const,
     label: "Atmosphere",
     title: "A room that feels alive",
     copy: "From the moment we start, the energy shifts. Live music transforms a venue in a way a playlist simply cannot — and guests feel it immediately.",
   },
   {
+    icon: "party" as const,
     label: "Energy",
     title: "Built for big moments",
     copy: "We know when to build, when to hold back and when to push for the big reactions. Every set is shaped around your event and your audience.",
   },
   {
+    icon: "support" as const,
     label: "Professional delivery",
     title: "Reliable, prepared and easy to work with",
     copy: "PA, insurance, timing coordination and clear communication throughout. We make things straightforward for you and your venue.",
@@ -44,32 +46,48 @@ const qualities = [
 
 const eventTypes = [
   {
+    icon: "events" as const,
     label: "Corporate Events",
     copy: "Award dinners, product launches, team celebrations and client entertainment. We match the tone of your event — professional, polished and with genuine impact.",
   },
   {
+    icon: "party" as const,
     label: "Private Parties",
     copy: "Milestone birthdays, anniversary celebrations and private gatherings. We bring the kind of energy that makes the night feel truly special.",
   },
   {
+    icon: "support" as const,
     label: "Charity Events",
     copy: "Fundraising dinners and charity gala evenings. We understand the importance of the occasion and deliver a performance that does justice to the cause.",
   },
 ];
 
-const formats = ["Singing Waiters", "Roaming Band", "Party Band", "Acoustic"];
-
-// Upbeat clips for events page
-const eventsVideos = [allVideos[2], allVideos[3]]; // Love on Top + Young Hearts
+const formats = [
+  {
+    icon: "surprise" as const,
+    label: "Singing Waiters / Roaming Singers",
+    copy: "An interactive roaming vocal set that moves through the room, surprises guests and changes the energy instantly.",
+  },
+  {
+    icon: "party" as const,
+    label: "Party Trio",
+    copy: "A high-impact three-vocal set built for bigger reactions, celebrations and dancefloor energy.",
+  },
+  {
+    icon: "acoustic" as const,
+    label: "Acoustic",
+    copy: "A more relaxed option for drinks, dinners and moments that need warmth without overwhelming the room.",
+  },
+];
 
 export default function EventsPage() {
   return (
     <div className="pt-20">
 
       {/* INTRO */}
-      <section className="bg-[var(--page-ivory)] py-14 md:py-24">
+      <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter">
-          <div className="mb-10 max-w-3xl">
+          <div className="section-intro mb-10">
             <p className="eyebrow mb-4">Events</p>
             <h1 className="section-title section-heading">
               Entertainment for corporate events and private parties.
@@ -106,21 +124,30 @@ export default function EventsPage() {
         </div>
       </section>
 
-      {/* WHAT YOU GET */}
-      <section className="bg-[var(--page-stone)] py-14 md:py-24">
+      {/* FORMATS */}
+      <section className="bg-[var(--page-stone)] py-12 md:py-20">
         <div className="section-shell page-gutter">
-          <div className="mb-10 max-w-3xl">
-            <p className="eyebrow mb-4">What You Get</p>
+          <div className="section-intro mb-10">
+            <p className="eyebrow mb-4">Formats</p>
             <h2 className="section-title section-heading">
-              More than entertainment — a room transformed.
+              Choose the format that fits your occasion.
             </h2>
+            <p className="section-copy mt-4 text-base">
+              Start with how you want the room to feel, and we&apos;ll guide you
+              toward the format that suits the event best.
+            </p>
           </div>
-          <div className="grid gap-10 md:grid-cols-3">
-            {qualities.map((q) => (
-              <article key={q.title} className="border-t border-[#d7dde3] pt-5">
-                <p className="eyebrow mb-4">{q.label}</p>
-                <h3 className="section-subheading text-[1.35rem]">{q.title}</h3>
-                <p className="section-copy mt-4">{q.copy}</p>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {formats.map((fmt) => (
+              <article
+                key={fmt.label}
+                className="info-card p-6 md:p-7"
+              >
+                <FeatureIcon name={fmt.icon} />
+                <h3 className="mt-4 text-[1.05rem] font-semibold text-[#2C2C2C]">
+                  {fmt.label}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-[#545454]">{fmt.copy}</p>
               </article>
             ))}
           </div>
@@ -128,9 +155,9 @@ export default function EventsPage() {
       </section>
 
       {/* EVENT TYPES */}
-      <section className="bg-[var(--page-ivory)] py-14 md:py-24">
+      <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter">
-          <div className="mb-10 max-w-3xl">
+          <div className="section-intro mb-10">
             <p className="eyebrow mb-4">Event Types</p>
             <h2 className="section-title section-heading">
               We work well across a range of occasions.
@@ -140,8 +167,9 @@ export default function EventsPage() {
             {eventTypes.map((type) => (
               <article
                 key={type.label}
-                className="rounded-[24px] border border-[#d7dde3] bg-white p-6"
+                className="soft-card p-6 md:p-7"
               >
+                <FeatureIcon name={type.icon} />
                 <h3 className="text-[1.05rem] font-semibold text-[#2C2C2C]">
                   {type.label}
                 </h3>
@@ -152,43 +180,34 @@ export default function EventsPage() {
         </div>
       </section>
 
-      {/* FORMATS */}
-      <section className="bg-[#1f1b17] py-14 md:py-24">
+      {/* WHAT'S INCLUDED */}
+      <section className="bg-[var(--page-stone)] py-6 md:py-10">
         <div className="section-shell page-gutter">
-          <div className="mb-10 max-w-3xl">
-            <p className="eyebrow mb-4 text-[#a1acb8]">How You Can Have Us</p>
-            <h2 className="section-heading-inverse">
-              Different formats for different occasions.
+          <div className="section-intro mb-10">
+            <p className="eyebrow mb-4">What&apos;s Included</p>
+            <h2 className="section-title section-heading">
+              The same calm, professional support behind every booking.
             </h2>
-            <p className="mt-4 text-stone-300">
-              From surprise singing waiters to a full stage-ready party band —
-              we work with you to find the format that fits your event best.
+            <p className="section-copy mt-4 text-base">
+              Alongside the performance itself, we make the practical side easy
+              so the event feels smooth from first contact to final song.
             </p>
           </div>
-          <div className="flex flex-wrap gap-3">
-            {formats.map((fmt) => (
-              <span
-                key={fmt}
-                className="rounded-full border border-white/20 bg-white/8 px-5 py-2.5 text-sm font-semibold text-white"
-              >
-                {fmt}
-              </span>
+          <div className="grid gap-6 md:grid-cols-3">
+            {qualities.map((q) => (
+              <article key={q.title} className="soft-card p-6 md:p-7">
+                <FeatureIcon name={q.icon} className="mb-4" />
+                <p className="eyebrow mb-4">{q.label}</p>
+                <h3 className="section-subheading text-[1.35rem]">{q.title}</h3>
+                <p className="section-copy mt-4">{q.copy}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* VIDEO */}
-      <YouTubeGrid
-        videos={eventsVideos}
-        eyebrow="See The Energy"
-        heading="Watch us perform live"
-        showLabels
-        background="bg-[var(--page-stone)]"
-      />
-
       {/* CTA */}
-      <section className="bg-[#211d19] py-14 md:py-24">
+      <section className="bg-[#211d19] py-12 md:py-20">
         <div className="section-shell page-gutter text-center">
           <h2 className="section-heading-inverse">
             Let&apos;s talk about your event.
@@ -202,13 +221,13 @@ export default function EventsPage() {
               href="https://wa.me/447740360678"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-[#211d19] transition-colors hover:bg-[#eef1f4]"
+              className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[#211d19] transition-colors hover:bg-[var(--page-stone)]"
             >
               Chat on WhatsApp
             </a>
             <Link
               href="/enquire"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/8"
+              className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white/8"
             >
               Send an Enquiry
             </Link>

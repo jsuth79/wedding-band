@@ -47,7 +47,7 @@ const answers = [
 export default function EnquirePage() {
   return (
     <div className="pt-20">
-      <section className="bg-[var(--page-ivory)] py-14 md:py-24">
+      <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
           <div>
             <p className="eyebrow mb-4">Enquire</p>
@@ -55,9 +55,10 @@ export default function EnquirePage() {
               Check availability for your date.
             </h1>
             <p className="section-copy mt-6 max-w-2xl text-lg">
-              Whether you are still exploring options or already know exactly what
-              you want, get in touch and we will come back within 24 hours with
-              availability, next steps and the package that feels right.
+              Whether you are planning a wedding, private party or corporate
+              event, this is the final step. Share your date, venue and what you
+              have in mind, and we&apos;ll come back with availability, next steps
+              and the option that fits best.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
@@ -70,23 +71,24 @@ export default function EnquirePage() {
               </a>
             </div>
             <p className="mt-4 text-sm text-[#888888]">
-              Or use the form below for a structured enquiry — we reply within 24 hours.
+              Or use the form below for a structured enquiry. Weddings are our
+              most common enquiry, but events and private parties are welcome too.
             </p>
           </div>
           <div className="panel-luxe rounded-[32px] p-8">
-            <p className="text-xs uppercase tracking-[0.22em] text-[#586474]">
+            <p className="text-xs uppercase tracking-[0.22em] text-[var(--color-brand-gold-dark)]">
               Helpful to include
             </p>
             <ul className="mt-4 space-y-3 text-[#444444]">
               {guidance.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1 text-[#6f7c8c]">●</span>
+                  <span className="mt-1 text-[var(--color-brand-gold)]">●</span>
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
             <div className="mt-6 rounded-[20px] bg-[var(--page-stone)] p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6f7c8c]">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-brand-gold)]">
                 Response time
               </p>
               <p className="mt-1 text-sm text-[#444444]">
@@ -97,7 +99,7 @@ export default function EnquirePage() {
         </div>
       </section>
 
-      <section className="bg-[var(--page-stone)] py-8 md:py-12">
+      <section className="bg-[var(--page-stone)] py-6 md:py-10">
         <div className="section-shell page-gutter grid gap-16 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="panel-luxe rounded-[36px] p-6 md:p-8">
             <EnquiryForm />
@@ -111,7 +113,7 @@ export default function EnquirePage() {
                   <p className="text-sm uppercase tracking-[0.16em] text-[#888888]">Email</p>
                   <a
                     href="mailto:info@theclooneys.co.uk"
-                    className="mt-1 inline-block text-[#6f7c8c] hover:text-[#586474]"
+                    className="mt-1 inline-block text-[var(--color-brand-gold)] hover:text-[var(--color-brand-gold-dark)]"
                   >
                     info@theclooneys.co.uk
                   </a>
@@ -120,7 +122,7 @@ export default function EnquirePage() {
                   <p className="text-sm uppercase tracking-[0.16em] text-[#888888]">Phone / WhatsApp</p>
                   <a
                     href="tel:+447740360678"
-                    className="mt-1 inline-block text-[#6f7c8c] hover:text-[#586474]"
+                    className="mt-1 inline-block text-[var(--color-brand-gold)] hover:text-[var(--color-brand-gold-dark)]"
                   >
                     +44 7740 360678
                   </a>
@@ -157,7 +159,7 @@ export default function EnquirePage() {
               <p className="text-sm uppercase tracking-[0.16em] text-[#888888]">
                 Professional Wedding &amp; Events Band
               </p>
-              <div className="mt-3 flex justify-center gap-1 text-[#6f7c8c]">
+              <div className="mt-3 flex justify-center gap-1 text-[var(--color-brand-gold)]">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-xl">
                     ★

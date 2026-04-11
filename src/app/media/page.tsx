@@ -29,7 +29,7 @@ export default function MediaPage() {
     <div className="pt-20">
 
       {/* INTRO */}
-      <section className="bg-[var(--page-ivory)] py-14 md:py-24">
+      <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter">
           <div className="max-w-3xl">
             <p className="eyebrow mb-4">Media</p>
@@ -45,14 +45,14 @@ export default function MediaPage() {
       </section>
 
       {/* FILTERABLE VIDEO GRID */}
-      <section className="bg-[var(--page-stone)] py-14 md:py-24">
+      <section className="bg-[var(--page-stone)] py-12 md:py-20">
         <div className="section-shell page-gutter">
           <MediaGrid videos={allVideos} />
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-[#211d19] py-14 md:py-24">
+      <section className="bg-[#211d19] py-12 md:py-20">
         <div className="section-shell page-gutter text-center">
           <h2 className="section-heading-inverse">
             See how we&apos;d fit your day.

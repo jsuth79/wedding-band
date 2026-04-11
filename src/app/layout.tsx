@@ -60,7 +60,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sans.variable} antialiased`}>
+      <body className={`${sans.className} ${sans.variable} antialiased`}>
         <Navbar />
         <main>{children}</main>
         <Footer />

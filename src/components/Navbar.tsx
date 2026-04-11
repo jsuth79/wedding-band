@@ -8,7 +8,7 @@ const navLinks = [
   { href: "/",         label: "Home" },
   { href: "/weddings", label: "Weddings" },
   { href: "/events",   label: "Events" },
-  { href: "/media",    label: "Media" },
+  { href: "/enquire",  label: "Enquire" },
 ];
 
 export default function Navbar() {
@@ -34,7 +34,7 @@ export default function Navbar() {
 
   const brandClassName = isLightTheme ? "text-[#201b16]" : "text-white";
   const navLinkClassName = (href: string) =>
-    `rounded-full px-3 py-1.5 text-[0.75rem] font-semibold uppercase tracking-[0.18em] transition-colors ${
+    `rounded-full px-3 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.14em] transition-colors ${
       pathname === href
         ? isLightTheme
           ? "bg-[#241f1a] text-white"
@@ -44,8 +44,8 @@ export default function Navbar() {
           : "text-white/88 hover:text-white"
     }`;
   const ctaClassName = isLightTheme
-    ? "inline-flex items-center justify-center rounded-full border border-[#aab5c0] bg-[#6f7c8c] px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:bg-[#586474]"
-    : "inline-flex items-center justify-center rounded-full border border-white/28 bg-white/12 px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm transition-colors hover:bg-white/20";
+    ? "inline-flex items-center justify-center rounded-full border border-[#aab5c0] bg-[#6f7c8c] px-2.5 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-[#705745]"
+    : "inline-flex items-center justify-center rounded-full border border-white/28 bg-white/12 px-2.5 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-sm transition-colors hover:bg-white/20";
   const menuButtonClassName = isLightTheme
     ? "rounded-full border border-[#d7dde3] bg-white/85 p-2.5 text-[#2C2C2C] md:hidden"
     : "rounded-full border border-white/28 bg-white/12 p-2.5 text-white backdrop-blur-sm md:hidden";
@@ -108,7 +108,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className={`block rounded-full px-4 py-3 text-center text-[0.78rem] font-semibold uppercase tracking-[0.18em] transition-colors ${
+                    className={`block rounded-full px-4 py-2.5 text-center text-[0.72rem] font-semibold uppercase tracking-[0.14em] transition-colors ${
                       pathname === link.href
                         ? "bg-[#241f1a] text-white"
                         : "border border-[#ece2d5] bg-white/75 text-[#4f463d]"
@@ -122,7 +122,7 @@ export default function Navbar() {
                 <Link
                   href="/enquire"
                   onClick={() => setIsOpen(false)}
-                  className="inline-flex w-full items-center justify-center rounded-full border border-[#aab5c0] bg-[#6f7c8c] px-5 py-3 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#586474]"
+                  className="inline-flex w-full items-center justify-center rounded-full border border-[#aab5c0] bg-[#6f7c8c] px-5 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-[#586474]"
                 >
                   Check Availability
                 </Link>

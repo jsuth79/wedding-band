@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import YouTubeGrid from "@/components/YouTubeGrid";
-import { allVideos } from "@/lib/videos";
+import FeatureIcon from "@/components/FeatureIcon";
 
 export const metadata: Metadata = {
   title: "Wedding Band Scotland | The Clooneys",
@@ -28,18 +27,17 @@ export const metadata: Metadata = {
 
 const ways = [
   {
-    label: "Singing Waiters",
-    copy: "Disguised as waiting staff, we break into song mid-service. Perfect for the wedding meal — a big surprise guests never see coming.",
+    icon: "surprise" as const,
+    label: "Singing Waiters / Roaming Singers",
+    copy: "An interactive roaming vocal set that moves through your guests and creates a surprise, high-energy atmosphere up close.",
   },
   {
-    label: "Roaming Band",
-    copy: "Moving through your guests, creating atmosphere up close. Interactive, warm and full of energy — ideal for drinks receptions.",
+    icon: "party" as const,
+    label: "Party Trio",
+    copy: "A high-impact three-vocal performance built for evenings, dancefloors and creating a proper party atmosphere.",
   },
   {
-    label: "Full Band",
-    copy: "Stage-ready performance with full sound. Built for evenings, dancefloors and creating a proper party atmosphere.",
-  },
-  {
+    icon: "acoustic" as const,
     label: "Acoustic Moments",
     copy: "A stripped-back, intimate sound perfect for ceremonies, dinner or the quieter parts of your day.",
   },
@@ -115,36 +113,36 @@ const packages = [
 const testimonials = [
   {
     quote:
-      "The Clooneys are phenomenal performers with stunning harmonies. Nothing was too big an ask and they made the whole day feel incredibly special.",
-    source: "Wedding client",
+      "Perfection does not even describe it. We had so many sentimental songs that were not traditional wedding songs, but they learned them all.",
+    source: "Danielle Burns",
   },
   {
     quote:
-      "We still get messages from guests saying the music was the highlight of the day. They read the room perfectly from ceremony right through to the evening.",
-    source: "Wedding client",
+      "They did a fantastic sound setup before the wedding so no guests would know, then had everyone joining in and up doing a conga round the room.",
+    source: "Christine Cosgrove",
   },
   {
     quote:
-      "Every part of the process felt easy, thoughtful and professional. From the first enquiry to the last song of the night.",
-    source: "Wedding client",
+      "Everything was outstanding from the entrance to the end. They had everyone out their seats and made our wedding weekend unforgettable.",
+    source: "Elizabeth Quayle",
   },
 ];
 
-// 3 clips labelled by moment
-const weddingVideos = allVideos.slice(0, 3);
-
 const supportItems = [
   {
+    icon: "support" as const,
     label: "Included",
     title: "Professional support",
     copy: "We help shape the timing, song flow and practical setup so your music feels considered from first contact to final performance.",
   },
   {
+    icon: "venueReady" as const,
     label: "Venue Ready",
     title: "PA and insurance covered",
     copy: "We come prepared with the professional equipment and documentation venues usually need, helping things run smoothly on the day.",
   },
   {
+    icon: "tailored" as const,
     label: "Tailored",
     title: "Built around your plans",
     copy: "If your timings or ideas do not fit neatly into one package, we can talk through a tailored option that suits your wedding best.",
@@ -156,9 +154,9 @@ export default function WeddingsPage() {
     <div className="pt-20">
 
       {/* INTRO */}
-      <section className="bg-[var(--page-ivory)] py-14 md:py-24">
+      <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter">
-          <div className="mb-10 max-w-3xl">
+          <div className="section-intro mb-10">
             <p className="eyebrow mb-4">Weddings</p>
             <h1 className="section-title section-heading">
               From your aisle walk to a full dancefloor.
@@ -195,58 +193,27 @@ export default function WeddingsPage() {
       </section>
 
 
-      {/* WAYS TO HAVE US */}
-      <section className="bg-[var(--page-ivory)] py-14 md:py-24">
-        <div className="section-shell page-gutter">
-          <div className="mb-10 max-w-3xl">
-            <p className="eyebrow mb-4">Ways to Have Us</p>
-            <h2 className="section-title section-heading">
-              Four formats, one band — built around your day.
-            </h2>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {ways.map((way) => (
-              <article
-                key={way.label}
-                className="rounded-[24px] border border-[#d7dde3] bg-white p-6"
-              >
-                <h3 className="text-[1.05rem] font-semibold text-[#2C2C2C]">
-                  {way.label}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-[#545454]">{way.copy}</p>
-              </article>
-            ))}
-          </div>
-          <div className="mt-10 text-center">
-            <a href="#packages" className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2C2C2C] hover:text-[#6f7c8c]">
-              View Pricing →
-            </a>
-            <p className="mt-1.5 text-[0.68rem] uppercase tracking-[0.16em] text-[#999]">No hidden costs</p>
-          </div>
-        </div>
-      </section>
-
-      {/* VIDEO BY MOMENT */}
       {/* PACKAGES */}
-      <section id="packages" className="bg-[var(--page-ivory)] py-10 md:py-16">
+      <section id="packages" className="bg-[var(--page-stone)] py-12 md:py-20">
         <div className="section-shell page-gutter">
-          <div className="mb-10 max-w-3xl">
+          <div className="section-intro mb-10">
             <p className="eyebrow mb-4">Packages</p>
             <h2 className="section-title section-heading">
-              Most couples choose one of these options.
+              Start with the parts of the day you want covered.
             </h2>
             <p className="section-copy mt-4 text-base">
-              These are starting points — every booking can be shaped around your
-              specific plans, venue and timings.
+              Most couples choose one of these starting points, then tailor the
+              finer details around their venue, timings and guest list.
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {packages.map((pkg) => (
               <article
                 key={pkg.name}
-                className="grid gap-5 border-t border-[#d7dde3] pt-6"
+                className="info-card flex h-full flex-col overflow-hidden p-5 md:p-6"
               >
-                <div className="relative aspect-[16/8] overflow-hidden rounded-[20px]">
+                <h3 className="section-subheading text-[1.45rem]">{pkg.name}</h3>
+                <div className="mt-4 relative aspect-[16/9.6] overflow-hidden">
                   <Image
                     src={pkg.image}
                     alt={`The Clooneys — ${pkg.name}`}
@@ -254,29 +221,39 @@ export default function WeddingsPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="flex flex-col">
-                  <h3 className="section-subheading text-[1.45rem]">{pkg.name}</h3>
-                  <p className="section-copy mt-4 text-base">{pkg.description}</p>
-                  <div className="mt-6 flex flex-wrap gap-2">
+                <div className="mt-5 flex flex-1 flex-col">
+                  <p className="section-copy text-[0.95rem] leading-7">{pkg.description}</p>
+                  <ul className="mt-6 space-y-3">
                     {pkg.includes.map((item) => (
-                      <span
+                      <li
                         key={item}
-                        className="rounded-full bg-[var(--page-stone)] px-3 py-1 text-xs uppercase tracking-[0.16em] text-[#5d6775]"
+                        className="flex items-start gap-3 text-sm leading-6 text-[#545454]"
                       >
-                        {item}
-                      </span>
+                        <span
+                          className="mt-1.5 h-2 w-2 rounded-full bg-[var(--color-brand-gold)]"
+                          aria-hidden="true"
+                        />
+                        <span>{item}</span>
+                      </li>
                     ))}
-                  </div>
-                  <div className="my-6 max-w-sm border-t border-b border-stone-200 py-5">
-                    {pkg.prices.map((price) => (
-                      <div
-                        key={price.label}
-                        className="mb-2 flex items-center justify-between text-base text-[#444444] last:mb-0"
-                      >
-                        <span>{price.label}</span>
-                        <span className="font-semibold text-[#2C2C2C]">{price.price}</span>
-                      </div>
-                    ))}
+                  </ul>
+                  <div className="mt-auto pt-6">
+                    <div className="bg-[var(--page-stone)] px-4 py-4">
+                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[var(--color-brand-gold)]">
+                      Starting Prices
+                    </p>
+                    <div className="mt-3 space-y-2">
+                      {pkg.prices.map((price) => (
+                        <div
+                          key={price.label}
+                          className="flex items-center justify-between text-sm text-[#444444]"
+                        >
+                          <span>{price.label}</span>
+                          <span className="font-semibold text-[#2C2C2C]">{price.price}</span>
+                        </div>
+                      ))}
+                    </div>
+                    </div>
                   </div>
                 </div>
               </article>
@@ -285,19 +262,41 @@ export default function WeddingsPage() {
         </div>
       </section>
 
-      {/* VIDEO BY MOMENT */}
-      <YouTubeGrid
-        videos={weddingVideos}
-        eyebrow="Watch Live"
-        heading="See each part of the day in action"
-        showLabels
-        background="bg-[var(--page-stone)]"
-      />
+      {/* OTHER FORMATS */}
+      <section className="bg-[var(--page-ivory)] py-12 md:py-20">
+        <div className="section-shell page-gutter">
+          <div className="section-intro mb-10">
+            <p className="eyebrow mb-4">Other Formats</p>
+            <h2 className="section-title section-heading">
+              Other ways to have The Clooneys on your wedding day.
+            </h2>
+            <p className="section-copy mt-4 text-base">
+              If you are looking for something more interactive, more relaxed or
+              more high-energy, these formats give you another way to shape the
+              feel of the day.
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {ways.map((way) => (
+              <article
+                key={way.label}
+                className="soft-card p-6 md:p-7"
+              >
+                <FeatureIcon name={way.icon} />
+                <h3 className="mt-4 text-[1.05rem] font-semibold text-[#2C2C2C]">
+                  {way.label}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-[#545454]">{way.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* REVIEWS */}
-      <section className="bg-[var(--page-stone)] py-14 md:py-24">
+      <section className="bg-[var(--page-stone)] py-12 md:py-20">
         <div className="section-shell page-gutter">
-          <div className="max-w-3xl">
+          <div className="section-intro">
             <p className="eyebrow mb-4">What Couples Say</p>
             <h2 className="section-title section-heading">
               Words from people who had us on their day.
@@ -311,14 +310,14 @@ export default function WeddingsPage() {
                   i === testimonials.length - 1 ? "md:pr-0" : ""
                 } ${
                   i < testimonials.length - 1
-                    ? "border-b border-[#d7dde3] md:border-b-0 md:border-r"
+                    ? "border-b border-[var(--line-soft)] md:border-b-0 md:border-r"
                     : ""
                 }`}
               >
                 <p className="text-[1.05rem] font-medium leading-7 text-[#2C2C2C]">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
-                <div className="mt-6 flex items-center gap-1 text-[#6f7c8c]">
+                <div className="mt-6 flex items-center gap-1 text-[var(--color-brand-gold)]">
                   {[...Array(5)].map((_, index) => (
                     <span key={index}>★</span>
                   ))}
@@ -333,17 +332,22 @@ export default function WeddingsPage() {
       </section>
 
       {/* WHAT'S INCLUDED */}
-      <section className="bg-[var(--page-ivory)] py-8 md:py-12">
+      <section className="bg-[var(--page-ivory)] py-6 md:py-10">
         <div className="section-shell page-gutter">
-          <div className="mb-8 max-w-3xl">
+          <div className="section-intro mb-8">
             <p className="eyebrow mb-4">What&apos;s Included</p>
             <h2 className="section-title section-heading">
-              Everything designed to make the music feel easy on the day.
+              The same calm, professional support behind every booking.
             </h2>
+            <p className="section-copy mt-4 text-base">
+              Alongside the performance itself, we make the practical side easy
+              so your wedding feels smooth from first contact to final song.
+            </p>
           </div>
-          <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3">
             {supportItems.map((item) => (
-              <article key={item.title} className="border-t border-[#d7dde3] pt-5">
+              <article key={item.title} className="soft-card p-6 md:p-7">
+                <FeatureIcon name={item.icon} className="mb-4" />
                 <p className="eyebrow mb-4">{item.label}</p>
                 <h3 className="section-subheading text-[1.35rem]">{item.title}</h3>
                 <p className="section-copy mt-4">{item.copy}</p>
@@ -354,7 +358,7 @@ export default function WeddingsPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#211d19] py-14 md:py-24">
+      <section className="bg-[#211d19] py-12 md:py-20">
         <div className="section-shell page-gutter text-center">
           <h2 className="section-heading-inverse">
             Ready to check your date?
