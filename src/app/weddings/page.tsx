@@ -27,7 +27,12 @@ export const metadata: Metadata = {
 
 const ways = [
   {
-    icon: "surprise" as const,
+    icon: "acoustic" as const,
+    label: "Acoustic Moments",
+    copy: "A stripped-back, intimate sound perfect for ceremonies, dinner or the quieter parts of your day.",
+  },
+  {
+    icon: "roaming" as const,
     label: "Singing Waiters / Roaming Singers",
     copy: "An interactive roaming vocal set that moves through your guests and creates a surprise, high-energy atmosphere up close.",
   },
@@ -36,11 +41,6 @@ const ways = [
     label: "Party Trio",
     copy: "A high-impact three-vocal performance built for evenings, dancefloors and creating a proper party atmosphere.",
   },
-  {
-    icon: "acoustic" as const,
-    label: "Acoustic Moments",
-    copy: "A stripped-back, intimate sound perfect for ceremonies, dinner or the quieter parts of your day.",
-  },
 ];
 
 const packages = [
@@ -48,8 +48,7 @@ const packages = [
     name: "The Ceremony",
     description:
       "Beautiful live vocals for the aisle entrance, signing and exit, with carefully chosen songs that give your ceremony warmth and emotional impact.",
-    image:
-      "https://images.squarespace-cdn.com/content/65f8c528b5449106e4650e68/a552687e-e421-4227-8f7f-5e565fcc9b23/490661475_122257962626066780_8872813234820613686_n.jpg?content-type=image%2Fjpeg",
+    image: "/images/the-clooneys-ceremony-sq.webp",
     includes: ["Aisle entrance music", "Signing music", "Exit music"],
     prices: [
       { label: "Solo", price: "£325" },
@@ -61,8 +60,7 @@ const packages = [
     name: "Drinks Reception",
     description:
       "Relaxed but polished live sets while guests mingle, celebrate and settle into the day. A lovely bridge from ceremony to reception.",
-    image:
-      "https://images.squarespace-cdn.com/content/65f8c528b5449106e4650e68/5a32b323-e457-4972-82a9-a668b8a70074/456965803_17887043475069880_4128126161902035965_n.jpg?content-type=image%2Fjpeg",
+    image: "/images/the-clooneys-drinks-reception-p.webp",
     includes: ["Acoustic live set", "Perfect for canapes and photos", "Warm upbeat atmosphere"],
     prices: [
       { label: "Solo", price: "£350" },
@@ -74,8 +72,7 @@ const packages = [
     name: "Daytime Package",
     description:
       "Ceremony and drinks reception combined into one seamless live music experience, with a consistent tone from the first arrivals through to the reception.",
-    image:
-      "https://images.squarespace-cdn.com/content/65f8c528b5449106e4650e68/cbc65cef-eec7-411c-8fbf-9ee94f847518/588734913_122298915152066780_2468145125351396523_n.jpg?content-type=image%2Fjpeg",
+    image: "/images/the-clooneys-roaming-singers-l.webp",
     includes: ["Ceremony coverage", "Reception coverage", "Simple all-in daytime flow"],
     prices: [
       { label: "Solo", price: "£575" },
@@ -87,8 +84,7 @@ const packages = [
     name: "Complete Package",
     description:
       "The fullest daytime experience, covering the key emotional moments and the celebration in between. Designed for couples who want the music woven throughout the day.",
-    image:
-      "https://images.squarespace-cdn.com/content/65f8c528b5449106e4650e68/24bd9574-d5dd-4e13-a0dc-663ae071c515/485144419_122252646410066780_367602104697355397_n.jpg?content-type=image%2Fjpeg",
+    image: "/images/the-clooneys-band-2-l.webp",
     includes: ["Ceremony", "Drinks reception", "First dances"],
     prices: [
       { label: "Solo", price: "£795" },
@@ -100,8 +96,7 @@ const packages = [
     name: "Secret Singers",
     description:
       "Unexpected vocal performances that appear from nowhere and turn the room instantly. Ideal for high-energy meal entertainment and a talking point guests never forget.",
-    image:
-      "https://images.squarespace-cdn.com/content/65f8c528b5449106e4650e68/954a10d7-d6fb-4dba-b985-7f38aaf5fbae/481789981_122246168978066780_3483161538487758072_n.jpg?content-type=image%2Fjpeg",
+    image: "/images/the-clooneys-surprise-singers-sq.webp",
     includes: ["Interactive performance", "Perfect during the meal", "Big surprise factor"],
     prices: [
       { label: "Duo", price: "£795" },
@@ -174,19 +169,27 @@ export default function WeddingsPage() {
                 that matter most to you. We&apos;ll guide you through the options and
                 make sure the music fits perfectly.
               </p>
+              <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="https://wa.me/447740360678"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  Chat on WhatsApp
+                </a>
+                <Link href="/enquire" className="btn-secondary">
+                  Check Your Date
+                </Link>
+              </div>
             </div>
-            <div className="flex flex-col gap-4 lg:items-stretch">
-              <a
-                href="https://wa.me/447740360678"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary w-full"
-              >
-                Chat on WhatsApp
-              </a>
-              <Link href="/enquire" className="btn-secondary w-full">
-                Check Your Date
-              </Link>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[20px]">
+              <Image
+                src="/images/the-clooneys-bride.webp"
+                alt="The Clooneys performing at a Scottish wedding"
+                fill
+                className="object-cover object-top"
+              />
             </div>
           </div>
         </div>
@@ -213,12 +216,12 @@ export default function WeddingsPage() {
                 className="info-card flex h-full flex-col overflow-hidden p-5 md:p-6"
               >
                 <h3 className="section-subheading text-[1.45rem]">{pkg.name}</h3>
-                <div className="mt-4 relative aspect-[16/9.6] overflow-hidden">
+                <div className="mt-4 relative aspect-square overflow-hidden">
                   <Image
                     src={pkg.image}
                     alt={`The Clooneys — ${pkg.name}`}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
                 <div className="mt-5 flex flex-1 flex-col">
@@ -262,13 +265,13 @@ export default function WeddingsPage() {
         </div>
       </section>
 
-      {/* OTHER FORMATS */}
+      {/* FORMATS */}
       <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter">
           <div className="section-intro mb-10">
-            <p className="eyebrow mb-4">Other Formats</p>
+            <p className="eyebrow mb-4">Formats</p>
             <h2 className="section-title section-heading">
-              Other ways to have The Clooneys on your wedding day.
+              Choose how you want the music to feel.
             </h2>
             <p className="section-copy mt-4 text-base">
               If you are looking for something more interactive, more relaxed or
@@ -331,32 +334,6 @@ export default function WeddingsPage() {
         </div>
       </section>
 
-      {/* WHAT'S INCLUDED */}
-      <section className="bg-[var(--page-ivory)] py-6 md:py-10">
-        <div className="section-shell page-gutter">
-          <div className="section-intro mb-8">
-            <p className="eyebrow mb-4">What&apos;s Included</p>
-            <h2 className="section-title section-heading">
-              The same calm, professional support behind every booking.
-            </h2>
-            <p className="section-copy mt-4 text-base">
-              Alongside the performance itself, we make the practical side easy
-              so your wedding feels smooth from first contact to final song.
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {supportItems.map((item) => (
-              <article key={item.title} className="soft-card p-6 md:p-7">
-                <FeatureIcon name={item.icon} className="mb-4" />
-                <p className="eyebrow mb-4">{item.label}</p>
-                <h3 className="section-subheading text-[1.35rem]">{item.title}</h3>
-                <p className="section-copy mt-4">{item.copy}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="bg-[#211d19] py-12 md:py-20">
         <div className="section-shell page-gutter text-center">
@@ -382,6 +359,32 @@ export default function WeddingsPage() {
             >
               Send an Enquiry
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT'S INCLUDED */}
+      <section className="bg-[var(--page-ivory)] py-6 md:py-10">
+        <div className="section-shell page-gutter">
+          <div className="section-intro mb-8">
+            <p className="eyebrow mb-4">What&apos;s Included</p>
+            <h2 className="section-title section-heading">
+              The same calm, professional support behind every booking.
+            </h2>
+            <p className="section-copy mt-4 text-base">
+              Alongside the performance itself, we make the practical side easy
+              so your wedding feels smooth from first contact to final song.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {supportItems.map((item) => (
+              <article key={item.title} className="soft-card p-6 md:p-7">
+                <FeatureIcon name={item.icon} className="mb-4" />
+                <p className="eyebrow mb-4">{item.label}</p>
+                <h3 className="section-subheading text-[1.35rem]">{item.title}</h3>
+                <p className="section-copy mt-4">{item.copy}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

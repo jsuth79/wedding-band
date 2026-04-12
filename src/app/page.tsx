@@ -61,19 +61,19 @@ const eventHighlights = [
     copy: "Polished live vocals for award dinners, launches, client events and team celebrations.",
   },
   {
-    icon: "party" as const,
+    icon: "celebration" as const,
     label: "Private Parties",
     copy: "A warm, high-impact set for birthdays, anniversaries and nights that need real atmosphere.",
   },
   {
     icon: "support" as const,
-    label: "Professional Delivery",
-    copy: "Clear communication, smooth setup and a performance shaped to the tone of the room.",
+    label: "Seasonal & Festive Events",
+    copy: "Christmas parties, end-of-year celebrations and seasonal dos that want something beyond a playlist.",
   },
 ];
 
 // 3-clip video strip for home page
-const homeVideos = allVideos.slice(0, 3);
+const homeVideos = allVideos;
 
 export default function Home() {
   const serviceSchema = {
@@ -112,7 +112,7 @@ export default function Home() {
       {/* BOOKING BANNER */}
       <div className="bg-[#241f1a] py-3 text-center">
         <p className="text-[0.68rem] uppercase tracking-[0.22em] text-stone-300">
-          Now booking 2026 &amp; 2027
+          Now booking 2026 &amp; 2027 weddings and events
         </p>
       </div>
 
@@ -148,8 +148,8 @@ export default function Home() {
               </p>
 
               <p className="mt-8 border-t border-[var(--line-soft)] pt-6 text-sm leading-6 text-[#5e4d41]">
-                Trusted by couples at venues across Scotland, from Norton House
-                to The Signet Library and beyond.
+                From intimate barn ceremonies to grand city receptions — at home
+                across Scotland's finest venues.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -167,12 +167,12 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="order-1 relative aspect-[4/5] overflow-hidden rounded-[24px] shadow-[0_24px_60px_rgba(44,44,44,0.12)] md:order-2">
+            <div className="order-1 relative aspect-square overflow-hidden rounded-[24px] shadow-[0_24px_60px_rgba(44,44,44,0.12)] md:order-2">
               <Image
-                src="/images/the-clooneys-ceremony2.webp"
-                alt="The Clooneys performing live vocal harmonies at a Scottish wedding ceremony"
+                src="/images/the-clooneys-award-sq-2.webp"
+                alt="The Clooneys wedding and events band Scotland"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
           </div>
@@ -211,10 +211,7 @@ export default function Home() {
               Whether you want one key moment covered or music throughout the
               day, we can shape it around your plans.
             </p>
-            <Link
-              href="/weddings"
-              className="mt-5 inline-flex items-center rounded-full border border-[#2C2C2C]/15 px-5 py-2.5 text-[0.7rem] font-bold uppercase tracking-[0.14em] text-[#2C2C2C] transition-colors hover:bg-white/70"
-            >
+            <Link href="/weddings" className="btn-secondary mt-5">
               Explore Wedding Packages
             </Link>
           </div>
@@ -224,7 +221,7 @@ export default function Home() {
       {/* EVENTS */}
       <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter">
-          <div className="section-intro mb-10">
+          <div className="section-intro ml-auto mb-10 text-right">
             <p className="eyebrow mb-4">Events</p>
             <h2 className="section-title section-heading">
               Live entertainment for corporate events and private parties.
@@ -253,10 +250,7 @@ export default function Home() {
               Looking for a tailored event format? We can shape the set around
               your timings, venue and the kind of atmosphere you want to create.
             </p>
-            <Link
-              href="/events"
-              className="mt-5 inline-flex items-center rounded-full border border-[#2C2C2C]/15 px-5 py-2.5 text-[0.7rem] font-bold uppercase tracking-[0.14em] text-[#2C2C2C] transition-colors hover:bg-[var(--page-stone)]"
-            >
+            <Link href="/events" className="btn-secondary mt-5">
               Explore Event Options
             </Link>
           </div>

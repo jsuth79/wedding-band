@@ -75,10 +75,13 @@ export default function YouTubeGrid({
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+  const ytVideos = videos.filter((v) => (v.platform ?? "youtube") === "youtube");
+  const igVideos = videos.filter((v) => v.platform === "instagram" || v.platform === "facebook");
+
   const colClass =
-    videos.length <= 2
-      ? "lg:grid-cols-2 lg:gap-0"
-      : "lg:grid-cols-3 lg:gap-0";
+    ytVideos.length <= 2
+      ? "lg:grid-cols-2"
+      : "lg:grid-cols-3";
 
   return (
     <>
@@ -92,32 +95,43 @@ export default function YouTubeGrid({
             <p className="eyebrow mb-4">{eyebrow}</p>
             <h2 className="section-title section-heading mb-4">{heading}</h2>
           </div>
-          <div className={`grid grid-cols-1 gap-6 md:grid-cols-2 ${colClass}`}>
-            {videos.map((video) => (
-              <div
-                key={video.id}
-                className="group py-5 lg:px-6 lg:first:pl-0 lg:last:pr-0 lg:[&:not(:last-child)]:border-r lg:[&:not(:last-child)]:border-[#d7dde3]"
-              >
-                {showLabels && video.label && (
-                  <p className="eyebrow mb-3">{video.label}</p>
-                )}
-                <div className="relative aspect-video overflow-hidden rounded-[20px] bg-stone-200">
-                  <iframe
-                    id={`yt-player-${video.id}`}
-                    src={`https://www.youtube.com/embed/${video.id}?enablejsapi=1`}
-                    title={video.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="absolute inset-0 h-full w-full"
-                  />
+          {igVideos.length > 0 && (
+            <div className="mb-10 flex flex-wrap gap-6">
+              {igVideos.map((video) => (
+                <div key={video.id} className="w-64 flex-shrink-0">
+                  <div className="relative aspect-[9/16] overflow-hidden rounded-[20px] bg-stone-200">
+                    {video.platform === "facebook" ? (
+                      <iframe
+                        src={`https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F${video.id}%2F&show_text=false`}
+                        title={video.title}
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                        allowFullScreen
+                        className="absolute inset-0 h-full w-full"
+                      />
+                    ) : (
+                      <iframe
+                        src={`https://www.instagram.com/reel/${video.id}/embed/`}
+                        title={video.title}
+                        allowFullScreen
+                        className="absolute inset-0 h-full w-full"
+                      />
+                    )}
+                  </div>
                 </div>
-                <h3 className="mt-4 text-base font-medium text-[#444444] transition-colors group-hover:text-[#6f7c8c]">
-                  {showLabels && video.label ? video.label : video.title}
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-[#777777]">
-                  {video.caption ??
-                    "A snapshot of the atmosphere, energy and style couples can expect live."}
-                </p>
+              ))}
+            </div>
+          )}
+          <div className={`grid grid-cols-1 gap-6 md:grid-cols-2 ${colClass}`}>
+            {ytVideos.map((video) => (
+              <div key={video.id} className="relative aspect-video overflow-hidden rounded-[20px] bg-stone-200">
+                <iframe
+                  id={`yt-player-${video.id}`}
+                  src={`https://www.youtube.com/embed/${video.id}?enablejsapi=1`}
+                  title={video.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full"
+                />
               </div>
             ))}
           </div>

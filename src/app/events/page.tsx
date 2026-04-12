@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import FeatureIcon from "@/components/FeatureIcon";
 
@@ -46,25 +47,30 @@ const qualities = [
 
 const eventTypes = [
   {
-    icon: "events" as const,
     label: "Corporate Events",
+    image: "/images/the-clooneys-corporate-l-2.webp",
     copy: "Award dinners, product launches, team celebrations and client entertainment. We match the tone of your event — professional, polished and with genuine impact.",
   },
   {
-    icon: "party" as const,
     label: "Private Parties",
+    image: "/images/the-clooneys-party.webp",
     copy: "Milestone birthdays, anniversary celebrations and private gatherings. We bring the kind of energy that makes the night feel truly special.",
   },
   {
-    icon: "support" as const,
     label: "Charity Events",
+    image: "/images/the-clooneys-events-l.webp",
     copy: "Fundraising dinners and charity gala evenings. We understand the importance of the occasion and deliver a performance that does justice to the cause.",
   },
 ];
 
 const formats = [
   {
-    icon: "surprise" as const,
+    icon: "acoustic" as const,
+    label: "Acoustic",
+    copy: "A more relaxed option for drinks, dinners and moments that need warmth without overwhelming the room.",
+  },
+  {
+    icon: "roaming" as const,
     label: "Singing Waiters / Roaming Singers",
     copy: "An interactive roaming vocal set that moves through the room, surprises guests and changes the energy instantly.",
   },
@@ -72,11 +78,6 @@ const formats = [
     icon: "party" as const,
     label: "Party Trio",
     copy: "A high-impact three-vocal set built for bigger reactions, celebrations and dancefloor energy.",
-  },
-  {
-    icon: "acoustic" as const,
-    label: "Acoustic",
-    copy: "A more relaxed option for drinks, dinners and moments that need warmth without overwhelming the room.",
   },
 ];
 
@@ -106,26 +107,67 @@ export default function EventsPage() {
                 galas to relaxed birthday dinners — and adjusting our set to match
                 the moment.
               </p>
+              <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="https://wa.me/447740360678"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  Chat on WhatsApp
+                </a>
+                <Link href="/enquire" className="btn-secondary">
+                  Enquire About Your Event
+                </Link>
+              </div>
             </div>
-            <div className="flex flex-col gap-4 lg:items-stretch">
-              <a
-                href="https://wa.me/447740360678"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary w-full"
-              >
-                Chat on WhatsApp
-              </a>
-              <Link href="/enquire" className="btn-secondary w-full">
-                Enquire About Your Event
-              </Link>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[20px]">
+              <Image
+                src="/images/the-clooneys-band-sq-2.webp"
+                alt="The Clooneys performing at a corporate event in Scotland"
+                fill
+                className="object-cover object-top"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* FORMATS */}
+      {/* EVENT TYPES */}
       <section className="bg-[var(--page-stone)] py-12 md:py-20">
+        <div className="section-shell page-gutter">
+          <div className="section-intro mb-10">
+            <p className="eyebrow mb-4">Event Types</p>
+            <h2 className="section-title section-heading">
+              We work well across a range of occasions.
+            </h2>
+          </div>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {eventTypes.map((type) => (
+              <article
+                key={type.label}
+                className="info-card flex h-full flex-col overflow-hidden p-5 md:p-6"
+              >
+                <h3 className="section-subheading text-[1.45rem]">{type.label}</h3>
+                <div className="mt-4 relative aspect-square overflow-hidden">
+                  <Image
+                    src={type.image}
+                    alt={`The Clooneys — ${type.label}`}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="mt-5 flex flex-1 flex-col">
+                  <p className="section-copy text-[0.95rem] leading-7">{type.copy}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FORMATS */}
+      <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter">
           <div className="section-intro mb-10">
             <p className="eyebrow mb-4">Formats</p>
@@ -137,7 +179,7 @@ export default function EventsPage() {
               toward the format that suits the event best.
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {formats.map((fmt) => (
               <article
                 key={fmt.label}
@@ -148,58 +190,6 @@ export default function EventsPage() {
                   {fmt.label}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-[#545454]">{fmt.copy}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* EVENT TYPES */}
-      <section className="bg-[var(--page-ivory)] py-12 md:py-20">
-        <div className="section-shell page-gutter">
-          <div className="section-intro mb-10">
-            <p className="eyebrow mb-4">Event Types</p>
-            <h2 className="section-title section-heading">
-              We work well across a range of occasions.
-            </h2>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {eventTypes.map((type) => (
-              <article
-                key={type.label}
-                className="soft-card p-6 md:p-7"
-              >
-                <FeatureIcon name={type.icon} />
-                <h3 className="text-[1.05rem] font-semibold text-[#2C2C2C]">
-                  {type.label}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-[#545454]">{type.copy}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* WHAT'S INCLUDED */}
-      <section className="bg-[var(--page-stone)] py-6 md:py-10">
-        <div className="section-shell page-gutter">
-          <div className="section-intro mb-10">
-            <p className="eyebrow mb-4">What&apos;s Included</p>
-            <h2 className="section-title section-heading">
-              The same calm, professional support behind every booking.
-            </h2>
-            <p className="section-copy mt-4 text-base">
-              Alongside the performance itself, we make the practical side easy
-              so the event feels smooth from first contact to final song.
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {qualities.map((q) => (
-              <article key={q.title} className="soft-card p-6 md:p-7">
-                <FeatureIcon name={q.icon} className="mb-4" />
-                <p className="eyebrow mb-4">{q.label}</p>
-                <h3 className="section-subheading text-[1.35rem]">{q.title}</h3>
-                <p className="section-copy mt-4">{q.copy}</p>
               </article>
             ))}
           </div>
@@ -231,6 +221,32 @@ export default function EventsPage() {
             >
               Send an Enquiry
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT'S INCLUDED */}
+      <section className="bg-[var(--page-stone)] py-6 md:py-10">
+        <div className="section-shell page-gutter">
+          <div className="section-intro mb-10">
+            <p className="eyebrow mb-4">What&apos;s Included</p>
+            <h2 className="section-title section-heading">
+              The same calm, professional support behind every booking.
+            </h2>
+            <p className="section-copy mt-4 text-base">
+              Alongside the performance itself, we make the practical side easy
+              so the event feels smooth from first contact to final song.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {qualities.map((q) => (
+              <article key={q.title} className="soft-card p-6 md:p-7">
+                <FeatureIcon name={q.icon} className="mb-4" />
+                <p className="eyebrow mb-4">{q.label}</p>
+                <h3 className="section-subheading text-[1.35rem]">{q.title}</h3>
+                <p className="section-copy mt-4">{q.copy}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

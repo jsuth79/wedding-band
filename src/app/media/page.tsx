@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import MediaGrid from "@/components/MediaGrid";
 import { allVideos } from "@/lib/videos";
 
 export const metadata: Metadata = {
@@ -37,17 +36,47 @@ export default function MediaPage() {
               See The Clooneys in action.
             </h1>
             <p className="section-copy mt-6 text-lg">
-              Real performances from real events — use the filters below to see
-              ceremony moments, background sets and full party energy.
+              Real performances from real weddings and events across Scotland.
             </p>
           </div>
         </div>
       </section>
 
-      {/* FILTERABLE VIDEO GRID */}
+      {/* VIDEO GRID */}
       <section className="bg-[var(--page-stone)] py-12 md:py-20">
         <div className="section-shell page-gutter">
-          <MediaGrid videos={allVideos} />
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {allVideos.map((video) => (
+              <article key={video.id}>
+                <div className="relative aspect-video overflow-hidden rounded-[20px] bg-stone-200">
+                  {video.platform === "facebook" ? (
+                    <iframe
+                      src={`https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F${video.id}%2F&show_text=false`}
+                      title={video.title}
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="absolute inset-0 h-full w-full"
+                    />
+                  ) : video.platform === "instagram" ? (
+                    <iframe
+                      src={`https://www.instagram.com/reel/${video.id}/embed/`}
+                      title={video.title}
+                      allowFullScreen
+                      className="absolute inset-0 h-full w-full"
+                    />
+                  ) : (
+                    <iframe
+                      src={`https://www.youtube.com/embed/${video.id}`}
+                      title={video.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute inset-0 h-full w-full"
+                    />
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
