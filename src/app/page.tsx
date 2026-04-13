@@ -125,7 +125,7 @@ export default function Home() {
               A trio built on harmony, warmth and real impact.
             </h2>
           </div>
-          <div className="grid items-start gap-10 md:grid-cols-[minmax(0,1.7fr)_minmax(280px,0.72fr)] lg:grid-cols-[minmax(0,1.7fr)_minmax(320px,0.72fr)]">
+          <div className="grid items-start gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(280px,1fr)] lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,1fr)]">
             <div className="order-2 md:order-1">
               <div className="mt-2 flex items-center justify-center gap-2 md:justify-start" aria-hidden="true">
                 {[1, 2, 3].map((item) => (
@@ -167,9 +167,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="order-1 relative aspect-square overflow-hidden rounded-[24px] shadow-[0_24px_60px_rgba(44,44,44,0.12)] md:order-2">
+            <div className="order-1 relative aspect-[4/3] overflow-hidden rounded-[24px] shadow-[0_24px_60px_rgba(44,44,44,0.12)] md:order-2">
               <Image
-                src="/images/the-clooneys-award-sq-2.webp"
+                src="/images/the-clooneys-corporate-l-2.webp"
                 alt="The Clooneys wedding and events band Scotland"
                 fill
                 className="object-cover object-top"
@@ -262,7 +262,6 @@ export default function Home() {
         videos={homeVideos}
         eyebrow="See The Clooneys Live"
         heading="Watch us in action"
-        showLabels
         background="bg-[var(--page-stone)]"
       />
 
