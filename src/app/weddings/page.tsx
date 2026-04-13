@@ -51,7 +51,6 @@ const packages = [
     image: "/images/the-clooneys-ceremony-sq.webp",
     includes: ["Aisle entrance music", "Signing music", "Exit music"],
     prices: [
-      { label: "Solo", price: "£325" },
       { label: "Duo", price: "£695" },
       { label: "Trio", price: "£975" },
     ],
@@ -63,7 +62,6 @@ const packages = [
     image: "/images/the-clooneys-drinks-reception-p.webp",
     includes: ["Acoustic live set", "Perfect for canapes and photos", "Warm upbeat atmosphere"],
     prices: [
-      { label: "Solo", price: "£350" },
       { label: "Duo", price: "£700" },
       { label: "Trio", price: "£1050" },
     ],
@@ -75,7 +73,6 @@ const packages = [
     image: "/images/the-clooneys-roaming-singers-l.webp",
     includes: ["Ceremony coverage", "Reception coverage", "Simple all-in daytime flow"],
     prices: [
-      { label: "Solo", price: "£575" },
       { label: "Duo", price: "£1150" },
       { label: "Trio", price: "£1725" },
     ],
@@ -87,7 +84,6 @@ const packages = [
     image: "/images/the-clooneys-band-2-l.webp",
     includes: ["Ceremony", "Drinks reception", "First dances"],
     prices: [
-      { label: "Solo", price: "£795" },
       { label: "Duo", price: "£1590" },
       { label: "Trio", price: "£2385" },
     ],
@@ -226,7 +222,7 @@ export default function WeddingsPage() {
                 </div>
                 <div className="mt-5 flex flex-1 flex-col">
                   <p className="section-copy text-[0.95rem] leading-7">{pkg.description}</p>
-                  <ul className="mt-6 space-y-3">
+                  <ul className="mt-8 mb-6 space-y-3">
                     {pkg.includes.map((item) => (
                       <li
                         key={item}
@@ -240,10 +236,9 @@ export default function WeddingsPage() {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-auto pt-6">
-                    <div className="bg-[var(--page-stone)] px-4 py-4">
+                  <div className="mt-auto pt-8 border-t border-[var(--line-soft)]">
                     <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[var(--color-brand-gold)]">
-                      Starting Prices
+                      Prices
                     </p>
                     <div className="mt-3 space-y-2">
                       {pkg.prices.map((price) => (
@@ -256,12 +251,27 @@ export default function WeddingsPage() {
                         </div>
                       ))}
                     </div>
-                    </div>
                   </div>
                 </div>
               </article>
             ))}
           </div>
+          <p className="mt-8 text-sm leading-6 text-[#5e4d41]">
+            Solo prices are also available on request.{" "}
+            <a
+              href="https://wa.me/447740360678"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-[#2C2C2C]"
+            >
+              WhatsApp us
+            </a>{" "}
+            or{" "}
+            <Link href="/enquire" className="underline hover:text-[#2C2C2C]">
+              send an enquiry
+            </Link>{" "}
+            for more details.
+          </p>
         </div>
       </section>
 

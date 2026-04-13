@@ -53,9 +53,9 @@ export const allVideos: VideoItem[] = [
     id: "882952860709255",
     platform: "facebook",
     orientation: "landscape",
-    title: "Leave The Door Open",
+    title: "Signed Sealed Delivered",
     description: "Trio",
-    category: "Roaming Singers",
+    category: "Wedding Ceremony",
   },
   {
     id: "963968569130937",
@@ -81,8 +81,8 @@ export const allVideos: VideoItem[] = [
   {
     id: "4cXKL3oPLNA",
     title: "Leave the Door Open — Silk Sonic",
-    description: "The Clooneys perform Leave the Door Open by Silk Sonic — live wedding ceremony in Scotland",
-    category: "ceremony",
+    description: "Trio",
+    category: "Roaming Singers",
   },
   {
     id: "XKc-6xf8_mQ",
@@ -93,13 +93,13 @@ export const allVideos: VideoItem[] = [
   {
     id: "ElDXQQPltmU",
     title: "Love on Top — Beyoncé",
-    description: "The Clooneys perform Love on Top by Beyoncé — live wedding evening party in Scotland",
+    description: "Trio",
     category: "party",
   },
   {
     id: "Ay7eYAzIUSk",
     title: "Young Hearts Run Free — Candi Staton",
-    description: "The Clooneys perform Young Hearts Run Free by Candi Staton — live wedding performance in Scotland",
+    description: "Trio",
     category: "party",
   },
 ];
