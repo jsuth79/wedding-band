@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.theclooneys.co.uk)"
+      "WebFetch(domain:www.theclooneys.co.uk)",
+      "Bash(npm uninstall:*)"
     ]
   }
 }

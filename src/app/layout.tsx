@@ -60,6 +60,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script defer src="https://umami-three-smoky.vercel.app/script.js" data-website-id="27623460-856a-45ce-ae66-3198efb09b08"></script>
+      </head>
       <body className={`${sans.className} ${sans.variable} antialiased`}>
         <Navbar />
         <main>{children}</main>

@@ -1,11 +1,20 @@
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
-function getResendClient() {
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    throw new Error("RESEND_API_KEY environment variable is not set");
+function getTransporter() {
+  const { SMTP_USER, SMTP_PASS } = process.env;
+  if (!SMTP_USER || !SMTP_PASS) {
+    throw new Error("SMTP_USER and SMTP_PASS environment variables are not set");
   }
-  return new Resend(apiKey);
+  return nodemailer.createTransport({
+    host: "smtppro.zoho.eu",
+    port: 587,
+    secure: false,
+    requireTLS: true,
+    auth: {
+      user: SMTP_USER,
+      pass: SMTP_PASS,
+    },
+  });
 }
 
 interface EnquiryData {
@@ -39,10 +48,11 @@ export async function sendEnquiryEmail(data: EnquiryData) {
   const safeEventType = escapeHtml(eventType);
   const safeMessage = escapeHtml(message);
 
-  const resend = getResendClient();
-  const { error } = await resend.emails.send({
-    from: "Website Enquiry <hello@theclooneys.co.uk>",
-    to: process.env.ENQUIRY_EMAIL || "hello@theclooneys.co.uk",
+  const transporter = getTransporter();
+
+  await transporter.sendMail({
+    from: `Website Enquiry <${process.env.SMTP_USER}>`,
+    to: process.env.ENQUIRY_EMAIL || process.env.SMTP_USER,
     replyTo: email,
     subject: `New Enquiry: ${safeEventType} on ${formattedDate}`,
     html: `
@@ -83,10 +93,6 @@ export async function sendEnquiryEmail(data: EnquiryData) {
       </div>
     `,
   });
-
-  if (error) {
-    throw error;
-  }
 
   return { success: true };
 }
