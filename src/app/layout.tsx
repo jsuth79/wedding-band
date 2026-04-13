@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       "Award-winning wedding and events band based in Scotland. Vocal harmonies for ceremonies, drinks receptions and evening parties across Scotland and the UK.",
     images: [
       {
-        url: "/images/the_clooneys_hero.webp",
+        url: "/images/the-clooneys-web.jpg",
         width: 1200,
         height: 630,
         alt: "The Clooneys Wedding Band performing live",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "The Clooneys | Award-Winning Wedding Band Scotland",
     description:
       "Award-winning wedding and events band based in Scotland. Vocal harmonies for ceremonies, drinks receptions and evening parties across Scotland and the UK.",
-    images: ["/images/the_clooneys_hero.webp"],
+    images: ["/images/the-clooneys-web.jpg"],
   },
 };
 

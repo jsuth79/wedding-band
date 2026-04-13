@@ -92,7 +92,7 @@ export default function Home() {
     email: "info@theclooneys.co.uk",
     description:
       "Award-winning wedding and events band based in Scotland providing live music with signature vocal harmonies for ceremonies, drinks receptions and evening parties.",
-    image: "https://www.theclooneys.co.uk/images/the_clooneys_hero.webp",
+    image: "https://www.theclooneys.co.uk/images/the-clooneys-web.jpg",
     areaServed: [
       { "@type": "City", name: "Glasgow" },
       { "@type": "City", name: "Edinburgh" },

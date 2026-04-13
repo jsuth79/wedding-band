@@ -44,8 +44,8 @@ export default function Navbar() {
           : "text-white/88 hover:text-white"
     }`;
   const ctaClassName = isLightTheme
-    ? "inline-flex items-center justify-center rounded-full border border-[#aab5c0] bg-[#6f7c8c] px-2.5 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-[#705745]"
-    : "inline-flex items-center justify-center rounded-full border border-white/28 bg-white/12 px-2.5 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-sm transition-colors hover:bg-white/20";
+    ? "inline-flex items-center justify-center rounded-full border border-[#aab5c0] bg-[#6f7c8c] px-2.5 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-[#705745]"
+    : "inline-flex items-center justify-center rounded-full border border-white/28 bg-white/12 px-2.5 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-sm transition-colors hover:bg-white/20";
   const menuButtonClassName = isLightTheme
     ? "rounded-full border border-[#d7dde3] bg-white/85 p-2.5 text-[#2C2C2C] md:hidden"
     : "rounded-full border border-white/28 bg-white/12 p-2.5 text-white backdrop-blur-sm md:hidden";
