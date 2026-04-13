@@ -4,23 +4,23 @@ import type { Metadata } from "next";
 import FeatureIcon from "@/components/FeatureIcon";
 
 export const metadata: Metadata = {
-  title: "Wedding Band Scotland | The Clooneys",
+  title: "Live Wedding Band Scotland | Packages & Prices — The Clooneys",
   description:
-    "From your aisle walk to a full dancefloor. The Clooneys provide live wedding music for ceremonies, drinks receptions, dinner and evening parties across Scotland and the UK.",
+    "Live wedding band Scotland covering ceremonies, drinks receptions, dinner and evening parties. From the aisle to the dancefloor — The Clooneys.",
   alternates: {
     canonical: "/weddings",
   },
   openGraph: {
-    title: "Wedding Band Scotland | The Clooneys",
+    title: "Live Wedding Band Scotland | Packages & Prices — The Clooneys",
     description:
-      "From your aisle walk to a full dancefloor. Live wedding music for ceremonies, drinks receptions, dinner and evening parties across Scotland.",
+      "Live wedding band Scotland covering ceremonies, drinks receptions, dinner and evening parties. From the aisle to the dancefloor — The Clooneys.",
     url: "https://www.theclooneys.co.uk/weddings",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wedding Band Scotland | The Clooneys",
+    title: "Live Wedding Band Scotland | Packages & Prices — The Clooneys",
     description:
-      "From your aisle walk to a full dancefloor. Live wedding music for ceremonies, drinks receptions, dinner and evening parties across Scotland.",
+      "Live wedding band Scotland covering ceremonies, drinks receptions, dinner and evening parties. From the aisle to the dancefloor — The Clooneys.",
   },
 };
 

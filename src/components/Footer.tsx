@@ -74,7 +74,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-stone-700 mt-6 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-stone-400">
           <p>&copy; {new Date().getFullYear()} The Clooneys. All rights reserved.</p>
-          <p>Professional Wedding &amp; Events Band &bull; Scotland &amp; UK</p>
+          <div className="flex items-center gap-4">
+            <p>Professional Wedding &amp; Events Band &bull; Scotland &amp; UK</p>
+            <a href="/privacy-policy" className="hover:text-stone-200 transition-colors">Privacy Policy</a>
+          </div>
         </div>
       </div>
     </footer>

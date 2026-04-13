@@ -6,7 +6,7 @@ export default function HeroSection() {
     <section className="relative isolate min-h-[700px] overflow-hidden bg-stone-900">
       <Image
         src="/images/the-clooneys-scotland-wedding-band-ceremony.jpeg"
-        alt=""
+        alt="The Clooneys wedding band performing live at a Scottish ceremony"
         fill
         priority
         className="object-cover object-top scale-[1.02]"

@@ -12,29 +12,26 @@ const sans = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "The Clooneys | Premium Wedding & Events Band",
+  title: "The Clooneys | Award-Winning Wedding Band Scotland",
   description:
-    "Professional wedding and events band based in Scotland. Stunning vocal harmonies and live entertainment for ceremonies, receptions, and celebrations across Scotland and the UK.",
+    "Award-winning wedding and events band based in Scotland. Vocal harmonies for ceremonies, drinks receptions and evening parties across Scotland and the UK.",
   keywords: [
     "wedding band Scotland",
     "wedding band UK",
-    "events band",
+    "events band Scotland",
     "ceremony band",
     "Scottish wedding entertainment",
     "The Clooneys band",
   ],
   metadataBase: new URL("https://www.theclooneys.co.uk"),
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://www.theclooneys.co.uk",
     siteName: "The Clooneys Wedding & Events Band",
-    title: "The Clooneys | Premium Wedding & Events Band",
+    title: "The Clooneys | Award-Winning Wedding Band Scotland",
     description:
-      "Professional wedding and events band based in Scotland. Stunning vocal harmonies and live entertainment for ceremonies, receptions, and celebrations across Scotland and the UK.",
+      "Award-winning wedding and events band based in Scotland. Vocal harmonies for ceremonies, drinks receptions and evening parties across Scotland and the UK.",
     images: [
       {
         url: "/images/the_clooneys_hero.webp",
@@ -46,9 +43,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Clooneys | Premium Wedding & Events Band",
+    title: "The Clooneys | Award-Winning Wedding Band Scotland",
     description:
-      "Professional wedding and events band based in Scotland. Stunning vocal harmonies and live entertainment across Scotland and the UK.",
+      "Award-winning wedding and events band based in Scotland. Vocal harmonies for ceremonies, drinks receptions and evening parties across Scotland and the UK.",
     images: ["/images/the_clooneys_hero.webp"],
   },
 };
@@ -59,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-GB">
       <head>
         <script defer src="https://umami-three-smoky.vercel.app/script.js" data-website-id="27623460-856a-45ce-ae66-3198efb09b08"></script>
       </head>

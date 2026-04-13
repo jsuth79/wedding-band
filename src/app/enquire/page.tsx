@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import EnquiryForm from "@/components/EnquiryForm";
 
 export const metadata: Metadata = {
-  title: "Check Availability | The Clooneys",
+  title: "Book a Wedding Band in Scotland | Enquire — The Clooneys",
   description:
-    "Check availability for your date. Contact The Clooneys to discuss your wedding or event entertainment — we respond within 24 hours.",
+    "Enquire about booking The Clooneys for your wedding or event in Scotland. Share your date and venue and we'll confirm availability within 24 hours.",
   alternates: {
     canonical: "/enquire",
   },
   openGraph: {
-    title: "Check Availability | The Clooneys",
+    title: "Book a Wedding Band in Scotland | Enquire — The Clooneys",
     description:
-      "Check availability for your date. Contact The Clooneys to discuss your wedding or event entertainment — we respond within 24 hours.",
+      "Enquire about booking The Clooneys for your wedding or event in Scotland. Share your date and venue and we'll confirm availability within 24 hours.",
     url: "https://www.theclooneys.co.uk/enquire",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Check Availability | The Clooneys",
+    title: "Book a Wedding Band in Scotland | Enquire — The Clooneys",
     description:
-      "Check availability for your date. Contact The Clooneys to discuss your wedding or event entertainment — we respond within 24 hours.",
+      "Enquire about booking The Clooneys for your wedding or event in Scotland. Share your date and venue and we'll confirm availability within 24 hours.",
   },
 };
 
@@ -45,7 +45,25 @@ const answers = [
 ];
 
 export default function EnquirePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: answers.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     <div className="pt-20">
       <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
@@ -174,5 +192,6 @@ export default function EnquirePage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

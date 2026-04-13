@@ -7,14 +7,21 @@ import YouTubeGrid from "@/components/YouTubeGrid";
 import { allVideos } from "@/lib/videos";
 
 export const metadata: Metadata = {
+  title: "The Clooneys | Award-Winning Wedding Band Scotland",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "The Clooneys | Wedding & Events Band Scotland",
+    title: "The Clooneys | Award-Winning Wedding Band Scotland",
     description:
-      "Vocal-led wedding and event entertainment across Scotland. Stunning live harmonies for ceremonies, drinks receptions, corporate events and private parties.",
+      "Award-winning wedding and events band based in Scotland. Vocal harmonies for ceremonies, drinks receptions and evening parties across Scotland and the UK.",
     url: "https://www.theclooneys.co.uk",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Clooneys | Award-Winning Wedding Band Scotland",
+    description:
+      "Award-winning wedding and events band based in Scotland. Vocal harmonies for ceremonies, drinks receptions and evening parties across Scotland and the UK.",
   },
 };
 
@@ -80,22 +87,33 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "MusicGroup",
     name: "The Clooneys",
+    url: "https://www.theclooneys.co.uk",
+    telephone: "+447740360678",
+    email: "info@theclooneys.co.uk",
     description:
-      "Professional wedding and events band based in Scotland providing live music with signature vocal harmonies.",
+      "Award-winning wedding and events band based in Scotland providing live music with signature vocal harmonies for ceremonies, drinks receptions and evening parties.",
+    image: "https://www.theclooneys.co.uk/images/the_clooneys_hero.webp",
     areaServed: [
       { "@type": "City", name: "Glasgow" },
       { "@type": "City", name: "Edinburgh" },
-      { "@type": "State", name: "Scotland" },
+      { "@type": "AdministrativeArea", name: "Scotland" },
+      { "@type": "Country", name: "United Kingdom" },
+    ],
+    sameAs: [
+      "https://www.instagram.com/theclooneys",
+      "https://www.facebook.com/profile.php?id=61552003414629",
+      "https://www.tiktok.com/@theclooneys",
+      "https://www.youtube.com/channel/UCVXe27VHQ7ILNg5CF0bplQQ",
     ],
     offers: {
       "@type": "Offer",
       priceCurrency: "GBP",
-      price: "325",
       priceSpecification: {
         "@type": "PriceSpecification",
-        minPrice: "325",
+        minPrice: "695",
         priceCurrency: "GBP",
       },
+      description: "Wedding and events packages from £695",
     },
   };
 
@@ -186,7 +204,7 @@ export default function Home() {
 
             {/* LEFT: credentials + awards */}
             <div>
-              <p className="eyebrow mb-6 text-stone-400">About the trio</p>
+              <p className="eyebrow mb-6 text-stone-400">About The Clooneys Wedding Band</p>
               <p className="text-base leading-7 text-stone-300 max-w-xl">
                 Nicola, Gary and Sian are three professional performers with decades of experience between them — from Berklee College of Music and session work in Los Angeles, to Classic FM appearances and Golden Jubilee celebrations.
               </p>

@@ -4,27 +4,27 @@ export default function NotFound() {
   return (
     <div className="pt-20 min-h-[70vh] flex items-center">
       <div className="section-shell page-gutter max-w-4xl py-24 text-center">
-        <p className="text-[#6f7c8c] text-sm uppercase tracking-[0.2em] mb-4">
-          404
+        <p className="text-[var(--color-brand-gold)] text-sm uppercase tracking-[0.2em] mb-4">
+          Wrong note
         </p>
         <h1 className="mb-6 text-4xl text-[#2C2C2C] md:text-6xl">
-          Page Not Found
+          Oops — we&apos;ve hit a bum note.
         </h1>
         <p className="text-xl text-[#444444] leading-relaxed mb-10">
-          Sorry, we couldn&apos;t find the page you were looking for.
+          That page doesn&apos;t exist, but the rest of the set is still going strong.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/"
-            className="inline-block bg-[#2C2C2C] hover:bg-[#1a1a1a] text-white px-8 py-4 text-sm uppercase tracking-wider transition-colors rounded-[4px]"
-          >
-            Back to Home
+          <Link href="/" className="btn-primary">
+            Home
           </Link>
-          <Link
-            href="/enquire"
-            className="inline-block border border-[#2C2C2C] text-[#2C2C2C] hover:bg-[#2C2C2C] hover:text-white px-8 py-4 text-sm uppercase tracking-wider transition-colors rounded-[4px]"
-          >
-            Get in Touch
+          <Link href="/weddings" className="btn-secondary">
+            Weddings
+          </Link>
+          <Link href="/events" className="btn-secondary">
+            Events
+          </Link>
+          <Link href="/enquire" className="btn-secondary">
+            Enquire
           </Link>
         </div>
       </div>

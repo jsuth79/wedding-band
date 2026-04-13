@@ -23,16 +23,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/media`,
-      lastModified: new Date("2026-04-10"),
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
       url: `${baseUrl}/enquire`,
       lastModified: new Date("2026-04-03"),
       changeFrequency: "monthly",
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/privacy-policy`,
+      lastModified: new Date("2026-04-13"),
+      changeFrequency: "yearly",
+      priority: 0.3,
     },
   ];
 }

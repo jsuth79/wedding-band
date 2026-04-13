@@ -4,23 +4,23 @@ import type { Metadata } from "next";
 import FeatureIcon from "@/components/FeatureIcon";
 
 export const metadata: Metadata = {
-  title: "Events Band Scotland | The Clooneys",
+  title: "Corporate & Events Live Band Scotland | The Clooneys",
   description:
-    "Live entertainment for corporate events, private parties and charity dinners across Scotland. The Clooneys bring atmosphere, energy and professional delivery to every event.",
+    "Live entertainment for corporate events, private parties and charity dinners across Scotland. Professional vocal harmonies with atmosphere and energy for every occasion.",
   alternates: {
     canonical: "/events",
   },
   openGraph: {
-    title: "Events Band Scotland | The Clooneys",
+    title: "Corporate & Events Live Band Scotland | The Clooneys",
     description:
-      "Live entertainment for corporate events, private parties and charity dinners across Scotland.",
+      "Live entertainment for corporate events, private parties and charity dinners across Scotland. Professional vocal harmonies for every occasion.",
     url: "https://www.theclooneys.co.uk/events",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Events Band Scotland | The Clooneys",
+    title: "Corporate & Events Live Band Scotland | The Clooneys",
     description:
-      "Live entertainment for corporate events, private parties and charity dinners across Scotland.",
+      "Live entertainment for corporate events, private parties and charity dinners across Scotland. Professional vocal harmonies for every occasion.",
   },
 };
 
