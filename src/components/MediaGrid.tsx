@@ -83,7 +83,7 @@ export default function MediaGrid({ videos }: MediaGridProps) {
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {filtered.map((video) => (
           <article key={video.id}>
-            {video.label && <p className="eyebrow mb-3">{video.label}</p>}
+            {video.category && <p className="eyebrow mb-3">{video.category}</p>}
             <div className="relative aspect-video overflow-hidden rounded-[20px] bg-stone-200">
               <iframe
                 id={`media-player-${video.id}`}
@@ -94,8 +94,8 @@ export default function MediaGrid({ videos }: MediaGridProps) {
                 className="absolute inset-0 h-full w-full"
               />
             </div>
-            {video.caption && (
-              <p className="mt-3 text-sm leading-6 text-[#777777]">{video.caption}</p>
+            {video.description && (
+              <p className="mt-3 text-sm leading-6 text-[#777777]">{video.description}</p>
             )}
           </article>
         ))}
