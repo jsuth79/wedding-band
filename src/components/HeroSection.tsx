@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section className="relative isolate min-h-[700px] overflow-hidden bg-stone-900">
       <Image
-        src="/images/the_clooneys_hero.webp"
+        src="/images/the-clooneys-scotland-wedding-band-ceremony.jpeg"
         alt=""
         fill
         priority
