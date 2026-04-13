@@ -32,7 +32,7 @@ const guidance = [
 const answers = [
   {
     question: "How quickly do you reply?",
-    answer: "Usually within 1-2 hours during the day, and often sooner on WhatsApp.",
+    answer: "Usually within 24 hours, and often sooner on WhatsApp.",
   },
   {
     question: "What areas do you cover?",

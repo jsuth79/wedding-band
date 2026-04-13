@@ -86,7 +86,7 @@ export default function EnquiryForm() {
         <h3 className="mb-2 text-xl text-[#2C2C2C]">Thank You</h3>
         <p className="text-[#444444]">
           Your enquiry has been sent successfully. We&apos;ll be back in touch within
-          1-2 hours to talk through the details.
+          24 hours to talk through the details.
         </p>
         <button
           onClick={() => setStatus("idle")}
@@ -219,7 +219,7 @@ export default function EnquiryForm() {
       </button>
 
       <p className="text-center text-sm text-[#888888]">
-        We typically reply within 1-2 hours. For urgent enquiries, WhatsApp is
+        We typically reply within 24 hours. For urgent enquiries, WhatsApp is
         the quickest option.
       </p>
     </form>
