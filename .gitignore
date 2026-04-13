@@ -41,4 +41,4 @@ yarn-error.log*
 next-env.d.ts
 
 # unused assets
-/public/images/unused
+#/public/images/unused
