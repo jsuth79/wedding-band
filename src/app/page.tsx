@@ -179,6 +179,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CREDIBILITY */}
+      <section className="bg-[#211d19] py-12 md:py-20">
+        <div className="section-shell page-gutter">
+          <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-center">
+
+            {/* LEFT: credentials + awards */}
+            <div>
+              <p className="eyebrow mb-6 text-stone-400">About the trio</p>
+              <p className="text-base leading-7 text-stone-300 max-w-xl">
+                Nicola, Gary and Sian are three professional performers with decades of experience between them — from Berklee College of Music and session work in Los Angeles, to Classic FM appearances and Golden Jubilee celebrations.
+              </p>
+
+              <div className="mt-10 border-t border-white/10 pt-8">
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[var(--color-brand-gold)]">
+                  Confetti Awards 2026
+                </p>
+                <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:gap-8">
+                  <div className="flex items-start gap-3">
+                    <span className="mt-0.5 text-[var(--color-brand-gold)]">★</span>
+                    <p className="text-sm leading-6 text-stone-300">
+                      Best Evening Entertainment (Live Bands)<br />
+                      <span className="text-xs text-stone-500">Highly Recommended</span>
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="mt-0.5 text-[var(--color-brand-gold)]">★</span>
+                    <p className="text-sm leading-6 text-stone-300">
+                      Best Ceremony Entertainer<br />
+                      <span className="text-xs text-stone-500">Highly Recommended</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT: award image */}
+            <div className="hidden md:block">
+              <div className="relative h-72 w-72 overflow-hidden rounded-[20px]">
+                <Image
+                  src="/images/the-clooneys-award-sq-2.webp"
+                  alt="Confetti Awards 2026 — The Clooneys"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* WEDDINGS */}
       <section className="bg-[var(--page-stone)] py-12 md:py-20">
         <div className="section-shell page-gutter">
