@@ -12,16 +12,19 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
+    siteName: "The Clooneys Wedding & Events Band",
     title: "The Clooneys | Award-Winning Wedding Band Scotland",
     description:
       "Award-winning wedding and events band based in Scotland. Vocal harmonies for ceremonies, drinks receptions and evening parties across Scotland and the UK.",
     url: "https://www.theclooneys.co.uk",
+    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys Wedding Band performing live" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "The Clooneys | Award-Winning Wedding Band Scotland",
     description:
       "Award-winning wedding and events band based in Scotland. Vocal harmonies for ceremonies, drinks receptions and evening parties across Scotland and the UK.",
+    images: ["/images/the-clooneys-web.jpg"],
   },
 };
 

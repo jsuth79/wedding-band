@@ -11,16 +11,19 @@ export const metadata: Metadata = {
     canonical: "/weddings",
   },
   openGraph: {
+    siteName: "The Clooneys Wedding & Events Band",
     title: "Live Wedding Band Scotland | Packages & Prices — The Clooneys",
     description:
       "Live wedding band Scotland covering ceremonies, drinks receptions, dinner and evening parties. From the aisle to the dancefloor — The Clooneys.",
     url: "https://www.theclooneys.co.uk/weddings",
+    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys Wedding Band performing live" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Live Wedding Band Scotland | Packages & Prices — The Clooneys",
     description:
       "Live wedding band Scotland covering ceremonies, drinks receptions, dinner and evening parties. From the aisle to the dancefloor — The Clooneys.",
+    images: ["/images/the-clooneys-web.jpg"],
   },
 };
 

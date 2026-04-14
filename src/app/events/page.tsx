@@ -11,16 +11,19 @@ export const metadata: Metadata = {
     canonical: "/events",
   },
   openGraph: {
+    siteName: "The Clooneys Wedding & Events Band",
     title: "Corporate & Events Live Band Scotland | The Clooneys",
     description:
       "Live entertainment for corporate events, private parties and charity dinners across Scotland. Professional vocal harmonies for every occasion.",
     url: "https://www.theclooneys.co.uk/events",
+    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys Wedding Band performing live" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Corporate & Events Live Band Scotland | The Clooneys",
     description:
       "Live entertainment for corporate events, private parties and charity dinners across Scotland. Professional vocal harmonies for every occasion.",
+    images: ["/images/the-clooneys-web.jpg"],
   },
 };
 

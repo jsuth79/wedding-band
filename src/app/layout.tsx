@@ -23,7 +23,11 @@ export const metadata: Metadata = {
     "Scottish wedding entertainment",
     "The Clooneys band",
   ],
-  metadataBase: new URL("https://www.theclooneys.co.uk"),
+  metadataBase: new URL(
+    process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "https://www.theclooneys.co.uk"
+  ),
   openGraph: {
     type: "website",
     locale: "en_GB",

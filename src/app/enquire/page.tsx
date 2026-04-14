@@ -9,16 +9,19 @@ export const metadata: Metadata = {
     canonical: "/enquire",
   },
   openGraph: {
+    siteName: "The Clooneys Wedding & Events Band",
     title: "Book a Wedding Band in Scotland | Enquire — The Clooneys",
     description:
       "Enquire about booking The Clooneys for your wedding or event in Scotland. Share your date and venue and we'll confirm availability within 24 hours.",
     url: "https://www.theclooneys.co.uk/enquire",
+    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys Wedding Band performing live" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Book a Wedding Band in Scotland | Enquire — The Clooneys",
     description:
       "Enquire about booking The Clooneys for your wedding or event in Scotland. Share your date and venue and we'll confirm availability within 24 hours.",
+    images: ["/images/the-clooneys-web.jpg"],
   },
 };
 
