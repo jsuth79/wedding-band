@@ -141,9 +141,9 @@ export default function Home() {
       <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter">
           <div className="section-intro mb-10">
-            <p className="eyebrow mb-4">About The Clooneys</p>
+            <p className="eyebrow mb-4">The Clooneys</p>
             <h2 className="section-title section-heading">
-              A trio built on harmony, warmth and real impact.
+              Three voices, one sound.
             </h2>
           </div>
           <div className="grid items-start gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(280px,1fr)] lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,1fr)]">
@@ -157,20 +157,18 @@ export default function Home() {
                 ))}
               </div>
               <p className="section-copy mt-6 text-lg">
-                Three voices, close harmonies and a repertoire that spans soul,
-                pop and classic wedding favourites. The Clooneys bring a sound
-                that feels polished and elevated — without losing warmth or
-                personality.
+                The Clooneys are a vocal harmony trio based in Scotland,
+                providing live music across the full wedding day — from ceremony
+                through to the evening party.
               </p>
               <p className="section-copy mt-5 text-lg">
-                More than anything, they know how to read a room: when to make a
-                ceremony feel intimate, when to lift a reception, and how to
-                create the kind of atmosphere guests keep talking about afterwards.
+                With a focus on close harmonies and carefully arranged songs,
+                they offer something a bit different from a standard wedding band.
               </p>
 
               <p className="mt-8 border-t border-[var(--line-soft)] pt-6 text-sm leading-6 text-[#5e4d41]">
-                From intimate barn ceremonies to grand city receptions — at home
-                across Scotland's finest venues.
+                From intimate ceremonies to packed dance floors, performing at
+                venues across Scotland.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -207,9 +205,9 @@ export default function Home() {
 
             {/* LEFT: credentials + awards */}
             <div>
-              <p className="eyebrow mb-6 text-stone-400">About The Clooneys Wedding Band</p>
+              <p className="eyebrow mb-6 text-stone-400">In Safe Hands</p>
               <p className="text-base leading-7 text-stone-300 max-w-xl">
-                Nicola, Gary and Sian are three professional performers with decades of experience between them — from Berklee College of Music and session work in Los Angeles, to Classic FM appearances and Golden Jubilee celebrations.
+                Nicola, Gary and Sian are experienced wedding performers who know how to prepare properly — from asking the right questions in advance to bringing the right setup on the day and adapting as things change.
               </p>
 
               <div className="mt-10 border-t border-white/10 pt-8">

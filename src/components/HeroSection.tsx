@@ -18,11 +18,10 @@ export default function HeroSection() {
       <div className="section-shell page-gutter relative z-10 flex min-h-[700px] flex-col justify-end pb-14">
         <div className="max-w-3xl">
           <h1 className="text-4xl leading-[0.96] text-white md:text-6xl">
-            Vocal-led wedding &amp; event entertainment across Scotland.
+            Vocal harmony trio for weddings and events across Scotland.
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-stone-200 md:text-xl md:leading-8">
-            The Clooneys bring warm, modern harmonies and polished live energy to
-            weddings, corporate events and private celebrations.
+            Warm, modern live music from ceremony to evening party.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Link href="/enquire" className="btn-primary">

@@ -151,22 +151,22 @@ export default function WeddingsPage() {
       <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter">
           <div className="section-intro mb-10">
-            <p className="eyebrow mb-4">Weddings</p>
+            <p className="eyebrow mb-4">Your Wedding Day</p>
             <h1 className="section-title section-heading">
-              From your aisle walk to a full dancefloor.
+              From your aisle walk to a full dance floor.
             </h1>
           </div>
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(260px,0.65fr)] lg:items-start">
             <div className="max-w-3xl">
               <p className="section-copy text-lg">
-                The Clooneys cover every part of your wedding day with live music
-                that feels considered and seamless — from the first quiet notes of
-                your ceremony to the last song of the night.
+                The Clooneys provide live music across the full wedding day —
+                from the first quiet moments of your ceremony to the last song
+                of the night.
               </p>
               <p className="section-copy mt-4 text-lg">
-                Each booking is tailored to your venue, timeline and the moments
-                that matter most to you. We&apos;ll guide you through the options and
-                make sure the music fits perfectly.
+                We&apos;ll guide you through the options and shape the music around
+                your day, making sure everything feels natural and in the right
+                place.
               </p>
               <div className="mt-6 flex flex-col gap-4 sm:flex-row">
                 <a
