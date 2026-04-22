@@ -30,18 +30,20 @@ const eventCards = [
   {
     title: "Acoustic Event Set",
     included: [
-      "A relaxed live format for drinks, dinner or background atmosphere.",
-      "A set shaped to the tone of the room and the type of event.",
-      "Professional PA and clear venue coordination.",
+      "Polished live vocals for drinks receptions, dinners and sophisticated background atmosphere.",
+      "A relaxed acoustic format shaped around corporate events, private parties and client entertainment.",
+      "Close harmony singing that adds warmth and presence without overpowering the room.",
+      "Professional PA and clear coordination with your venue or organiser.",
     ],
     price: "From £695",
   },
   {
     title: "Party Trio",
     included: [
-      "A stronger vocal-led set for bigger reactions and higher energy.",
-      "Ideal for private parties, celebrations and evening event slots.",
-      "Built around your audience, room and timings.",
+      "A stronger vocal-led set for bigger reactions, fuller rooms and higher energy.",
+      "Ideal for corporate entertainment, private parties, awards nights and evening event slots.",
+      "Built around your audience, room and timings so the set lands properly.",
+      "Designed to create momentum, audience engagement and a memorable lift in the night.",
     ],
     price: "From £950",
   },
@@ -122,19 +124,20 @@ export default function EventsPage() {
           <div className="section-intro mb-10">
             <p className="eyebrow mb-4">Events</p>
             <h1 className="section-title section-heading">
-              Live vocals for corporate events and private parties.
+              Corporate event singers and live entertainment in Scotland.
             </h1>
           </div>
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(260px,0.65fr)] lg:items-start">
             <div className="max-w-3xl">
               <p className="section-copy text-lg">
-                The Clooneys bring polished live vocals to corporate events,
-                private parties and celebration bookings across Scotland.
+                The Clooneys provide polished live vocals for corporate events,
+                private parties and celebrations across Scotland.
               </p>
               <p className="section-copy mt-4 text-lg">
-                From award dinners and launches to birthdays and private
-                celebrations, the set is shaped around the room, the audience
-                and the atmosphere you want to create.
+                From award dinners, launches and client events to birthdays,
+                private celebrations and Christmas parties, the set is shaped
+                around the room, the audience and the atmosphere you want to
+                create.
               </p>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-[20px]">
@@ -159,9 +162,9 @@ export default function EventsPage() {
                   Live event formats built around atmosphere and energy.
                 </h2>
                 <p className="section-copy mt-4 text-base">
-                  Some events need warmth in the background, others need a set
-                  that lifts the whole room. These options give you a clear
-                  starting point.
+                  Some corporate entertainment needs warmth in the background,
+                  others need a set that lifts the whole room. These live event
+                  singer choices give you a clear starting point.
                 </p>
               </div>
               <div className="grid gap-6">
@@ -188,8 +191,8 @@ export default function EventsPage() {
                 </h2>
                 <p className="section-copy mt-4 text-base">
                   We shape the performance around your audience, your timings
-                  and the tone of the event so the music supports the room
-                  rather than fighting it.
+                  and the tone of the event so the live entertainment supports
+                  the room rather than fighting it.
                 </p>
               </div>
               <div className="grid gap-6">
@@ -207,7 +210,7 @@ export default function EventsPage() {
 
       <DarkCta
         heading="Planning live music for an event in Scotland?"
-        copy="Tell us the date, venue and the kind of atmosphere you want, and we’ll point you towards the event format that fits best."
+        copy="Tell us the date, venue and the kind of atmosphere you want, and we’ll point you towards the corporate entertainment or live event singer setup that fits best."
       />
 
       <section className="bg-[var(--page-stone)] py-12 md:py-20">

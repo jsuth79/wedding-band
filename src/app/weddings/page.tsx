@@ -30,30 +30,31 @@ const weddingCards = [
   {
     title: "Special Offer - Surprise Singer Trio and Room Turnover",
     included: [
-      "Three surprise singers with live 3-part harmony.",
+      "Three surprise singers with rich 3-part harmony and a bigger live vocal sound.",
       "A high-impact set delivered as singing waiters or glam roaming singers.",
-      "A surprise performance designed to catch guests when they least expect it.",
-      "Room turnover entertainment while your room is being prepared for evening guests.",
-      "Available on selected dates in April and May, and from September 1st to November 15th.",
+      "A reveal-led performance that catches guests when they least expect it and changes the energy instantly.",
+      "Room turnover entertainment that keeps the atmosphere alive while the evening space is being prepared.",
+      "Available on selected wedding dates in April and May, and from September 1st to November 15th.",
     ],
     price: "£750",
   },
   {
     title: "Ceremony + Drinks",
     included: [
-      "Aisle song, signing music and exit song.",
-      "Two 30-minute live sets for the drinks reception.",
-      "Curated playlist between live sets.",
+      "Live ceremony singers for your aisle walk, signing music and exit song.",
+      "Acoustic wedding singers for two relaxed 30-minute drinks reception sets.",
+      "Close harmony vocals that keep the atmosphere warm, personal and effortless.",
+      "Curated background playlist between live sets so the energy never drops.",
     ],
     price: "£950",
   },
   {
     title: "Ceremony to Early Evening",
     included: [
-      "Ceremony music from entrance to exit.",
-      "Two 30-minute live sets during drinks reception.",
-      "First dance and a 90-minute live party set.",
-      "One song learnt to order.",
+      "Full live wedding singer coverage from the ceremony through to the early evening.",
+      "Wedding singers for the ceremony from entrance to exit.",
+      "Two 30-minute drinks reception sets with acoustic harmony vocals.",
+      "First dance plus a 90-minute live evening set for the bigger singalong moments.",
     ],
     price: "£1300",
   },
@@ -134,20 +135,20 @@ export default function WeddingsPage() {
           <div className="section-intro mb-10">
             <p className="eyebrow mb-4">Weddings</p>
             <h1 className="section-title section-heading">
-              Live wedding vocals for every part of the day.
+              Wedding singers in Scotland for every part of the day.
             </h1>
           </div>
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(260px,0.65fr)] lg:items-start">
             <div className="max-w-3xl">
               <p className="section-copy text-lg">
                 The Clooneys are a vocal harmony trio based in Scotland,
-                providing live wedding music from the ceremony through to the
-                evening party.
+                providing live wedding music and acoustic wedding singers for
+                the ceremony, drinks reception and evening party.
               </p>
               <p className="section-copy mt-4 text-lg">
-                With close harmonies, carefully arranged songs and a warm live
-                sound, they offer something more personal than a standard
-                wedding band package.
+                With close harmonies, carefully arranged songs and a warm
+                choir-like sound, they offer something more personal than a
+                standard wedding band package.
               </p>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-[20px]">
@@ -172,9 +173,10 @@ export default function WeddingsPage() {
                   Wedding packages built around the moments that matter.
                 </h2>
                 <p className="section-copy mt-4 text-base">
-                  From the aisle walk to the first dance, these wedding music
-                  options are designed around the flow of the day and the kind
-                  of atmosphere you want to create.
+                  From ceremony singers and drinks reception vocals to the first
+                  dance and evening set, these live wedding music choices are shaped
+                  around the flow of the day and the atmosphere you want to
+                  create.
                 </p>
               </div>
               <div className="grid gap-6">
@@ -213,13 +215,14 @@ export default function WeddingsPage() {
             <div>
             <div className="section-intro mb-10 xl:ml-auto xl:text-right">
               <p className="eyebrow mb-4">How It Works</p>
-              <h2 className="section-title section-heading">
+                <h2 className="section-title section-heading">
                   Great vocals, placed in the right part of the day.
                 </h2>
                 <p className="section-copy mt-4 text-base">
                   We help shape the timings, song flow and practical setup so
-                  the live music feels natural, considered and in the right
-                  place from start to finish.
+                  the live vocals feel natural, considered and in the right
+                  place from the first quiet ceremony moment to the last song of
+                  the night.
                 </p>
               </div>
               <div className="grid gap-6">
@@ -237,7 +240,7 @@ export default function WeddingsPage() {
 
       <DarkCta
         heading="Looking for live wedding music in Scotland?"
-        copy="Send your date, venue and the parts of the day you want covered, and we’ll come back with availability and the wedding package that fits best."
+        copy="Send your date, venue and the parts of the day you want covered, and we’ll come back with availability and the live wedding music that fits best."
       />
 
       <section className="bg-[var(--page-stone)] py-12 md:py-20">

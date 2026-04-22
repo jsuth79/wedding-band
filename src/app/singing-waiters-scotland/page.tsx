@@ -45,10 +45,10 @@ const surpriseCards = [
   {
     title: "Surprise Singers",
     included: [
-      "A reveal-led live vocal performance at the right point in the day.",
-      "Timing planned around drinks reception, meal service or another key moment.",
-      "Guest interaction and a stronger lift in room energy.",
-      "Pre-event coordination so the surprise still lands cleanly.",
+      "A reveal-led singing waiters or surprise singers performance at exactly the right point in the day.",
+      "Timing planned around drinks reception, meal service or another key moment where the reaction will land best.",
+      "Strong live vocals, guest interaction and a fast lift in room energy from the first song.",
+      "Pre-event coordination so the surprise feels seamless to you and completely unexpected to your guests.",
     ],
     price: "£950",
   },
@@ -69,7 +69,7 @@ const surpriseSteps = [
   },
   {
     title: "4. We leave you with a proper shared moment",
-    copy: "The best surprise singer bookings become a talking point of the day because they shift the room all at once and get guests involved quickly.",
+    copy: "The best surprise singer performances become a talking point of the day because they shift the room all at once and get guests involved quickly.",
   },
 ];
 
@@ -77,12 +77,12 @@ const crossLinks = [
   {
     href: "/weddings",
     title: "Weddings",
-    copy: "If you want live music across the wider day as well as the big moments, the weddings page covers the main package options.",
+    copy: "If you want live music across the wider day as well as the big moments, the weddings page shows how The Clooneys cover the ceremony, drinks reception and evening.",
   },
   {
     href: "/events",
     title: "Events",
-    copy: "For private parties, corporate bookings and occasions that need a more traditional live set, the events page is the better fit.",
+    copy: "For private parties, corporate events and occasions that need a more traditional live set, the events page is the better fit.",
   },
 ];
 
@@ -95,12 +95,12 @@ const faqs = [
   {
     question: "Do you provide singing waiters in Glasgow?",
     answer:
-      "Yes. Glasgow is one of our core areas, and we regularly travel across Scotland for weddings, parties and event bookings.",
+      "Yes. Glasgow is one of our core areas, and we regularly travel across Scotland for weddings, parties and events.",
   },
   {
     question: "When does the performance usually happen?",
     answer:
-      "Most bookings place it during the meal, during drinks reception or at another point where the room is settled and the reveal can create a strong contrast in energy.",
+      "Most couples place it during the meal, during drinks reception or at another point where the room is settled and the reveal can create a strong contrast in energy.",
   },
   {
     question: "Can the surprise singers be part of a wider package?",
@@ -195,15 +195,16 @@ export default function SingingWaitersScotlandPage() {
             <div className="section-intro mb-10">
               <p className="eyebrow mb-4">Surprise Singers</p>
               <h1 className="section-title section-heading">
-                Singing waiters and surprise singers in Glasgow and across Scotland.
+                Singing waiters, surprise singers and secret singers in Scotland.
               </h1>
             </div>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(260px,0.65fr)] lg:items-start">
               <div className="max-w-3xl">
                 <p className="section-copy text-lg">
-                  This is the format for clients who want more than background
-                  music. It is built for the reveal, the reaction and the moment
-                  the whole room suddenly wakes up.
+                  If you are looking for singing waiters, surprise singers or
+                  secret singers in Glasgow, Edinburgh, Central Scotland or
+                  further afield, this is the format built for the reveal, the
+                  reaction and the moment the whole room suddenly wakes up.
                 </p>
                 <p className="section-copy mt-4 text-lg">
                   The Clooneys treat surprise singers as a dedicated booking,
@@ -231,12 +232,12 @@ export default function SingingWaitersScotlandPage() {
                 <div className="section-intro mb-10">
                   <p className="eyebrow mb-4">Packages</p>
                   <h2 className="section-title section-heading">
-                    Surprise singer bookings designed for maximum impact.
+                    Surprise singers designed for maximum impact.
                   </h2>
                   <p className="section-copy mt-4 text-base">
                     This is not just a short add-on. The value comes from the
                     reveal, the live vocals and the way the performance changes
-                    the energy in the room.
+                    the energy in the room from the first note.
                   </p>
                 </div>
                 <div className="grid gap-6 max-w-2xl">
@@ -269,7 +270,8 @@ export default function SingingWaitersScotlandPage() {
                   <p className="section-copy mt-4 text-base">
                     The impact comes from delivery as much as the songs. We plan
                     the reveal carefully so the performance feels surprising to
-                    guests and seamless to you.
+                    guests and seamless to you, whether you call it surprise
+                    singers, secret singers or singing waiters.
                   </p>
                 </div>
                 <div className="grid gap-6">
@@ -287,7 +289,7 @@ export default function SingingWaitersScotlandPage() {
 
         <DarkCta
           heading="Looking for singing waiters in Glasgow or Scotland?"
-          copy="Send the date, venue and the point in the day you want to transform, and we’ll tell you quickly whether surprise singers are the right fit."
+          copy="Send the date, venue and the point in the day you want to transform, and we’ll tell you quickly whether singing waiters, surprise singers or secret singers are the right fit."
         />
 
         <section className="bg-[var(--page-stone)] py-12 md:py-20">
