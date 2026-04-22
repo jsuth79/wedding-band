@@ -50,13 +50,13 @@ const surpriseCards = [
       "Guest interaction and a stronger lift in room energy.",
       "Pre-event coordination so the surprise still lands cleanly.",
     ],
-    price: "£950",
+    price: "£750",
   },
 ];
 
 const surpriseSteps = [
   {
-    title: "1. We choose the right reveal point",
+    title: "1. We'll help you choose the right reveal point",
     copy: "The format works best when the room is settled and the contrast in energy can really land, usually during dinner or drinks.",
   },
   {
@@ -195,19 +195,20 @@ export default function SingingWaitersScotlandPage() {
             <div className="section-intro mb-10">
               <p className="eyebrow mb-4">Surprise Singers</p>
               <h1 className="section-title section-heading">
-                Singing waiters and surprise singers for Glasgow and Scotland.
+                Singing waiters and surprise singers in Glasgow and across Scotland.
               </h1>
             </div>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(260px,0.65fr)] lg:items-start">
               <div className="max-w-3xl">
                 <p className="section-copy text-lg">
-                  This is the format for clients who want a reveal, a jolt of
-                  energy and a room that changes in an instant rather than a more
-                  traditional live set.
+                  This is the format for clients who want more than background
+                  music. It is built for the reveal, the reaction and the moment
+                  the whole room suddenly wakes up.
                 </p>
                 <p className="section-copy mt-4 text-lg">
-                  The Clooneys handle it as a dedicated booking with the timing,
-                  reveal and guest interaction planned properly in advance.
+                  The Clooneys treat surprise singers as a dedicated booking,
+                  using strong live vocals, careful timing and guest interaction
+                  to create a genuine talking point in the day.
                 </p>
               </div>
 
@@ -230,12 +231,12 @@ export default function SingingWaitersScotlandPage() {
                 <div className="section-intro mb-10">
                   <p className="eyebrow mb-4">Packages</p>
                   <h2 className="section-title section-heading">
-                    Surprise singer pricing and what&apos;s included.
+                    Surprise singer bookings designed for maximum impact.
                   </h2>
                   <p className="section-copy mt-4 text-base">
-                    This is a dedicated format rather than a small add-on. The value
-                    is in the timing, reveal and room interaction as much as the set
-                    itself.
+                    This is not just a short add-on. The value comes from the
+                    reveal, the live vocals and the way the performance changes
+                    the energy in the room.
                   </p>
                 </div>
                 <div className="grid gap-6 max-w-2xl">
@@ -263,11 +264,12 @@ export default function SingingWaitersScotlandPage() {
                 <div className="section-intro mb-10 xl:ml-auto xl:text-right">
                   <p className="eyebrow mb-4">How It Works</p>
                   <h2 className="section-title section-heading">
-                    A reveal-based booking that has to be timed properly.
+                    A surprise singer performance only works when the timing is right.
                   </h2>
                   <p className="section-copy mt-4 text-base">
-                    The impact comes from delivery, not just the songs. We treat the
-                    whole thing as a controlled reveal rather than a standard set.
+                    The impact comes from delivery as much as the songs. We plan
+                    the reveal carefully so the performance feels surprising to
+                    guests and seamless to you.
                   </p>
                 </div>
                 <div className="grid gap-6">
@@ -284,8 +286,8 @@ export default function SingingWaitersScotlandPage() {
         </section>
 
         <DarkCta
-          heading="Thinking about a surprise singers booking?"
-          copy="Send the date, venue and the moment in the day you want to transform, and we’ll tell you quickly whether the format fits."
+          heading="Looking for singing waiters in Glasgow or Scotland?"
+          copy="Send the date, venue and the point in the day you want to transform, and we’ll tell you quickly whether surprise singers are the right fit."
         />
 
         <section className="bg-[var(--page-stone)] py-12 md:py-20">
@@ -293,7 +295,7 @@ export default function SingingWaitersScotlandPage() {
             <div className="section-intro mb-10">
               <p className="eyebrow mb-4">Also Explore</p>
               <h2 className="section-title section-heading">
-                Related formats from The Clooneys.
+                Other live music options from The Clooneys.
               </h2>
             </div>
             <div className="grid gap-6 md:grid-cols-2">

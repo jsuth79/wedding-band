@@ -34,7 +34,7 @@ const weddingCards = [
       "Two 30-minute live sets for the drinks reception.",
       "Curated playlist between live sets.",
     ],
-    price: "£1200",
+    price: "£950",
   },
   {
     title: "Ceremony to Early Evening",
@@ -44,7 +44,7 @@ const weddingCards = [
       "First dance and a 90-minute live party set.",
       "One song learnt to order.",
     ],
-    price: "£1800",
+    price: "£1300",
   },
 ];
 
@@ -123,20 +123,20 @@ export default function WeddingsPage() {
           <div className="section-intro mb-10">
             <p className="eyebrow mb-4">Weddings</p>
             <h1 className="section-title section-heading">
-              Live wedding music shaped around the whole day.
+              Live wedding vocals for every part of the day.
             </h1>
           </div>
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(260px,0.65fr)] lg:items-start">
             <div className="max-w-3xl">
               <p className="section-copy text-lg">
-                The Clooneys cover the key moments of the wedding day with close
-                harmonies, a warm live sound and a format that feels more
-                considered than a standard evening-only band.
+                The Clooneys are a vocal harmony trio based in Scotland,
+                providing live wedding music from the ceremony through to the
+                evening party.
               </p>
               <p className="section-copy mt-4 text-lg">
-                Whether you want music from the aisle onwards or a booking that
-                carries through to the first dance, we build the day around what
-                matters most to you.
+                With close harmonies, carefully arranged songs and a warm live
+                sound, they offer something more personal than a standard
+                wedding band package.
               </p>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-[20px]">
@@ -158,11 +158,12 @@ export default function WeddingsPage() {
               <div className="section-intro mb-10">
                 <p className="eyebrow mb-4">Packages</p>
                 <h2 className="section-title section-heading">
-                  Wedding packages with clear pricing and what&apos;s included.
+                  Wedding packages built around the moments that matter.
                 </h2>
                 <p className="section-copy mt-4 text-base">
-                  Start with the option that fits your timings best, then we can
-                  fine-tune details around your venue and flow of the day.
+                  From the aisle walk to the first dance, these wedding music
+                  options are designed around the flow of the day and the kind
+                  of atmosphere you want to create.
                 </p>
               </div>
               <div className="grid gap-6">
@@ -190,11 +191,12 @@ export default function WeddingsPage() {
               <div className="section-intro mb-10 xl:ml-auto xl:text-right">
                 <p className="eyebrow mb-4">How It Works</p>
                 <h2 className="section-title section-heading">
-                  A wedding booking that feels smooth from first call to final song.
+                  Great vocals, placed in the right part of the day.
                 </h2>
                 <p className="section-copy mt-4 text-base">
-                  The process matters as much as the performance. We keep the music
-                  properly placed, well prepared and easy to plan around.
+                  We help shape the timings, song flow and practical setup so
+                  the live music feels natural, considered and in the right
+                  place from start to finish.
                 </p>
               </div>
               <div className="grid gap-6">
@@ -211,8 +213,8 @@ export default function WeddingsPage() {
       </section>
 
       <DarkCta
-        heading="Checking wedding music options?"
-        copy="Send your date, venue and which parts of the day you want covered, and we’ll come back with availability and the right package."
+        heading="Looking for live wedding music in Scotland?"
+        copy="Send your date, venue and the parts of the day you want covered, and we’ll come back with availability and the wedding package that fits best."
       />
 
       <section className="bg-[var(--page-stone)] py-12 md:py-20">
@@ -220,7 +222,7 @@ export default function WeddingsPage() {
           <div className="section-intro mb-10">
             <p className="eyebrow mb-4">Also Explore</p>
             <h2 className="section-title section-heading">
-              Related formats from The Clooneys.
+              Other live music options from The Clooneys.
             </h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
