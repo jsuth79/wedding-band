@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 
 const navLinks = [
   { href: "/",         label: "Home" },
@@ -50,6 +50,11 @@ export default function Navbar() {
   const menuButtonClassName = isLightTheme
     ? "rounded-full border border-[#d7dde3] bg-white/85 p-2.5 text-[#2C2C2C] md:hidden"
     : "rounded-full border border-white/28 bg-white/12 p-2.5 text-white backdrop-blur-sm md:hidden";
+  const preventSameRouteNav = (href: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === href) {
+      event.preventDefault();
+    }
+  };
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 pt-3">
@@ -71,7 +76,11 @@ export default function Navbar() {
               </svg>
             )}
           </button>
-          <Link href="/" className={`absolute left-1/2 -translate-x-1/2 ${brandClassName}`}>
+          <Link
+            href="/"
+            onClick={preventSameRouteNav("/")}
+            className={`absolute left-1/2 -translate-x-1/2 ${brandClassName}`}
+          >
             <span className="font-serif text-xl leading-none">The Clooneys</span>
           </Link>
           {/* Spacer to balance the hamburger */}
@@ -83,14 +92,18 @@ export default function Navbar() {
           <ul className="flex items-center gap-1">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className={navLinkClassName(link.href)}>
+                <Link
+                  href={link.href}
+                  onClick={preventSameRouteNav(link.href)}
+                  className={navLinkClassName(link.href)}
+                >
                   {link.label}
                 </Link>
               </li>
             ))}
           </ul>
           <div className="flex justify-center">
-            <Link href="/" className={brandClassName}>
+            <Link href="/" onClick={preventSameRouteNav("/")} className={brandClassName}>
               <span className="font-serif text-2xl leading-none">The Clooneys</span>
             </Link>
           </div>
@@ -108,7 +121,10 @@ export default function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    onClick={() => setIsOpen(false)}
+                    onClick={(event) => {
+                      preventSameRouteNav(link.href)(event);
+                      setIsOpen(false);
+                    }}
                     className={`block rounded-full px-4 py-2.5 text-center text-[0.72rem] font-semibold uppercase tracking-[0.14em] transition-colors ${
                       pathname === link.href
                         ? "bg-[#241f1a] text-white"
