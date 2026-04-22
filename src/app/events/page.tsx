@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import FeatureIcon from "@/components/FeatureIcon";
 
 export const metadata: Metadata = {
   title: "Corporate & Events Live Band Scotland | The Clooneys",
@@ -27,102 +26,116 @@ export const metadata: Metadata = {
   },
 };
 
-const qualities = [
+const eventCards = [
   {
-    icon: "events" as const,
-    label: "Atmosphere",
-    title: "A room that feels alive",
-    copy: "From the moment we start, the energy shifts. Live music transforms a venue in a way a playlist simply cannot — and guests feel it immediately.",
+    title: "Acoustic Event Set",
+    included: [
+      "A relaxed live format for drinks, dinner or background atmosphere.",
+      "A set shaped to the tone of the room and the type of event.",
+      "Professional PA and clear venue coordination.",
+    ],
+    price: "From £695",
   },
   {
-    icon: "party" as const,
-    label: "Energy",
-    title: "Built for big moments",
-    copy: "We know when to build, when to hold back and when to push for the big reactions. Every set is shaped around your event and your audience.",
-  },
-  {
-    icon: "support" as const,
-    label: "Professional delivery",
-    title: "Reliable, prepared and easy to work with",
-    copy: "PA, insurance, timing coordination and clear communication throughout. We make things straightforward for you and your venue.",
-  },
-];
-
-const eventTypes = [
-  {
-    label: "Corporate Events",
-    image: "/images/the-clooneys-corporate-l-2.webp",
-    copy: "Award dinners, product launches, team celebrations and client entertainment. We match the tone of your event — professional, polished and with genuine impact.",
-  },
-  {
-    label: "Private Parties",
-    image: "/images/the-clooneys-party.webp",
-    copy: "Milestone birthdays, anniversary celebrations and private gatherings. We bring the kind of energy that makes the night feel truly special.",
-  },
-  {
-    label: "Charity Events",
-    image: "/images/the-clooneys-events-l.webp",
-    copy: "Fundraising dinners and charity gala evenings. We understand the importance of the occasion and deliver a performance that does justice to the cause.",
+    title: "Party Trio",
+    included: [
+      "A stronger vocal-led set for bigger reactions and higher energy.",
+      "Ideal for private parties, celebrations and evening event slots.",
+      "Built around your audience, room and timings.",
+    ],
+    price: "From £950",
   },
 ];
 
-const formats = [
+const eventSteps = [
   {
-    icon: "acoustic" as const,
-    label: "Acoustic",
-    copy: "A more relaxed option for drinks, dinners and moments that need warmth without overwhelming the room.",
+    title: "1. We get clear on the tone of the event",
+    copy: "Some bookings need polished background atmosphere, others need a strong lift in energy. We plan the set around that from the start.",
   },
   {
-    icon: "roaming" as const,
-    label: "Singing Waiters / Roaming Singers",
-    copy: "An interactive roaming vocal set that moves through the room, surprises guests and changes the energy instantly.",
+    title: "2. We match the room and audience",
+    copy: "Corporate dinners, private parties and charity nights all need slightly different pacing. We adjust the delivery to fit the room properly.",
   },
   {
-    icon: "party" as const,
-    label: "Party Trio",
-    copy: "A high-impact three-vocal set built for bigger reactions, celebrations and dancefloor energy.",
+    title: "3. We coordinate the practical detail",
+    copy: "We keep communication straightforward with you and your venue so setup, timing and performance windows are all clear.",
+  },
+  {
+    title: "4. The performance lands where it matters",
+    copy: "Whether the goal is atmosphere, momentum or a full-room reaction, the set is shaped to support the event rather than sit awkwardly beside it.",
   },
 ];
+
+const crossLinks = [
+  {
+    href: "/weddings",
+    title: "Weddings",
+    copy: "Ceremony, drinks reception and evening wedding music built around the full flow of the day.",
+  },
+  {
+    href: "/singing-waiters-scotland",
+    title: "Surprise Singers",
+    copy: "A reveal-based format for guests who are meant to be caught completely off guard.",
+  },
+];
+
+function DarkCta({
+  heading,
+  copy,
+}: {
+  heading: string;
+  copy: string;
+}) {
+  return (
+    <section className="bg-[#211d19] py-12 md:py-20">
+      <div className="section-shell page-gutter text-center">
+        <h2 className="section-heading-inverse">{heading}</h2>
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-stone-300">
+          {copy}
+        </p>
+        <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+          <a
+            href="https://wa.me/447740360678"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[#211d19] transition-colors hover:bg-[var(--page-stone)]"
+          >
+            Chat on WhatsApp
+          </a>
+          <Link
+            href="/enquire"
+            className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white/8"
+          >
+            Send an Enquiry
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function EventsPage() {
   return (
     <div className="pt-20">
-
-      {/* INTRO */}
       <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter">
           <div className="section-intro mb-10">
             <p className="eyebrow mb-4">Events</p>
             <h1 className="section-title section-heading">
-              Entertainment for corporate events and private parties.
+              Live entertainment for corporate events and private parties.
             </h1>
           </div>
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(260px,0.65fr)] lg:items-start">
             <div className="max-w-3xl">
               <p className="section-copy text-lg">
-                The Clooneys bring the same professionalism and energy to corporate
-                events and private parties that they bring to weddings. Whether you
-                need a sophisticated background sound or a full dancefloor moment,
-                we shape the performance around your event.
+                The Clooneys bring a polished live sound to corporate events,
+                private parties and celebration bookings across Scotland.
               </p>
               <p className="section-copy mt-4 text-lg">
-                We&apos;re experienced at reading diverse rooms — from black-tie charity
-                galas to relaxed birthday dinners — and adjusting our set to match
-                the moment.
+                Some events need atmosphere and warmth, some need a stronger set
+                that changes the mood of the room. We help you choose the format
+                that fits the occasion.
               </p>
-              <div className="mt-6 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="https://wa.me/447740360678"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                >
-                  Chat on WhatsApp
-                </a>
-                <Link href="/enquire" className="btn-secondary">
-                  Enquire About Your Event
-                </Link>
-              </div>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-[20px]">
               <Image
@@ -136,118 +149,86 @@ export default function EventsPage() {
         </div>
       </section>
 
-      {/* EVENT TYPES */}
+      <section className="bg-[var(--page-stone)] py-12 md:py-20">
+        <div className="section-shell page-gutter">
+          <div className="grid gap-12 xl:grid-cols-2 xl:items-start">
+            <div>
+              <div className="section-intro mb-10">
+                <p className="eyebrow mb-4">Packages</p>
+                <h2 className="section-title section-heading">
+                  Event formats with clear pricing and what&apos;s included.
+                </h2>
+                <p className="section-copy mt-4 text-base">
+                  Choose the feel of the booking first, then we&apos;ll shape the set
+                  around your venue, audience and running order.
+                </p>
+              </div>
+              <div className="grid gap-6">
+                {eventCards.map((card) => (
+                  <article key={card.title} className="info-card p-6 md:p-7">
+                    <h3 className="section-subheading text-[1.25rem]">{card.title}</h3>
+                    <ul className="mt-4 space-y-3">
+                      {card.included.map((item) => (
+                        <li key={item} className="flex items-start gap-3 text-[0.92rem] leading-6 text-[#545454]">
+                          <span className="mt-1 text-[var(--color-brand-gold)]">●</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-6 border-t border-[var(--line-soft)] pt-4">
+                      <p className="text-[1.6rem] font-semibold tracking-tight text-[#2C2C2C]">
+                        {card.price}
+                      </p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+            <div>
+              <div className="section-intro mb-10 xl:ml-auto xl:text-right">
+                <p className="eyebrow mb-4">How It Works</p>
+                <h2 className="section-title section-heading">
+                  Event entertainment that adapts to the room.
+                </h2>
+                <p className="section-copy mt-4 text-base">
+                  We keep the process clear and professional so the booking feels
+                  easy to organise and strong in the room.
+                </p>
+              </div>
+              <div className="grid gap-6">
+                {eventSteps.map((step) => (
+                  <article key={step.title} className="soft-card p-6 md:p-7">
+                    <h3 className="section-subheading text-[1.2rem]">{step.title}</h3>
+                    <p className="section-copy mt-4">{step.copy}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <DarkCta
+        heading="Planning an event booking?"
+        copy="Tell us the date, venue and the kind of room you’re trying to create, and we’ll point you to the right format quickly."
+      />
+
       <section className="bg-[var(--page-stone)] py-12 md:py-20">
         <div className="section-shell page-gutter">
           <div className="section-intro mb-10">
-            <p className="eyebrow mb-4">Event Types</p>
+            <p className="eyebrow mb-4">Also Explore</p>
             <h2 className="section-title section-heading">
-              We work well across a range of occasions.
+              Related formats from The Clooneys.
             </h2>
           </div>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {eventTypes.map((type) => (
-              <article
-                key={type.label}
-                className="info-card flex h-full flex-col overflow-hidden p-5 md:p-6"
-              >
-                <h3 className="section-subheading text-[1.45rem]">{type.label}</h3>
-                <div className="mt-4 relative aspect-square overflow-hidden">
-                  <Image
-                    src={type.image}
-                    alt={`The Clooneys — ${type.label}`}
-                    fill
-                    className="object-cover object-top"
-                  />
-                </div>
-                <div className="mt-5 flex flex-1 flex-col">
-                  <p className="section-copy text-[0.95rem] leading-7">{type.copy}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FORMATS */}
-      <section className="bg-[var(--page-ivory)] py-12 md:py-20">
-        <div className="section-shell page-gutter">
-          <div className="section-intro mb-10">
-            <p className="eyebrow mb-4">Formats</p>
-            <h2 className="section-title section-heading">
-              Choose the format that fits your occasion.
-            </h2>
-            <p className="section-copy mt-4 text-base">
-              Start with how you want the room to feel, and we&apos;ll guide you
-              toward the format that suits the event best.
-            </p>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {formats.map((fmt) => (
-              <article
-                key={fmt.label}
-                className="info-card p-6 md:p-7"
-              >
-                <FeatureIcon name={fmt.icon} />
-                <h3 className="mt-4 text-[1.05rem] font-semibold text-[#2C2C2C]">
-                  {fmt.label}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-[#545454]">{fmt.copy}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-[#211d19] py-12 md:py-20">
-        <div className="section-shell page-gutter text-center">
-          <h2 className="section-heading-inverse">
-            Let&apos;s talk about your event.
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-stone-300">
-            Tell us your date, venue and what you&apos;re planning — we&apos;ll come back
-            quickly with availability and the best format for your occasion.
-          </p>
-          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <a
-              href="https://wa.me/447740360678"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[#211d19] transition-colors hover:bg-[var(--page-stone)]"
-            >
-              Chat on WhatsApp
-            </a>
-            <Link
-              href="/enquire"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white/8"
-            >
-              Send an Enquiry
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* WHAT'S INCLUDED */}
-      <section className="bg-[var(--page-stone)] py-6 md:py-10">
-        <div className="section-shell page-gutter">
-          <div className="section-intro mb-10">
-            <p className="eyebrow mb-4">What&apos;s Included</p>
-            <h2 className="section-title section-heading">
-              The same calm, professional support behind every booking.
-            </h2>
-            <p className="section-copy mt-4 text-base">
-              Alongside the performance itself, we make the practical side easy
-              so the event feels smooth from first contact to final song.
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {qualities.map((q) => (
-              <article key={q.title} className="soft-card p-6 md:p-7">
-                <FeatureIcon name={q.icon} className="mb-4" />
-                <p className="eyebrow mb-4">{q.label}</p>
-                <h3 className="section-subheading text-[1.35rem]">{q.title}</h3>
-                <p className="section-copy mt-4">{q.copy}</p>
+          <div className="grid gap-6 md:grid-cols-2">
+            {crossLinks.map((item) => (
+              <article key={item.href} className="soft-card p-6 md:p-7">
+                <h3 className="section-subheading text-[1.25rem]">{item.title}</h3>
+                <p className="section-copy mt-4">{item.copy}</p>
+                <Link href={item.href} className="btn-secondary mt-6">
+                  Explore {item.title}
+                </Link>
               </article>
             ))}
           </div>

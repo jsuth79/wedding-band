@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import FeatureIcon from "@/components/FeatureIcon";
 
 export const metadata: Metadata = {
   title: "Live Wedding Band Scotland | Packages & Prices — The Clooneys",
@@ -27,102 +26,118 @@ export const metadata: Metadata = {
   },
 };
 
-
-const ways = [
+const weddingCards = [
   {
-    icon: "acoustic" as const,
-    label: "Acoustic Moments",
-    copy: "A stripped-back, intimate sound perfect for ceremonies, dinner or the quieter parts of your day.",
+    title: "Ceremony + Drinks",
+    included: [
+      "Aisle song, signing music and exit song.",
+      "Two 30-minute live sets for the drinks reception.",
+      "Curated playlist between live sets.",
+    ],
+    price: "£1200",
   },
   {
-    icon: "roaming" as const,
-    label: "Surprise Singers",
-    copy: "The band appears unannounced and moves through your guests — an interactive, high-energy performance that nobody sees coming.",
-  },
-  {
-    icon: "party" as const,
-    label: "Party Trio",
-    copy: "A high-impact three-vocal performance built for evenings, dancefloors and creating a proper party atmosphere.",
-  },
-];
-
-const testimonials = [
-  {
-    quote:
-      "Perfection does not even describe it. We had so many sentimental songs that were not traditional wedding songs, but they learned them all.",
-    source: "Danielle Burns",
-  },
-  {
-    quote:
-      "They did a fantastic sound setup before the wedding so no guests would know, then had everyone joining in and up doing a conga round the room.",
-    source: "Christine Cosgrove",
-  },
-  {
-    quote:
-      "Everything was outstanding from the entrance to the end. They had everyone out their seats and made our wedding weekend unforgettable.",
-    source: "Elizabeth Quayle",
+    title: "Ceremony to Early Evening",
+    included: [
+      "Ceremony music from entrance to exit.",
+      "Two 30-minute live sets during drinks reception.",
+      "First dance and a 90-minute live party set.",
+      "One song learnt to order.",
+    ],
+    price: "£1800",
   },
 ];
 
-const supportItems = [
+const weddingSteps = [
   {
-    icon: "support" as const,
-    label: "Included",
-    title: "Professional support",
-    copy: "We help shape the timing, song flow and practical setup so your music feels considered from first contact to final performance.",
+    title: "1. We map the day with you",
+    copy: "We plan where live music adds the most value, from the ceremony through to the first dance and evening energy.",
   },
   {
-    icon: "venueReady" as const,
-    label: "Venue Ready",
-    title: "PA and insurance covered",
-    copy: "We come prepared with the professional equipment and documentation venues usually need, helping things run smoothly on the day.",
+    title: "2. We shape the set around your timings",
+    copy: "We work around your venue schedule, meal service and room changes so the music lands naturally rather than interrupting the flow.",
   },
   {
-    icon: "tailored" as const,
-    label: "Tailored",
-    title: "Built around your plans",
-    copy: "If your timings or ideas do not fit neatly into one package, we can talk through a tailored option that suits your wedding best.",
+    title: "3. We handle the practical side",
+    copy: "PA, setup, communication and venue requirements are covered in advance so the day feels calm and properly prepared.",
+  },
+  {
+    title: "4. The music builds with the day",
+    copy: "The atmosphere starts intimate, opens out through the drinks reception and finishes with the bigger singing and dancefloor moments later on.",
   },
 ];
+
+const crossLinks = [
+  {
+    href: "/events",
+    title: "Events",
+    copy: "Corporate events, private parties and dinners that need live music with polish and flexibility.",
+  },
+  {
+    href: "/singing-waiters-scotland",
+    title: "Surprise Singers",
+    copy: "A dedicated surprise format for daytime reveals, guest interaction and a sharper change of energy.",
+  },
+];
+
+function DarkCta({
+  heading,
+  copy,
+}: {
+  heading: string;
+  copy: string;
+}) {
+  return (
+    <section className="bg-[#211d19] py-12 md:py-20">
+      <div className="section-shell page-gutter text-center">
+        <h2 className="section-heading-inverse">{heading}</h2>
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-stone-300">
+          {copy}
+        </p>
+        <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+          <a
+            href="https://wa.me/447740360678"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[#211d19] transition-colors hover:bg-[var(--page-stone)]"
+          >
+            Chat on WhatsApp
+          </a>
+          <Link
+            href="/enquire"
+            className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white/8"
+          >
+            Send an Enquiry
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function WeddingsPage() {
   return (
     <div className="pt-20">
-
-      {/* INTRO */}
       <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter">
           <div className="section-intro mb-10">
-            <p className="eyebrow mb-4">Your Wedding Day</p>
+            <p className="eyebrow mb-4">Weddings</p>
             <h1 className="section-title section-heading">
-              From your aisle walk to a full dance floor.
+              Live wedding music shaped around the whole day.
             </h1>
           </div>
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(260px,0.65fr)] lg:items-start">
             <div className="max-w-3xl">
               <p className="section-copy text-lg">
-                The Clooneys provide live music across the full wedding day —
-                from the first quiet moments of your ceremony to the last song
-                of the night.
+                The Clooneys cover the key moments of the wedding day with close
+                harmonies, a warm live sound and a format that feels more
+                considered than a standard evening-only band.
               </p>
               <p className="section-copy mt-4 text-lg">
-                We&apos;ll guide you through the options and shape the music around
-                your day, making sure everything feels natural and in the right
-                place.
+                Whether you want music from the aisle onwards or a booking that
+                carries through to the first dance, we build the day around what
+                matters most to you.
               </p>
-              <div className="mt-6 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="https://wa.me/447740360678"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                >
-                  Chat on WhatsApp
-                </a>
-                <Link href="/enquire" className="btn-secondary">
-                  Check Your Date
-                </Link>
-              </div>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-[20px]">
               <Image
@@ -136,244 +151,86 @@ export default function WeddingsPage() {
         </div>
       </section>
 
-
-      {/* PRICING */}
-      <section id="packages" className="bg-[var(--page-stone)] py-12 md:py-20">
-        <div className="section-shell page-gutter">
-          <div className="section-intro mb-12">
-            <p className="eyebrow mb-4">Pricing</p>
-            <h2 className="section-title section-heading">
-              Live music for every part of your day.
-            </h2>
-            <p className="section-copy mt-4 text-base">
-              Start with the bookings below and tailor the details around your venue and timings.
-            </p>
-          </div>
-
-          {/* TRIO */}
-          <div>
-            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[var(--color-brand-gold)] mb-6">
-              Trio
-            </p>
-            <div className="grid md:grid-cols-2 gap-4">
-              {/* Ceremony + Drinks */}
-              <article className="info-card p-5 md:p-6 flex flex-col">
-                <h3 className="section-subheading text-[1.2rem]">Ceremony + Drinks</h3>
-                <ul className="mt-3 space-y-2 flex-1">
-                  {[
-                    "Aisle song, signing of the register (up to 3 songs), and exit song.",
-                    "Two 30-minute live sets with a curated playlist between sets.",
-                  ].map((bullet) => (
-                    <li key={bullet} className="flex items-start gap-2 text-[0.88rem] leading-6 text-[#545454]">
-                      <span className="mt-[0.4rem] w-1.5 h-1.5 rounded-full bg-[var(--color-brand-gold)] shrink-0" aria-hidden="true" />
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-5 pt-4 border-t border-[var(--line-soft)]">
-                  <p className="text-[1.6rem] font-semibold tracking-tight text-[#2C2C2C]">£1200</p>
-                </div>
-              </article>
-
-              {/* Ceremony to Early Evening */}
-              <article className="info-card p-5 md:p-6 flex flex-col">
-                <h3 className="section-subheading text-[1.2rem]">Ceremony to Early Evening</h3>
-                <ul className="mt-3 space-y-2 flex-1">
-                  {[
-                    "Aisle song, signing of the register (up to 3 songs), and exit song.",
-                    "Two 30-minute live sets with a curated playlist between sets.",
-                    "First dances and a 90-minute live set.",
-                  ].map((line) => (
-                    <li key={line} className="flex items-start gap-2 text-[0.88rem] leading-6 text-[#545454]">
-                      <span className="mt-[0.4rem] w-1.5 h-1.5 rounded-full bg-[var(--color-brand-gold)] shrink-0" aria-hidden="true" />
-                      {line}
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-3 text-[0.72rem] leading-5 text-[#888888]">One song learnt to order. Everything else from our repertoire.</p>
-                <div className="mt-5 pt-4 border-t border-[var(--line-soft)]">
-                  <p className="text-[1.6rem] font-semibold tracking-tight text-[#2C2C2C]">£1800</p>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          {/* SURPRISE SINGERS */}
-          <div className="mt-10 pt-10 border-t border-[var(--line-soft)]">
-            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[var(--color-brand-gold)] mb-6">
-              Surprise Singers
-            </p>
-            <article className="info-card p-5 md:p-6 flex flex-col">
-              <h3 className="section-subheading text-[1.2rem]">Surprise Singers</h3>
-              <p className="section-copy mt-3 text-[0.88rem] leading-6 text-[#545454] flex-1">
-                An unexpected vocal performance during your drinks reception or meal. The band appears unannounced — a completely different kind of booking.
-              </p>
-              <div className="mt-5 pt-4 border-t border-[var(--line-soft)]">
-                <p className="text-[1.6rem] font-semibold tracking-tight text-[#2C2C2C]">£950</p>
-              </div>
-            </article>
-          </div>
-
-          {/* ADD-ONS */}
-          <div className="mt-10">
-            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[var(--color-brand-gold)] mb-6">
-              Add-ons
-            </p>
-            <article className="info-card p-5 md:p-6 space-y-0">
-              <div className="flex items-start justify-between gap-4 pb-4 border-b border-[var(--line-soft)]">
-                <div>
-                  <h3 className="section-subheading text-[1.1rem]">Keepsake Recording</h3>
-                  <p className="section-copy mt-1 text-[0.88rem] leading-6">
-                    A professional recording of one song from your booking.
-                  </p>
-                  <p className="mt-2 text-[0.78rem] text-[#888888]">Available with any existing booking.</p>
-                </div>
-                <p className="text-[1.4rem] font-semibold tracking-tight text-[#2C2C2C] shrink-0">£150</p>
-              </div>
-              <div className="flex items-start justify-between gap-4 pt-4">
-                <div>
-                  <h3 className="section-subheading text-[1.1rem]">Saxophone Power Hour</h3>
-                  <p className="section-copy mt-1 text-[0.88rem] leading-6">
-                    A live saxophone set added to your booking.
-                  </p>
-                  <p className="mt-2 text-[0.78rem] text-[#888888]">Available with any existing booking.</p>
-                </div>
-                <p className="text-[1.4rem] font-semibold tracking-tight text-[#2C2C2C] shrink-0">£370</p>
-              </div>
-              <div className="flex items-start justify-between gap-4 pt-4 border-t border-[var(--line-soft)]">
-                <div>
-                  <h3 className="section-subheading text-[1.1rem]">Dinner</h3>
-                  <p className="section-copy mt-1 text-[0.88rem] leading-6">
-                    Your epic entrance to dinner, then a personal playlist through the PA for the meal.
-                  </p>
-                  <p className="mt-2 text-[0.78rem] text-[#888888]">Available with any existing booking.</p>
-                </div>
-                <p className="text-[1.4rem] font-semibold tracking-tight text-[#2C2C2C] shrink-0">£300</p>
-              </div>
-            </article>
-          </div>
-
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-[#211d19] py-12 md:py-20">
-        <div className="section-shell page-gutter text-center">
-          <h2 className="section-heading-inverse">
-            Ready to check your date?
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-stone-300">
-            Tell us your wedding date and venue and we&apos;ll confirm availability
-            and help you plan the right music for your day.
-          </p>
-          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <a
-              href="https://wa.me/447740360678"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-[#211d19] transition-colors hover:bg-[#eef1f4]"
-            >
-              Chat on WhatsApp
-            </a>
-            <Link
-              href="/enquire"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/8"
-            >
-              Send an Enquiry
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* FORMATS */}
-      <section className="bg-[var(--page-ivory)] py-12 md:py-20">
-        <div className="section-shell page-gutter">
-          <div className="section-intro mb-10">
-            <p className="eyebrow mb-4">Formats</p>
-            <h2 className="section-title section-heading">
-              Choose how you want the music to feel.
-            </h2>
-            <p className="section-copy mt-4 text-base">
-              If you are looking for something more interactive, more relaxed or
-              more high-energy, these formats give you another way to shape the
-              feel of the day.
-            </p>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {ways.map((way) => (
-              <article
-                key={way.label}
-                className="soft-card p-6 md:p-7"
-              >
-                <FeatureIcon name={way.icon} />
-                <h3 className="mt-4 text-[1.05rem] font-semibold text-[#2C2C2C]">
-                  {way.label}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-[#545454]">{way.copy}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* REVIEWS */}
       <section className="bg-[var(--page-stone)] py-12 md:py-20">
         <div className="section-shell page-gutter">
-          <div className="section-intro">
-            <p className="eyebrow mb-4">What Couples Say</p>
-            <h2 className="section-title section-heading">
-              Words from people who had us on their day.
-            </h2>
-          </div>
-          <div className="mt-10 grid lg:grid-cols-3">
-            {testimonials.map((testimonial, i) => (
-              <blockquote
-                key={testimonial.quote}
-                className={`py-5 md:py-6 md:px-6 ${i === 0 ? "md:pl-0" : ""} ${
-                  i === testimonials.length - 1 ? "md:pr-0" : ""
-                } ${
-                  i < testimonials.length - 1
-                    ? "border-b border-[var(--line-soft)] md:border-b-0 md:border-r"
-                    : ""
-                }`}
-              >
-                <p className="text-[1.05rem] font-medium leading-7 text-[#2C2C2C]">
-                  &ldquo;{testimonial.quote}&rdquo;
+          <div className="grid gap-12 xl:grid-cols-2 xl:items-start">
+            <div>
+              <div className="section-intro mb-10">
+                <p className="eyebrow mb-4">Packages</p>
+                <h2 className="section-title section-heading">
+                  Wedding packages with clear pricing and what&apos;s included.
+                </h2>
+                <p className="section-copy mt-4 text-base">
+                  Start with the option that fits your timings best, then we can
+                  fine-tune details around your venue and flow of the day.
                 </p>
-                <div className="mt-6 flex items-center gap-1 text-[var(--color-brand-gold)]">
-                  {[...Array(5)].map((_, index) => (
-                    <span key={index}>★</span>
-                  ))}
-                </div>
-                <p className="mt-3 text-sm uppercase tracking-[0.18em] text-[#777777]">
-                  {testimonial.source}
+              </div>
+              <div className="grid gap-6">
+                {weddingCards.map((card) => (
+                  <article key={card.title} className="info-card p-6 md:p-7">
+                    <h3 className="section-subheading text-[1.25rem]">{card.title}</h3>
+                    <ul className="mt-4 space-y-3">
+                      {card.included.map((item) => (
+                        <li key={item} className="flex items-start gap-3 text-[0.92rem] leading-6 text-[#545454]">
+                          <span className="mt-1 text-[var(--color-brand-gold)]">●</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-6 border-t border-[var(--line-soft)] pt-4">
+                      <p className="text-[1.6rem] font-semibold tracking-tight text-[#2C2C2C]">
+                        {card.price}
+                      </p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+            <div>
+              <div className="section-intro mb-10 xl:ml-auto xl:text-right">
+                <p className="eyebrow mb-4">How It Works</p>
+                <h2 className="section-title section-heading">
+                  A wedding booking that feels smooth from first call to final song.
+                </h2>
+                <p className="section-copy mt-4 text-base">
+                  The process matters as much as the performance. We keep the music
+                  properly placed, well prepared and easy to plan around.
                 </p>
-              </blockquote>
-            ))}
+              </div>
+              <div className="grid gap-6">
+                {weddingSteps.map((step) => (
+                  <article key={step.title} className="soft-card p-6 md:p-7">
+                    <h3 className="section-subheading text-[1.2rem]">{step.title}</h3>
+                    <p className="section-copy mt-4">{step.copy}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* WHAT'S INCLUDED */}
-      <section className="bg-[var(--page-ivory)] py-6 md:py-10">
+      <DarkCta
+        heading="Checking wedding music options?"
+        copy="Send your date, venue and which parts of the day you want covered, and we’ll come back with availability and the right package."
+      />
+
+      <section className="bg-[var(--page-stone)] py-12 md:py-20">
         <div className="section-shell page-gutter">
-          <div className="section-intro mb-8">
-            <p className="eyebrow mb-4">What&apos;s Included</p>
+          <div className="section-intro mb-10">
+            <p className="eyebrow mb-4">Also Explore</p>
             <h2 className="section-title section-heading">
-              The same calm, professional support behind every booking.
+              Related formats from The Clooneys.
             </h2>
-            <p className="section-copy mt-4 text-base">
-              Alongside the performance itself, we make the practical side easy
-              so your wedding feels smooth from first contact to final song.
-            </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {supportItems.map((item) => (
-              <article key={item.title} className="soft-card p-6 md:p-7">
-                <FeatureIcon name={item.icon} className="mb-4" />
-                <p className="eyebrow mb-4">{item.label}</p>
-                <h3 className="section-subheading text-[1.35rem]">{item.title}</h3>
+          <div className="grid gap-6 md:grid-cols-2">
+            {crossLinks.map((item) => (
+              <article key={item.href} className="soft-card p-6 md:p-7">
+                <h3 className="section-subheading text-[1.25rem]">{item.title}</h3>
                 <p className="section-copy mt-4">{item.copy}</p>
+                <Link href={item.href} className="btn-secondary mt-6">
+                  Explore {item.title}
+                </Link>
               </article>
             ))}
           </div>

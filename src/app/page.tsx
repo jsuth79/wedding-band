@@ -281,9 +281,14 @@ export default function Home() {
               Whether you want one key moment covered or music throughout the
               day, we can shape it around your plans.
             </p>
-            <Link href="/weddings" className="btn-secondary mt-5">
-              Explore Wedding Packages
-            </Link>
+            <div className="mt-5 flex flex-col gap-4 sm:flex-row">
+              <Link href="/weddings" className="btn-secondary">
+                Explore Wedding Packages
+              </Link>
+              <Link href="/singing-waiters-scotland" className="btn-secondary">
+                Singing Waiters Scotland
+              </Link>
+            </div>
           </div>
         </div>
       </section>

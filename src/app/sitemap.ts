@@ -23,6 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/singing-waiters-scotland`,
+      lastModified: new Date("2026-04-22"),
+      changeFrequency: "monthly",
+      priority: 0.88,
+    },
+    {
       url: `${baseUrl}/enquire`,
       lastModified: new Date("2026-04-03"),
       changeFrequency: "monthly",
