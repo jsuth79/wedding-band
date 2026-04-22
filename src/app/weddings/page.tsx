@@ -28,6 +28,17 @@ export const metadata: Metadata = {
 
 const weddingCards = [
   {
+    title: "Special Offer - Surprise Singer Trio and Room Turnover",
+    included: [
+      "Three surprise singers with live 3-part harmony.",
+      "A high-impact set delivered as singing waiters or glam roaming singers.",
+      "A surprise performance designed to catch guests when they least expect it.",
+      "Room turnover entertainment while your room is being prepared for evening guests.",
+      "Available on selected dates in April and May, and from September 1st to November 15th.",
+    ],
+    price: "£750",
+  },
+  {
     title: "Ceremony + Drinks",
     included: [
       "Aisle song, signing music and exit song.",
@@ -168,7 +179,19 @@ export default function WeddingsPage() {
               </div>
               <div className="grid gap-6">
                 {weddingCards.map((card) => (
-                  <article key={card.title} className="info-card p-6 md:p-7">
+                  <article
+                    key={card.title}
+                    className={`p-6 md:p-7 ${
+                      card.title === "Special Offer - Surprise Singer Trio and Room Turnover"
+                        ? "rounded-[28px] border border-[var(--color-brand-gold)] bg-[linear-gradient(180deg,rgba(212,175,55,0.14),rgba(255,255,255,0.92))] shadow-[0_18px_44px_rgba(44,44,44,0.08)]"
+                        : "info-card"
+                    }`}
+                  >
+                    {card.title === "Special Offer - Surprise Singer Trio and Room Turnover" && (
+                      <p className="mb-4 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[var(--color-brand-gold-dark)]">
+                        Limited Dates
+                      </p>
+                    )}
                     <h3 className="section-subheading text-[1.25rem]">{card.title}</h3>
                     <ul className="mt-4 space-y-3">
                       {card.included.map((item) => (
@@ -188,9 +211,9 @@ export default function WeddingsPage() {
               </div>
             </div>
             <div>
-              <div className="section-intro mb-10 xl:ml-auto xl:text-right">
-                <p className="eyebrow mb-4">How It Works</p>
-                <h2 className="section-title section-heading">
+            <div className="section-intro mb-10 xl:ml-auto xl:text-right">
+              <p className="eyebrow mb-4">How It Works</p>
+              <h2 className="section-title section-heading">
                   Great vocals, placed in the right part of the day.
                 </h2>
                 <p className="section-copy mt-4 text-base">

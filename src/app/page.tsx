@@ -46,39 +46,33 @@ const testimonials = [
   },
 ];
 
-const homePackages = [
+const serviceHighlights = [
   {
     icon: "daytime" as const,
-    label: "Ceremony & Drinks Reception",
-    copy: "Live vocals for the aisle, signing and exit, then relaxed sets while guests mingle, celebrate and settle into the day.",
+    label: "Weddings",
+    title: "Live wedding vocals that carry the day",
+    copy: "From the aisle walk to the evening party, The Clooneys bring close harmonies, warmth and the kind of live music that becomes part of the memory of the day itself.",
+    image: "/images/the-clooneys-ceremony-sq.webp",
+    href: "/weddings",
+    cta: "Explore Weddings",
+  },
+  {
+    icon: "events" as const,
+    label: "Events",
+    title: "Atmosphere with polish and real presence",
+    copy: "For corporate events, private parties and celebrations, live vocals change how a room feels — adding style, momentum and a stronger sense that something special is happening.",
+    image: "/images/the-clooneys-corporate-l-2.webp",
+    href: "/events",
+    cta: "Explore Events",
   },
   {
     icon: "surprise" as const,
-    label: "Interactive Wedding Moments",
-    copy: "Roaming singers and surprise singing waiter-style performances that bring guests into the music and lift the room instantly.",
-  },
-  {
-    icon: "party" as const,
-    label: "Evening Party",
-    copy: "A high-energy evening set for first dances, full dancefloors and the bigger singalong moments later in the night.",
-  },
-];
-
-const eventHighlights = [
-  {
-    icon: "events" as const,
-    label: "Corporate Events",
-    copy: "Polished live vocals for award dinners, launches, client events and team celebrations.",
-  },
-  {
-    icon: "celebration" as const,
-    label: "Private Parties",
-    copy: "A warm, high-impact set for birthdays, anniversaries and nights that need real atmosphere.",
-  },
-  {
-    icon: "support" as const,
-    label: "Seasonal & Festive Events",
-    copy: "Christmas parties, end-of-year celebrations and seasonal dos that want something beyond a playlist.",
+    label: "Singing Waiters",
+    title: "A reveal guests talk about long after",
+    copy: "Surprise singers and singing waiter-style performances create the sharpest shift in energy — the moment people stop, laugh, sing, film and remember exactly where they were when it started.",
+    image: "/images/the-clooneys-roaming-singers-l.webp",
+    href: "/singing-waiters-scotland",
+    cta: "Find Out More",
   },
 ];
 
@@ -249,85 +243,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WEDDINGS */}
+      {/* SERVICES */}
       <section className="bg-[var(--page-stone)] py-12 md:py-20">
         <div className="section-shell page-gutter">
           <div className="section-intro mb-10">
-            <p className="eyebrow mb-4">Weddings</p>
+            <p className="eyebrow mb-4">What We Do</p>
             <h2 className="section-title section-heading">
-              Live wedding music for every part of the day.
+              Three ways The Clooneys change the feel of a day.
             </h2>
             <p className="section-copy mt-4 text-base">
-              From the ceremony through to the party, we shape the music around
-              the moments that matter most and the atmosphere you want to create.
+              Whether it is a wedding, an event or a surprise singers reveal,
+              the difference is not just the songs. It is the atmosphere, the
+              reaction in the room and the memories people carry away afterwards.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
-            {homePackages.map((pkg) => (
-              <article
-                key={pkg.label}
-                className="info-card p-6 md:p-7"
-              >
-                <FeatureIcon name={pkg.icon} />
-                <h3 className="mt-4 text-[1.1rem] font-semibold text-[#2C2C2C]">
-                  {pkg.label}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-[#545454]">{pkg.copy}</p>
-              </article>
-            ))}
-          </div>
-          <div className="mt-8 max-w-3xl border-t border-[var(--line-soft)] pt-6">
-            <p className="text-sm leading-6 text-[#5e4d41]">
-              Whether you want one key moment covered or music throughout the
-              day, we can shape it around your plans.
-            </p>
-            <div className="mt-5 flex flex-col gap-4 sm:flex-row">
-              <Link href="/weddings" className="btn-secondary">
-                Explore Wedding Packages
-              </Link>
-              <Link href="/singing-waiters-scotland" className="btn-secondary">
-                Singing Waiters Scotland
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* EVENTS */}
-      <section className="bg-[var(--page-ivory)] py-12 md:py-20">
-        <div className="section-shell page-gutter">
-          <div className="section-intro ml-auto mb-10 text-right">
-            <p className="eyebrow mb-4">Events</p>
-            <h2 className="section-title section-heading">
-              Live entertainment for corporate events and private parties.
-            </h2>
-            <p className="section-copy mt-4 text-base">
-              Weddings are the heart of what we do, but we also bring the same
-              warmth, polish and energy to standout event bookings.
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {eventHighlights.map((item) => (
+            {serviceHighlights.map((item) => (
               <article
                 key={item.label}
-                className="soft-card p-6 md:p-7"
+                className="info-card p-6 md:p-7"
               >
                 <FeatureIcon name={item.icon} />
-                <h3 className="mt-4 text-[1.1rem] font-semibold text-[#2C2C2C]">
-                  {item.label}
+                <p className="eyebrow mt-4">{item.label}</p>
+                <div className="relative mt-4 aspect-[4/3] overflow-hidden rounded-[18px]">
+                  <Image
+                    src={item.image}
+                    alt={`The Clooneys — ${item.label}`}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+                <h3 className="mt-4 text-[1.25rem] font-semibold text-[#2C2C2C]">
+                  {item.title}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-[#545454]">{item.copy}</p>
+                <Link href={item.href} className="btn-secondary mt-6">
+                  {item.cta}
+                </Link>
               </article>
             ))}
           </div>
-          <div className="mt-8 max-w-3xl border-t border-[var(--line-soft)] pt-6">
+          <div className="mt-8 max-w-4xl border-t border-[var(--line-soft)] pt-6">
             <p className="text-sm leading-6 text-[#5e4d41]">
-              Looking for a tailored event format? We can shape the set around
-              your timings, venue and the kind of atmosphere you want to create.
+              The Clooneys bring strong live vocals, close harmonies and a real
+              sense of occasion to the moments that matter most, whether that is
+              goosebumps in the ceremony, a room lifted by surprise singers or a
+              packed dance floor later in the night.
             </p>
-            <Link href="/events" className="btn-secondary mt-5">
-              Explore Event Options
-            </Link>
           </div>
         </div>
       </section>

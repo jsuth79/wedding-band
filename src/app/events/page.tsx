@@ -176,11 +176,6 @@ export default function EventsPage() {
                         </li>
                       ))}
                     </ul>
-                    <div className="mt-6 border-t border-[var(--line-soft)] pt-4">
-                      <p className="text-[1.6rem] font-semibold tracking-tight text-[#2C2C2C]">
-                        {card.price}
-                      </p>
-                    </div>
                   </article>
                 ))}
               </div>

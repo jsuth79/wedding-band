@@ -50,7 +50,7 @@ const surpriseCards = [
       "Guest interaction and a stronger lift in room energy.",
       "Pre-event coordination so the surprise still lands cleanly.",
     ],
-    price: "£750",
+    price: "£950",
   },
 ];
 
