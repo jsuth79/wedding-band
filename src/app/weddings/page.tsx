@@ -71,7 +71,7 @@ const weddingSteps = [
   },
   {
     title: "3. We handle the practical side",
-    copy: "PA, setup, communication and venue requirements are covered in advance so the day feels calm and properly prepared.",
+    copy: "PA, setup, communication and venue requirements are covered in advance so the day feels calm and nothing gets left to chance.",
   },
   {
     title: "4. The music builds with the day",
@@ -170,13 +170,12 @@ export default function WeddingsPage() {
               <div className="section-intro mb-10">
                 <p className="eyebrow mb-4">Packages</p>
                 <h2 className="section-title section-heading">
-                  Wedding packages built around the moments that matter.
+                  Wedding packages for every part of the day.
                 </h2>
                 <p className="section-copy mt-4 text-base">
                   From ceremony singers and drinks reception vocals to the first
-                  dance and evening set, these live wedding music choices are shaped
-                  around the flow of the day and the atmosphere you want to
-                  create.
+                  dance and evening set, these options are built around how the
+                  day actually flows — not a fixed formula.
                 </p>
               </div>
               <div className="grid gap-6">
@@ -220,9 +219,8 @@ export default function WeddingsPage() {
                 </h2>
                 <p className="section-copy mt-4 text-base">
                   We help shape the timings, song flow and practical setup so
-                  the live vocals feel natural, considered and in the right
-                  place from the first quiet ceremony moment to the last song of
-                  the night.
+                  the vocals land at the right points — from the first quiet
+                  ceremony moment to the last song of the night.
                 </p>
               </div>
               <div className="grid gap-6">

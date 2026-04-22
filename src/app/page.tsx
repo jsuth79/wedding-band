@@ -62,7 +62,7 @@ const serviceHighlights = [
     icon: "events" as const,
     label: "Events",
     title: "Atmosphere with polish and real presence",
-    copy: "For corporate events, private parties and celebrations, live vocals change how a room feels — adding style, momentum and a stronger sense that something special is happening.",
+    copy: "For corporate events, private parties and celebrations, live vocals change how a room feels — people relax into it, conversations open up and the night takes on a different shape.",
     image: "/images/the-clooneys-corporate-l-2.webp",
     href: "/events",
     cta: "Explore Events",
@@ -203,7 +203,7 @@ export default function Home() {
             <div>
               <p className="eyebrow mb-6 text-stone-400">In Safe Hands</p>
               <p className="text-base leading-7 text-stone-300 max-w-xl">
-                Nicola, Gary and Sian are experienced wedding performers who know how to prepare properly — from asking the right questions in advance to bringing the right setup on the day and adapting as things change.
+                Nicola, Gary and Sian are experienced wedding performers who know how to prepare — from asking the right questions in advance to bringing the right setup on the day and adapting as things change.
               </p>
 
               <div className="mt-10 border-t border-white/10 pt-8">
@@ -254,9 +254,9 @@ export default function Home() {
               Three ways The Clooneys change the feel of a day.
             </h2>
             <p className="section-copy mt-4 text-base">
-              Whether it is a wedding, an event or a surprise singers reveal,
-              the difference is not just the songs. It is the atmosphere, the
-              reaction in the room and the memories people carry away afterwards.
+              The songs matter, but they are not what people remember. It is the
+              hush before the aisle walk, the moment the room erupts, the dance
+              floor still going an hour later than planned.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
@@ -287,10 +287,9 @@ export default function Home() {
           </div>
           <div className="mt-8 max-w-4xl border-t border-[var(--line-soft)] pt-6">
             <p className="text-sm leading-6 text-[#5e4d41]">
-              The Clooneys bring strong live vocals, close harmonies and a real
-              sense of occasion to the moments that matter most, whether that is
-              goosebumps in the ceremony, a room lifted by surprise singers or a
-              packed dance floor later in the night.
+              From the quiet of the ceremony to a packed dance floor, The
+              Clooneys bring close harmonies and strong live vocals to the parts
+              of the day that stay with people.
             </p>
           </div>
         </div>

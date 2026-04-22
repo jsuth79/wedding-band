@@ -31,7 +31,7 @@ const eventCards = [
     title: "Acoustic Event Set",
     included: [
       "Polished live vocals for drinks receptions, dinners and sophisticated background atmosphere.",
-      "A relaxed acoustic format shaped around corporate events, private parties and client entertainment.",
+      "A relaxed acoustic format suited to corporate events, private parties and client entertainment.",
       "Close harmony singing that adds warmth and presence without overpowering the room.",
       "Professional PA and clear coordination with your venue or organiser.",
     ],
@@ -42,8 +42,8 @@ const eventCards = [
     included: [
       "A stronger vocal-led set for bigger reactions, fuller rooms and higher energy.",
       "Ideal for corporate entertainment, private parties, awards nights and evening event slots.",
-      "Built around your audience, room and timings so the set lands properly.",
-      "Designed to create momentum, audience engagement and a memorable lift in the night.",
+      "Built around your audience, room and timings so the set lands at the right moment.",
+      "Designed to get the room moving and give the night a clear high point.",
     ],
     price: "From £950",
   },
@@ -56,7 +56,7 @@ const eventSteps = [
   },
   {
     title: "2. We match the room and audience",
-    copy: "Corporate dinners, private parties and charity nights all need slightly different pacing. We adjust the delivery to fit the room properly.",
+    copy: "Corporate dinners, private parties and charity nights all need slightly different pacing. We adjust the delivery to fit.",
   },
   {
     title: "3. We coordinate the practical detail",
@@ -64,7 +64,7 @@ const eventSteps = [
   },
   {
     title: "4. The performance lands where it matters",
-    copy: "Whether the goal is atmosphere, momentum or a full-room reaction, the set is shaped to support the event rather than sit awkwardly beside it.",
+    copy: "The goal might be a warm background hum or a full-room reaction — either way, the set is there to support the event, not fight it.",
   },
 ];
 
@@ -135,9 +135,9 @@ export default function EventsPage() {
               </p>
               <p className="section-copy mt-4 text-lg">
                 From award dinners, launches and client events to birthdays,
-                private celebrations and Christmas parties, the set is shaped
-                around the room, the audience and the atmosphere you want to
-                create.
+                private celebrations and Christmas parties, the set is built
+                around the room, the audience and what you want people to take
+                away from the night.
               </p>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-[20px]">
@@ -187,7 +187,7 @@ export default function EventsPage() {
               <div className="section-intro mb-10 xl:ml-auto xl:text-right">
                 <p className="eyebrow mb-4">How It Works</p>
                 <h2 className="section-title section-heading">
-                  Live entertainment that reads the room properly.
+                  Live entertainment that reads the room.
                 </h2>
                 <p className="section-copy mt-4 text-base">
                   We shape the performance around your audience, your timings

@@ -46,8 +46,8 @@ const surpriseCards = [
     title: "Surprise Singers",
     included: [
       "A reveal-led singing waiters or surprise singers performance at exactly the right point in the day.",
-      "Timing planned around drinks reception, meal service or another key moment where the reaction will land best.",
-      "Strong live vocals, guest interaction and a fast lift in room energy from the first song.",
+      "Timing planned around dinner, drinks or another moment where the reveal will land cleanest.",
+      "Strong live vocals, guest interaction and an immediate shift in the room from the first note.",
       "Pre-event coordination so the surprise feels seamless to you and completely unexpected to your guests.",
     ],
     price: "£950",
@@ -61,15 +61,15 @@ const surpriseSteps = [
   },
   {
     title: "2. We keep the setup controlled",
-    copy: "The surprise only works if it is handled properly. We coordinate discreetly so the performance still feels unexpected to guests.",
+    copy: "We coordinate discreetly so the reveal still feels completely unexpected to guests.",
   },
   {
     title: "3. The first song changes the room",
     copy: "The opening reveal is designed to catch attention fast, then build into a more interactive set that feels lively rather than awkward.",
   },
   {
-    title: "4. We leave you with a proper shared moment",
-    copy: "The best surprise singer performances become a talking point of the day because they shift the room all at once and get guests involved quickly.",
+    title: "4. The room ends up in it together",
+    copy: "The best ones shift the whole room at once — everyone in it at the same time, which is rare and hard to replicate with anything else.",
   },
 ];
 
