@@ -3,25 +3,25 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Corporate & Events Live Band Scotland | The Clooneys",
+  title: "Corporate Event Singers & Live Entertainment in Scotland | The Clooneys",
   description:
-    "Live entertainment for corporate events, private parties and charity dinners across Scotland. Professional vocal harmonies with atmosphere and energy for every occasion.",
+    "Corporate event singers and live entertainment in Scotland for awards nights, launches, client events and private parties, with polished live vocals and real atmosphere.",
   alternates: {
     canonical: "/events",
   },
   openGraph: {
-    siteName: "The Clooneys Wedding & Events Band",
-    title: "Corporate & Events Live Band Scotland | The Clooneys",
+    siteName: "The Clooneys",
+    title: "Corporate Event Singers & Live Entertainment in Scotland | The Clooneys",
     description:
-      "Live entertainment for corporate events, private parties and charity dinners across Scotland. Professional vocal harmonies for every occasion.",
+      "Corporate event singers and live entertainment in Scotland for awards nights, launches, client events and private parties, with polished live vocals and real atmosphere.",
     url: "https://www.theclooneys.co.uk/events",
     images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys Wedding Band performing live" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Corporate & Events Live Band Scotland | The Clooneys",
+    title: "Corporate Event Singers & Live Entertainment in Scotland | The Clooneys",
     description:
-      "Live entertainment for corporate events, private parties and charity dinners across Scotland. Professional vocal harmonies for every occasion.",
+      "Corporate event singers and live entertainment in Scotland for awards nights, launches, client events and private parties, with polished live vocals and real atmosphere.",
     images: ["/images/the-clooneys-web.jpg"],
   },
 };

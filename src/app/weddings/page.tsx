@@ -3,25 +3,25 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Live Wedding Band Scotland | Packages & Prices — The Clooneys",
+  title: "Wedding Singers in Scotland for Ceremony, Drinks & Evening | The Clooneys",
   description:
-    "Live wedding band based in Scotland — ceremonies, drinks receptions, first dances and evening entertainment across Edinburgh, Glasgow, the Highlands and beyond.",
+    "Acoustic wedding singers in Scotland for ceremonies, drinks receptions and early evening celebrations, with close harmony vocals and a warm live sound.",
   alternates: {
     canonical: "/weddings",
   },
   openGraph: {
-    siteName: "The Clooneys Wedding & Events Band",
-    title: "Live Wedding Band Scotland | Packages & Prices — The Clooneys",
+    siteName: "The Clooneys",
+    title: "Wedding Singers in Scotland for Ceremony, Drinks & Evening | The Clooneys",
     description:
-      "Live wedding band based in Scotland — ceremonies, drinks receptions, first dances and evening entertainment across Edinburgh, Glasgow, the Highlands and beyond.",
+      "Acoustic wedding singers in Scotland for ceremonies, drinks receptions and early evening celebrations, with close harmony vocals and a warm live sound.",
     url: "https://www.theclooneys.co.uk/weddings",
     images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys Wedding Band performing live" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Live Wedding Band Scotland | Packages & Prices — The Clooneys",
+    title: "Wedding Singers in Scotland for Ceremony, Drinks & Evening | The Clooneys",
     description:
-      "Live wedding band based in Scotland — ceremonies, drinks receptions, first dances and evening entertainment across Edinburgh, Glasgow, the Highlands and beyond.",
+      "Acoustic wedding singers in Scotland for ceremonies, drinks receptions and early evening celebrations, with close harmony vocals and a warm live sound.",
     images: ["/images/the-clooneys-web.jpg"],
   },
 };
@@ -56,7 +56,7 @@ const weddingCards = [
       "Two 30-minute drinks reception sets with acoustic harmony vocals.",
       "First dance plus a 90-minute live evening set for the bigger singalong moments.",
     ],
-    price: "£1300",
+    price: "£1500",
   },
 ];
 

@@ -12,9 +12,10 @@ const sans = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "The Clooneys | Award-Winning Wedding Band Scotland",
+  title: "Wedding Singers, Singing Waiters & Corporate Entertainment | The Clooneys",
   description:
-    "Award-winning wedding and events band based in Scotland. Vocal harmonies for ceremonies, drinks receptions and evening parties across Scotland and the UK.",
+    "Award-winning vocal harmony trio for wedding singers, singing waiters, surprise singers and corporate entertainment across Scotland.",
+  applicationName: "The Clooneys",
   keywords: [
     "wedding band Scotland",
     "wedding band UK",
@@ -32,10 +33,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: "https://www.theclooneys.co.uk",
-    siteName: "The Clooneys Wedding & Events Band",
-    title: "The Clooneys | Award-Winning Wedding Band Scotland",
+    siteName: "The Clooneys",
+    title: "Wedding Singers, Singing Waiters & Corporate Entertainment | The Clooneys",
     description:
-      "Award-winning wedding and events band based in Scotland. Vocal harmonies for ceremonies, drinks receptions and evening parties across Scotland and the UK.",
+      "Award-winning vocal harmony trio for wedding singers, singing waiters, surprise singers and corporate entertainment across Scotland.",
     images: [
       {
         url: "/images/the-clooneys-web.jpg",
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Clooneys | Award-Winning Wedding Band Scotland",
+    title: "Wedding Singers, Singing Waiters & Corporate Entertainment | The Clooneys",
     description:
-      "Award-winning wedding and events band based in Scotland. Vocal harmonies for ceremonies, drinks receptions and evening parties across Scotland and the UK.",
+      "Award-winning vocal harmony trio for wedding singers, singing waiters, surprise singers and corporate entertainment across Scotland.",
     images: ["/images/the-clooneys-web.jpg"],
   },
 };

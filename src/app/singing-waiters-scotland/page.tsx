@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Singing Waiters Scotland | Surprise Singers Glasgow — The Clooneys",
+  title: "Singing Waiters & Secret Singers in Scotland | The Clooneys",
   description:
-    "Book singing waiters and surprise singers in Glasgow and across Scotland. See how it works, where it fits in your day and how The Clooneys create a high-impact guest surprise.",
+    "Singing waiters, surprise singers and secret singers for weddings and events in Glasgow, Edinburgh and across Scotland, with high-impact live vocals and real guest reaction.",
   keywords: [
     "singing waiters Glasgow",
     "singing waiters Scotland",
@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     canonical: "/singing-waiters-scotland",
   },
   openGraph: {
-    siteName: "The Clooneys Wedding & Events Band",
-    title: "Singing Waiters Scotland | Surprise Singers Glasgow — The Clooneys",
+    siteName: "The Clooneys",
+    title: "Singing Waiters & Secret Singers in Scotland | The Clooneys",
     description:
-      "Singing waiters and surprise singers for weddings, parties and events in Glasgow and across Scotland. Find out how the performance works and when to book it.",
+      "Singing waiters, surprise singers and secret singers for weddings and events in Glasgow, Edinburgh and across Scotland, with high-impact live vocals and real guest reaction.",
     url: "https://www.theclooneys.co.uk/singing-waiters-scotland",
     images: [
       {
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Singing Waiters Scotland | Surprise Singers Glasgow — The Clooneys",
+    title: "Singing Waiters & Secret Singers in Scotland | The Clooneys",
     description:
-      "Book singing waiters and surprise singers in Glasgow and across Scotland. See how it works and where it fits best in your day.",
+      "Singing waiters, surprise singers and secret singers for weddings and events in Glasgow, Edinburgh and across Scotland, with high-impact live vocals and real guest reaction.",
     images: ["/images/the-clooneys-surprise-singers-sq.webp"],
   },
 };

@@ -2,25 +2,25 @@ import type { Metadata } from "next";
 import EnquiryForm from "@/components/EnquiryForm";
 
 export const metadata: Metadata = {
-  title: "Book a Wedding Band in Scotland | Enquire — The Clooneys",
+  title: "Check Availability for Weddings, Events & Singing Waiters | The Clooneys",
   description:
-    "Enquire about booking The Clooneys for your wedding or event in Scotland. Share your date and venue and we'll confirm availability within 24 hours.",
+    "Check availability for wedding singers, singing waiters and corporate entertainment across Scotland. Fast replies by form or WhatsApp.",
   alternates: {
     canonical: "/enquire",
   },
   openGraph: {
-    siteName: "The Clooneys Wedding & Events Band",
-    title: "Book a Wedding Band in Scotland | Enquire — The Clooneys",
+    siteName: "The Clooneys",
+    title: "Check Availability for Weddings, Events & Singing Waiters | The Clooneys",
     description:
-      "Enquire about booking The Clooneys for your wedding or event in Scotland. Share your date and venue and we'll confirm availability within 24 hours.",
+      "Check availability for wedding singers, singing waiters and corporate entertainment across Scotland. Fast replies by form or WhatsApp.",
     url: "https://www.theclooneys.co.uk/enquire",
     images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys Wedding Band performing live" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Book a Wedding Band in Scotland | Enquire — The Clooneys",
+    title: "Check Availability for Weddings, Events & Singing Waiters | The Clooneys",
     description:
-      "Enquire about booking The Clooneys for your wedding or event in Scotland. Share your date and venue and we'll confirm availability within 24 hours.",
+      "Check availability for wedding singers, singing waiters and corporate entertainment across Scotland. Fast replies by form or WhatsApp.",
     images: ["/images/the-clooneys-web.jpg"],
   },
 };

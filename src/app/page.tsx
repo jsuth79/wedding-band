@@ -7,23 +7,25 @@ import YouTubeGrid from "@/components/YouTubeGrid";
 import { allVideos } from "@/lib/videos";
 
 export const metadata: Metadata = {
-  title: "The Clooneys | Award-Winning Wedding Band Scotland",
+  title: "Wedding Singers, Singing Waiters & Corporate Entertainment | The Clooneys",
+  description:
+    "Close-harmony wedding singers, singing waiters and corporate entertainment across Scotland. See videos, packages and availability for The Clooneys.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    siteName: "The Clooneys Wedding & Events Band",
-    title: "The Clooneys | Award-Winning Wedding Band Scotland",
+    siteName: "The Clooneys",
+    title: "Wedding Singers, Singing Waiters & Corporate Entertainment | The Clooneys",
     description:
-      "Award-winning wedding and events band based in Scotland. Vocal harmonies for ceremonies, drinks receptions and evening parties across Scotland and the UK.",
+      "Close-harmony wedding singers, singing waiters and corporate entertainment across Scotland. See videos, packages and availability for The Clooneys.",
     url: "https://www.theclooneys.co.uk",
     images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys Wedding Band performing live" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Clooneys | Award-Winning Wedding Band Scotland",
+    title: "Wedding Singers, Singing Waiters & Corporate Entertainment | The Clooneys",
     description:
-      "Award-winning wedding and events band based in Scotland. Vocal harmonies for ceremonies, drinks receptions and evening parties across Scotland and the UK.",
+      "Close-harmony wedding singers, singing waiters and corporate entertainment across Scotland. See videos, packages and availability for The Clooneys.",
     images: ["/images/the-clooneys-web.jpg"],
   },
 };
