@@ -117,7 +117,47 @@ function DarkCta({
 }
 
 export default function EventsPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Corporate Event Singers Scotland",
+    provider: {
+      "@type": "MusicGroup",
+      name: "The Clooneys",
+      url: "https://www.theclooneys.co.uk",
+    },
+    areaServed: [
+      { "@type": "City", name: "Glasgow" },
+      { "@type": "City", name: "Edinburgh" },
+      { "@type": "AdministrativeArea", name: "Scotland" },
+      { "@type": "Country", name: "United Kingdom" },
+    ],
+    serviceType: "Corporate event singers and live entertainment for awards nights, parties and private events",
+    url: "https://www.theclooneys.co.uk/events",
+    description:
+      "Polished live vocal entertainment for corporate events, private parties and celebrations across Scotland, with acoustic and full party trio formats.",
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Acoustic Event Set",
+        price: "695",
+        priceCurrency: "GBP",
+      },
+      {
+        "@type": "Offer",
+        name: "Party Trio",
+        price: "950",
+        priceCurrency: "GBP",
+      },
+    ],
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
     <div className="pt-20">
       <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter">
@@ -235,5 +275,6 @@ export default function EventsPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

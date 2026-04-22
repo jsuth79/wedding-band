@@ -169,6 +169,7 @@ export default function SingingWaitersScotlandPage() {
     },
     areaServed: [
       { "@type": "City", name: "Glasgow" },
+      { "@type": "City", name: "Edinburgh" },
       { "@type": "AdministrativeArea", name: "Scotland" },
       { "@type": "Country", name: "United Kingdom" },
     ],
@@ -176,6 +177,12 @@ export default function SingingWaitersScotlandPage() {
     url: "https://www.theclooneys.co.uk/singing-waiters-scotland",
     description:
       "Interactive singing waiter and surprise singer performances for weddings, private parties and corporate events in Glasgow and across Scotland.",
+    offers: {
+      "@type": "Offer",
+      name: "Surprise Singers",
+      price: "950",
+      priceCurrency: "GBP",
+    },
   };
 
   return (

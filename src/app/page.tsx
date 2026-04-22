@@ -106,12 +106,8 @@ export default function Home() {
     ],
     offers: {
       "@type": "Offer",
+      price: "695",
       priceCurrency: "GBP",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        minPrice: "695",
-        priceCurrency: "GBP",
-      },
       description: "Wedding and events packages from £695",
     },
   };

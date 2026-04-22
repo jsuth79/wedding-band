@@ -128,7 +128,47 @@ function DarkCta({
 }
 
 export default function WeddingsPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Wedding Singers Scotland",
+    provider: {
+      "@type": "MusicGroup",
+      name: "The Clooneys",
+      url: "https://www.theclooneys.co.uk",
+    },
+    areaServed: [
+      { "@type": "City", name: "Glasgow" },
+      { "@type": "City", name: "Edinburgh" },
+      { "@type": "AdministrativeArea", name: "Scotland" },
+      { "@type": "Country", name: "United Kingdom" },
+    ],
+    serviceType: "Wedding singers for ceremonies, drinks receptions and evening parties",
+    url: "https://www.theclooneys.co.uk/weddings",
+    description:
+      "Close harmony wedding singers in Scotland for ceremonies, drinks receptions and evening parties, with acoustic vocal trio and curated playlists.",
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Ceremony + Drinks",
+        price: "950",
+        priceCurrency: "GBP",
+      },
+      {
+        "@type": "Offer",
+        name: "Ceremony to Early Evening",
+        price: "1500",
+        priceCurrency: "GBP",
+      },
+    ],
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
     <div className="pt-20">
       <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter">
@@ -263,5 +303,6 @@ export default function WeddingsPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }
