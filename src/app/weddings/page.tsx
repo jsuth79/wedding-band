@@ -6,7 +6,7 @@ import FeatureIcon from "@/components/FeatureIcon";
 export const metadata: Metadata = {
   title: "Live Wedding Band Scotland | Packages & Prices — The Clooneys",
   description:
-    "Live wedding band Scotland covering ceremonies, drinks receptions, dinner and evening parties. From the aisle to the dancefloor — The Clooneys.",
+    "Live wedding band based in Scotland — ceremonies, drinks receptions, first dances and evening entertainment across Edinburgh, Glasgow, the Highlands and beyond.",
   alternates: {
     canonical: "/weddings",
   },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "The Clooneys Wedding & Events Band",
     title: "Live Wedding Band Scotland | Packages & Prices — The Clooneys",
     description:
-      "Live wedding band Scotland covering ceremonies, drinks receptions, dinner and evening parties. From the aisle to the dancefloor — The Clooneys.",
+      "Live wedding band based in Scotland — ceremonies, drinks receptions, first dances and evening entertainment across Edinburgh, Glasgow, the Highlands and beyond.",
     url: "https://www.theclooneys.co.uk/weddings",
     images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys Wedding Band performing live" }],
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Live Wedding Band Scotland | Packages & Prices — The Clooneys",
     description:
-      "Live wedding band Scotland covering ceremonies, drinks receptions, dinner and evening parties. From the aisle to the dancefloor — The Clooneys.",
+      "Live wedding band based in Scotland — ceremonies, drinks receptions, first dances and evening entertainment across Edinburgh, Glasgow, the Highlands and beyond.",
     images: ["/images/the-clooneys-web.jpg"],
   },
 };
@@ -36,71 +36,13 @@ const ways = [
   },
   {
     icon: "roaming" as const,
-    label: "Singing Waiters / Roaming Singers",
-    copy: "An interactive roaming vocal set that moves through your guests and creates a surprise, high-energy atmosphere up close.",
+    label: "Surprise Singers",
+    copy: "The band appears unannounced and moves through your guests — an interactive, high-energy performance that nobody sees coming.",
   },
   {
     icon: "party" as const,
     label: "Party Trio",
     copy: "A high-impact three-vocal performance built for evenings, dancefloors and creating a proper party atmosphere.",
-  },
-];
-
-const packages = [
-  {
-    name: "The Ceremony",
-    description:
-      "Beautiful live vocals for the aisle entrance, signing and exit, with carefully chosen songs that give your ceremony warmth and emotional impact.",
-    image: "/images/the-clooneys-ceremony-sq.webp",
-    includes: ["Aisle entrance music", "Signing music", "Exit music"],
-    prices: [
-      { label: "Duo", price: "£695" },
-      { label: "Trio", price: "£975" },
-    ],
-  },
-  {
-    name: "Drinks Reception",
-    description:
-      "Relaxed but polished live sets while guests mingle, celebrate and settle into the day. A lovely bridge from ceremony to reception.",
-    image: "/images/the-clooneys-drinks-reception-p.webp",
-    includes: ["Acoustic live set", "Perfect for canapes and photos", "Warm upbeat atmosphere"],
-    prices: [
-      { label: "Duo", price: "£700" },
-      { label: "Trio", price: "£1050" },
-    ],
-  },
-  {
-    name: "Daytime Package",
-    description:
-      "Ceremony and drinks reception combined into one seamless live music experience, with a consistent tone from the first arrivals through to the reception.",
-    image: "/images/the-clooneys-roaming-singers-l.webp",
-    includes: ["Ceremony coverage", "Reception coverage", "Simple all-in daytime flow"],
-    prices: [
-      { label: "Duo", price: "£1150" },
-      { label: "Trio", price: "£1725" },
-    ],
-  },
-  {
-    name: "Complete Package",
-    description:
-      "The fullest daytime experience, covering the key emotional moments and the celebration in between. Designed for couples who want the music woven throughout the day.",
-    image: "/images/the-clooneys-band-2-l.webp",
-    includes: ["Ceremony", "Drinks reception", "First dances"],
-    prices: [
-      { label: "Duo", price: "£1590" },
-      { label: "Trio", price: "£2385" },
-    ],
-  },
-  {
-    name: "Secret Singers",
-    description:
-      "Unexpected vocal performances that appear from nowhere and turn the room instantly. Ideal for high-energy meal entertainment and a talking point guests never forget.",
-    image: "/images/the-clooneys-surprise-singers-sq.webp",
-    includes: ["Interactive performance", "Perfect during the meal", "Big surprise factor"],
-    prices: [
-      { label: "Duo", price: "£795" },
-      { label: "Trio", price: "£995" },
-    ],
   },
 ];
 
@@ -195,86 +137,151 @@ export default function WeddingsPage() {
       </section>
 
 
-      {/* PACKAGES */}
+      {/* PRICING */}
       <section id="packages" className="bg-[var(--page-stone)] py-12 md:py-20">
         <div className="section-shell page-gutter">
-          <div className="section-intro mb-10">
-            <p className="eyebrow mb-4">Packages</p>
+          <div className="section-intro mb-12">
+            <p className="eyebrow mb-4">Pricing</p>
             <h2 className="section-title section-heading">
-              Start with the parts of the day you want covered.
+              Live music for every part of your day.
             </h2>
             <p className="section-copy mt-4 text-base">
-              Most couples choose one of these starting points, then tailor the
-              finer details around their venue, timings and guest list.
+              Start with the bookings below and tailor the details around your venue and timings.
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {packages.map((pkg) => (
-              <article
-                key={pkg.name}
-                className="info-card flex h-full flex-col overflow-hidden p-5 md:p-6"
-              >
-                <h3 className="section-subheading text-[1.45rem]">{pkg.name}</h3>
-                <div className="mt-4 relative aspect-square overflow-hidden">
-                  <Image
-                    src={pkg.image}
-                    alt={`The Clooneys — ${pkg.name}`}
-                    fill
-                    className="object-cover object-top"
-                  />
-                </div>
-                <div className="mt-5 flex flex-1 flex-col">
-                  <p className="section-copy text-[0.95rem] leading-7">{pkg.description}</p>
-                  <ul className="mt-8 mb-6 space-y-3">
-                    {pkg.includes.map((item) => (
-                      <li
-                        key={item}
-                        className="flex items-start gap-3 text-sm leading-6 text-[#545454]"
-                      >
-                        <span
-                          className="mt-1.5 h-2 w-2 rounded-full bg-[var(--color-brand-gold)]"
-                          aria-hidden="true"
-                        />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-auto pt-8 border-t border-[var(--line-soft)]">
-                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[var(--color-brand-gold)]">
-                      Prices
-                    </p>
-                    <div className="mt-3 space-y-2">
-                      {pkg.prices.map((price) => (
-                        <div
-                          key={price.label}
-                          className="flex items-center justify-between text-sm text-[#444444]"
-                        >
-                          <span>{price.label}</span>
-                          <span className="font-semibold text-[#2C2C2C]">{price.price}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+
+          {/* TRIO */}
+          <div>
+            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[var(--color-brand-gold)] mb-6">
+              Trio
+            </p>
+            <div className="grid md:grid-cols-2 gap-4">
+              {/* Ceremony + Drinks */}
+              <article className="info-card p-5 md:p-6 flex flex-col">
+                <h3 className="section-subheading text-[1.2rem]">Ceremony + Drinks</h3>
+                <ul className="mt-3 space-y-2 flex-1">
+                  {[
+                    "Aisle song, signing of the register (up to 3 songs), and exit song.",
+                    "Two 30-minute live sets with a curated playlist between sets.",
+                  ].map((bullet) => (
+                    <li key={bullet} className="flex items-start gap-2 text-[0.88rem] leading-6 text-[#545454]">
+                      <span className="mt-[0.4rem] w-1.5 h-1.5 rounded-full bg-[var(--color-brand-gold)] shrink-0" aria-hidden="true" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-5 pt-4 border-t border-[var(--line-soft)]">
+                  <p className="text-[1.6rem] font-semibold tracking-tight text-[#2C2C2C]">£1200</p>
                 </div>
               </article>
-            ))}
+
+              {/* Ceremony to Early Evening */}
+              <article className="info-card p-5 md:p-6 flex flex-col">
+                <h3 className="section-subheading text-[1.2rem]">Ceremony to Early Evening</h3>
+                <ul className="mt-3 space-y-2 flex-1">
+                  {[
+                    "Aisle song, signing of the register (up to 3 songs), and exit song.",
+                    "Two 30-minute live sets with a curated playlist between sets.",
+                    "First dances and a 90-minute live set.",
+                  ].map((line) => (
+                    <li key={line} className="flex items-start gap-2 text-[0.88rem] leading-6 text-[#545454]">
+                      <span className="mt-[0.4rem] w-1.5 h-1.5 rounded-full bg-[var(--color-brand-gold)] shrink-0" aria-hidden="true" />
+                      {line}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-3 text-[0.72rem] leading-5 text-[#888888]">One song learnt to order. Everything else from our repertoire.</p>
+                <div className="mt-5 pt-4 border-t border-[var(--line-soft)]">
+                  <p className="text-[1.6rem] font-semibold tracking-tight text-[#2C2C2C]">£1800</p>
+                </div>
+              </article>
+            </div>
           </div>
-          <p className="mt-8 text-sm leading-6 text-[#5e4d41]">
-            Solo prices are also available on request.{" "}
+
+          {/* SURPRISE SINGERS */}
+          <div className="mt-10 pt-10 border-t border-[var(--line-soft)]">
+            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[var(--color-brand-gold)] mb-6">
+              Surprise Singers
+            </p>
+            <article className="info-card p-5 md:p-6 flex flex-col">
+              <h3 className="section-subheading text-[1.2rem]">Surprise Singers</h3>
+              <p className="section-copy mt-3 text-[0.88rem] leading-6 text-[#545454] flex-1">
+                An unexpected vocal performance during your drinks reception or meal. The band appears unannounced — a completely different kind of booking.
+              </p>
+              <div className="mt-5 pt-4 border-t border-[var(--line-soft)]">
+                <p className="text-[1.6rem] font-semibold tracking-tight text-[#2C2C2C]">£950</p>
+              </div>
+            </article>
+          </div>
+
+          {/* ADD-ONS */}
+          <div className="mt-10">
+            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[var(--color-brand-gold)] mb-6">
+              Add-ons
+            </p>
+            <article className="info-card p-5 md:p-6 space-y-0">
+              <div className="flex items-start justify-between gap-4 pb-4 border-b border-[var(--line-soft)]">
+                <div>
+                  <h3 className="section-subheading text-[1.1rem]">Keepsake Recording</h3>
+                  <p className="section-copy mt-1 text-[0.88rem] leading-6">
+                    A professional recording of one song from your booking.
+                  </p>
+                  <p className="mt-2 text-[0.78rem] text-[#888888]">Available with any existing booking.</p>
+                </div>
+                <p className="text-[1.4rem] font-semibold tracking-tight text-[#2C2C2C] shrink-0">£150</p>
+              </div>
+              <div className="flex items-start justify-between gap-4 pt-4">
+                <div>
+                  <h3 className="section-subheading text-[1.1rem]">Saxophone Power Hour</h3>
+                  <p className="section-copy mt-1 text-[0.88rem] leading-6">
+                    A live saxophone set added to your booking.
+                  </p>
+                  <p className="mt-2 text-[0.78rem] text-[#888888]">Available with any existing booking.</p>
+                </div>
+                <p className="text-[1.4rem] font-semibold tracking-tight text-[#2C2C2C] shrink-0">£370</p>
+              </div>
+              <div className="flex items-start justify-between gap-4 pt-4 border-t border-[var(--line-soft)]">
+                <div>
+                  <h3 className="section-subheading text-[1.1rem]">Dinner</h3>
+                  <p className="section-copy mt-1 text-[0.88rem] leading-6">
+                    Your epic entrance to dinner, then a personal playlist through the PA for the meal.
+                  </p>
+                  <p className="mt-2 text-[0.78rem] text-[#888888]">Available with any existing booking.</p>
+                </div>
+                <p className="text-[1.4rem] font-semibold tracking-tight text-[#2C2C2C] shrink-0">£300</p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-[#211d19] py-12 md:py-20">
+        <div className="section-shell page-gutter text-center">
+          <h2 className="section-heading-inverse">
+            Ready to check your date?
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-stone-300">
+            Tell us your wedding date and venue and we&apos;ll confirm availability
+            and help you plan the right music for your day.
+          </p>
+          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
             <a
               href="https://wa.me/447740360678"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-[#2C2C2C]"
+              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-[#211d19] transition-colors hover:bg-[#eef1f4]"
             >
-              WhatsApp us
-            </a>{" "}
-            or{" "}
-            <Link href="/enquire" className="underline hover:text-[#2C2C2C]">
-              send an enquiry
-            </Link>{" "}
-            for more details.
-          </p>
+              Chat on WhatsApp
+            </a>
+            <Link
+              href="/enquire"
+              className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/8"
+            >
+              Send an Enquiry
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -343,35 +350,6 @@ export default function WeddingsPage() {
                 </p>
               </blockquote>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-[#211d19] py-12 md:py-20">
-        <div className="section-shell page-gutter text-center">
-          <h2 className="section-heading-inverse">
-            Ready to check your date?
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-stone-300">
-            Tell us your wedding date and venue and we&apos;ll confirm availability
-            and help you plan the right music for your day.
-          </p>
-          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <a
-              href="https://wa.me/447740360678"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-[#211d19] transition-colors hover:bg-[#eef1f4]"
-            >
-              Chat on WhatsApp
-            </a>
-            <Link
-              href="/enquire"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/8"
-            >
-              Send an Enquiry
-            </Link>
           </div>
         </div>
       </section>

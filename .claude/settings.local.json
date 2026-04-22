@@ -3,7 +3,12 @@
     "allow": [
       "WebFetch(domain:www.theclooneys.co.uk)",
       "Bash(npm uninstall:*)",
-      "WebFetch(domain:www.nicolamason.co.uk)"
+      "WebFetch(domain:www.nicolamason.co.uk)",
+      "Bash(npm run *)",
+      "Bash(npx tsc *)",
+      "Bash(curl -s http://localhost:3000/weddings)",
+      "Bash(kill %1)"
     ]
-  }
+  },
+  "spinnerTipsEnabled": false
 }

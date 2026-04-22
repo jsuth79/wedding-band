@@ -4,11 +4,10 @@ export default function Footer() {
       <div className="section-shell page-gutter py-8">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           {/* Contact - Left */}
-          <div className="flex items-center gap-4 text-sm shrink-0">
+          <div className="flex flex-col gap-1 text-sm lg:flex-1">
             <a href="mailto:info@theclooneys.co.uk" className="hover:text-[#6f7c8c] transition-colors">
               info@theclooneys.co.uk
             </a>
-            <span className="text-stone-600">|</span>
             <a href="tel:+447740360678" className="hover:text-[#6f7c8c] transition-colors">
               +44 7740 360678
             </a>
@@ -23,7 +22,7 @@ export default function Footer() {
           </p>
 
           {/* Social Links - Right */}
-          <div className="flex gap-4 shrink-0">
+          <div className="flex gap-4 lg:flex-1 lg:justify-end">
             <a
               href="https://www.instagram.com/theclooneys"
               target="_blank"
