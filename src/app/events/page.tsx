@@ -280,14 +280,14 @@ export default function EventsPage() {
             <div>
               <div className="relative aspect-[9/16] overflow-hidden rounded-[20px] bg-stone-200">
                 <iframe
-                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F616681694666317%2F&show_text=false"
-                  title="Pink Pony Club — Chappell Roan"
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  src="https://www.youtube.com/embed/4cXKL3oPLNA?enablejsapi=1"
+                  title="Leave the Door Open — Silk Sonic"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="absolute inset-0 h-full w-full"
                 />
               </div>
-              <p className="mt-3 text-sm font-semibold leading-snug text-[#2C2C2C]">Pink Pony Club — Chappell Roan</p>
+              <p className="mt-3 text-sm font-semibold leading-snug text-[#2C2C2C]">Leave the Door Open — Silk Sonic</p>
               <p className="mt-1 text-xs text-[#545454]">Party</p>
             </div>
           </div>
