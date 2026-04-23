@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Corporate Event Singers & Live Entertainment in Scotland | The Clooneys",
   description:
-    "Corporate event singers and live entertainment in Scotland for awards nights, launches, client events and private parties, with polished live vocals and real atmosphere.",
+    "Polished live vocals for corporate events, private parties and awards nights across Scotland. Live entertainment that reads the room and fits the occasion.",
   alternates: {
     canonical: "/events",
   },
@@ -13,16 +13,16 @@ export const metadata: Metadata = {
     siteName: "The Clooneys",
     title: "Corporate Event Singers & Live Entertainment in Scotland | The Clooneys",
     description:
-      "Corporate event singers and live entertainment in Scotland for awards nights, launches, client events and private parties, with polished live vocals and real atmosphere.",
+      "Polished live vocals for corporate events, private parties and awards nights across Scotland. Live entertainment that reads the room and fits the occasion.",
     url: "https://www.theclooneys.co.uk/events",
-    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys Wedding Band performing live" }],
+    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys performing live vocals at a corporate event in Scotland" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Corporate Event Singers & Live Entertainment in Scotland | The Clooneys",
     description:
-      "Corporate event singers and live entertainment in Scotland for awards nights, launches, client events and private parties, with polished live vocals and real atmosphere.",
-    images: ["/images/the-clooneys-web.jpg"],
+      "Polished live vocals for corporate events, private parties and awards nights across Scotland. Live entertainment that reads the room and fits the occasion.",
+    images: [{ url: "/images/the-clooneys-web.jpg", alt: "The Clooneys performing live vocals at a corporate event in Scotland" }],
   },
 };
 
@@ -128,7 +128,7 @@ export default function EventsPage() {
             </h1>
           </div>
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(260px,0.65fr)] lg:items-start">
-            <div className="max-w-3xl">
+            <div id="intro" className="max-w-3xl">
               <p className="section-copy text-lg">
                 The Clooneys provide polished live vocals for corporate events,
                 private parties and celebrations across Scotland.

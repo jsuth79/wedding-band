@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     description:
       "Check availability for wedding singers, singing waiters and corporate entertainment across Scotland. Fast replies by form or WhatsApp.",
     url: "https://www.theclooneys.co.uk/enquire",
-    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys Wedding Band performing live" }],
+    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys vocal harmony trio performing live" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Check Availability for Weddings, Events & Singing Waiters | The Clooneys",
     description:
       "Check availability for wedding singers, singing waiters and corporate entertainment across Scotland. Fast replies by form or WhatsApp.",
-    images: ["/images/the-clooneys-web.jpg"],
+    images: [{ url: "/images/the-clooneys-web.jpg", alt: "The Clooneys vocal harmony trio performing live" }],
   },
 };
 
