@@ -322,6 +322,37 @@ export default function WeddingsPage() {
         </div>
       </section>
 
+      <section className="bg-[var(--page-stone)] py-12 md:py-20">
+        <div className="section-shell page-gutter">
+          <div className="section-intro mb-10">
+            <p className="eyebrow mb-4">What People Said</p>
+            <h2 className="section-title section-heading">
+              Kind words from couples.
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            <blockquote className="soft-card p-6 md:p-7">
+              <div className="flex gap-1 text-[var(--color-brand-gold)]" aria-label="5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p className="mt-4 text-[1.05rem] font-medium leading-7 text-[#2C2C2C]">
+                &ldquo;Walking down the aisle and as I signed the register I had goosebumps. Every song they did was amazing.&rdquo;
+              </p>
+              <p className="mt-4 text-sm uppercase tracking-[0.18em] text-[#777777]">Danielle Burns</p>
+            </blockquote>
+            <blockquote className="soft-card p-6 md:p-7">
+              <div className="flex gap-1 text-[var(--color-brand-gold)]" aria-label="5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p className="mt-4 text-[1.05rem] font-medium leading-7 text-[#2C2C2C]">
+                &ldquo;They learned our first dance and father of the bride song days before, and performed every song to perfection. Every one of our guests commented on how truly amazing they were.&rdquo;
+              </p>
+              <p className="mt-4 text-sm uppercase tracking-[0.18em] text-[#777777]">Beth Williams</p>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
       <DarkCta
         heading="Looking for live wedding music in Scotland?"
         copy="Send your date, venue and the parts of the day you want covered, and we’ll come back with availability and the live wedding music that fits best."

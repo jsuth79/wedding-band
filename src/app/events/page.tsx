@@ -294,6 +294,37 @@ export default function EventsPage() {
         </div>
       </section>
 
+      <section className="bg-[var(--page-stone)] py-12 md:py-20">
+        <div className="section-shell page-gutter">
+          <div className="section-intro mb-10">
+            <p className="eyebrow mb-4">What People Said</p>
+            <h2 className="section-title section-heading">
+              Kind words from clients.
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            <blockquote className="soft-card p-6 md:p-7">
+              <div className="flex gap-1 text-[var(--color-brand-gold)]" aria-label="5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p className="mt-4 text-[1.05rem] font-medium leading-7 text-[#2C2C2C]">
+                &ldquo;They had everyone out their seats and on a dance floor that didn&apos;t even exist. I couldn&apos;t recommend them enough for any event.&rdquo;
+              </p>
+              <p className="mt-4 text-sm uppercase tracking-[0.18em] text-[#777777]">Elizabeth Quayle</p>
+            </blockquote>
+            <blockquote className="soft-card p-6 md:p-7">
+              <div className="flex gap-1 text-[var(--color-brand-gold)]" aria-label="5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p className="mt-4 text-[1.05rem] font-medium leading-7 text-[#2C2C2C]">
+                &ldquo;Absolutely fantastic from start to finish. Great to hear so much positive feedback from guests who attended my event.&rdquo;
+              </p>
+              <p className="mt-4 text-sm uppercase tracking-[0.18em] text-[#777777]">Stephen McGeever</p>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
       <DarkCta
         heading="Planning live music for an event in Scotland?"
         copy="Tell us the date, venue and the kind of atmosphere you want, and we’ll point you towards the corporate entertainment or live event singer setup that fits best."

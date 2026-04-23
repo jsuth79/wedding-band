@@ -335,6 +335,37 @@ export default function SingingWaitersScotlandPage() {
           </div>
         </section>
 
+        <section className="bg-[var(--page-stone)] py-12 md:py-20">
+          <div className="section-shell page-gutter">
+            <div className="section-intro mb-10">
+              <p className="eyebrow mb-4">What People Said</p>
+              <h2 className="section-title section-heading">
+                Kind words from wedding guests.
+              </h2>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              <blockquote className="soft-card p-6 md:p-7">
+                <div className="flex gap-1 text-[var(--color-brand-gold)]" aria-label="5 stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <p className="mt-4 text-[1.05rem] font-medium leading-7 text-[#2C2C2C]">
+                  &ldquo;Seen them doing a surprise singing Just Eat delivery — it was hysterical and got the party started and everyone ready for the evening.&rdquo;
+                </p>
+                <p className="mt-4 text-sm uppercase tracking-[0.18em] text-[#777777]">Iain Fraser</p>
+              </blockquote>
+              <blockquote className="soft-card p-6 md:p-7">
+                <div className="flex gap-1 text-[var(--color-brand-gold)]" aria-label="5 stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <p className="mt-4 text-[1.05rem] font-medium leading-7 text-[#2C2C2C]">
+                  &ldquo;They had everyone joining in and up doing a conga round the room. They have wonderful voices and made our day even more special.&rdquo;
+                </p>
+                <p className="mt-4 text-sm uppercase tracking-[0.18em] text-[#777777]">Christine Cosgrove</p>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
         <DarkCta
           heading="Looking for singing waiters in Glasgow or Scotland?"
           copy="Send the date, venue and the point in the day you want to transform, and we’ll tell you quickly whether singing waiters, surprise singers or secret singers are the right fit."
