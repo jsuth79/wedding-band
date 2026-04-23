@@ -19,47 +19,32 @@ export const metadata: Metadata = {
     description:
       "Close-harmony wedding singers, singing waiters and corporate entertainment across Scotland. See videos, packages and availability for The Clooneys.",
     url: "https://www.theclooneys.co.uk",
-    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys vocal harmony trio performing live at a Scottish wedding" }],
+    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys Wedding Band performing live" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Wedding Singers, Singing Waiters & Corporate Entertainment | The Clooneys",
     description:
       "Close-harmony wedding singers, singing waiters and corporate entertainment across Scotland. See videos, packages and availability for The Clooneys.",
-    images: [{ url: "/images/the-clooneys-web.jpg", alt: "The Clooneys vocal harmony trio performing live at a Scottish wedding" }],
+    images: ["/images/the-clooneys-web.jpg"],
   },
 };
 
 const testimonials = [
   {
     quote:
-      "Contemplating renewing my wedding vows — just so I can book these guys. You'll have to search far and wide to find the smooth and assured vocal harmonies these guys provide.",
-    source: "Iain Fraser",
-  },
-  {
-    quote:
-      "Walking down the aisle and as I signed the register I had goosebumps. Every song they did was amazing.",
-    source: "Danielle Burns",
-  },
-  {
-    quote:
-      "They had everyone joining in and up doing a conga round the room. They have wonderful voices and made our day even more special.",
-    source: "Christine Cosgrove",
-  },
-  {
-    quote:
-      "It was absolutely fantastic — everyone was up dancing and having a brilliant time. All our guests have been raving about how good they were.",
+      "We had the Clooneys surprise our wedding guests after dinner with a Just Eat delivery entrance. It was absolutely fantastic and everyone was up dancing.",
     source: "Carrieann Smith",
   },
   {
     quote:
-      "Gorgeous harmonies, carried with such charisma. The lead singer really knows how to engage with the audience. Highly recommended.",
-    source: "Lisa Rose",
+      "Walking down the aisle and signing the register I had goosebumps. Every song they did was amazing.",
+    source: "Danielle Burns",
   },
   {
     quote:
-      "Learning our first dance and father of the bride song days before, and they did every song to perfection. Every one of our guests commented on how truly amazing they were.",
-    source: "Beth Williams",
+      "They have gorgeous harmonies, real charisma and know how to engage with an audience. Highly recommended.",
+    source: "Lisa Rose",
   },
 ];
 
@@ -70,7 +55,6 @@ const serviceHighlights = [
     title: "Live wedding vocals that carry the day",
     copy: "From the aisle walk to the evening party, The Clooneys bring close harmonies, warmth and the kind of live music that becomes part of the memory of the day itself.",
     image: "/images/the-clooneys-ceremony-sq.webp",
-    imageAlt: "The Clooneys performing close harmony vocals at a Scottish wedding ceremony",
     href: "/weddings",
     cta: "Explore Weddings",
   },
@@ -80,7 +64,6 @@ const serviceHighlights = [
     title: "Atmosphere with polish and real presence",
     copy: "For corporate events, private parties and celebrations, live vocals change how a room feels — people relax into it, conversations open up and the night takes on a different shape.",
     image: "/images/the-clooneys-corporate-l-2.webp",
-    imageAlt: "The Clooneys performing live vocals at a corporate event in Scotland",
     href: "/events",
     cta: "Explore Events",
   },
@@ -90,7 +73,6 @@ const serviceHighlights = [
     title: "A reveal guests talk about long after",
     copy: "Surprise singers and singing waiter-style performances create the sharpest shift in energy — the moment people stop, laugh, sing, film and remember exactly where they were when it started.",
     image: "/images/the-clooneys-roaming-singers-l.webp",
-    imageAlt: "The Clooneys performing as roaming surprise singing waiters at a Scottish event",
     href: "/singing-waiters-scotland",
     cta: "Find Out More",
   },
@@ -100,8 +82,43 @@ const serviceHighlights = [
 const homeVideos = allVideos;
 
 export default function Home() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    name: "The Clooneys",
+    url: "https://www.theclooneys.co.uk",
+    telephone: "+447740360678",
+    email: "info@theclooneys.co.uk",
+    description:
+      "Award-winning wedding and events band based in Scotland providing live music with signature vocal harmonies for ceremonies, drinks receptions and evening parties.",
+    image: "https://www.theclooneys.co.uk/images/the-clooneys-web.jpg",
+    areaServed: [
+      { "@type": "City", name: "Glasgow" },
+      { "@type": "City", name: "Edinburgh" },
+      { "@type": "AdministrativeArea", name: "Scotland" },
+      { "@type": "Country", name: "United Kingdom" },
+    ],
+    sameAs: [
+      "https://www.instagram.com/theclooneys",
+      "https://www.facebook.com/profile.php?id=61552003414629",
+      "https://www.tiktok.com/@theclooneys",
+      "https://www.youtube.com/channel/UCVXe27VHQ7ILNg5CF0bplQQ",
+    ],
+    offers: {
+      "@type": "Offer",
+      price: "695",
+      priceCurrency: "GBP",
+      description: "Wedding and events packages from £695",
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+
       {/* HERO */}
       <HeroSection />
 
@@ -249,7 +266,7 @@ export default function Home() {
                 <div className="relative mt-4 aspect-[4/3] overflow-hidden rounded-[18px]">
                   <Image
                     src={item.image}
-                    alt={item.imageAlt}
+                    alt={`The Clooneys — ${item.label}`}
                     fill
                     className="object-cover object-top"
                   />
@@ -291,11 +308,13 @@ export default function Home() {
               What clients say about The Clooneys.
             </h2>
           </div>
-          <div className="mt-10 grid gap-x-8 md:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((testimonial) => (
+          <div className="mt-10 grid lg:grid-cols-3">
+            {testimonials.map((testimonial, i) => (
               <blockquote
-                key={testimonial.source}
-                className="border-t border-[var(--line-soft)] py-6"
+                key={testimonial.quote}
+                className={`py-5 md:py-6 md:px-6 ${i === 0 ? "md:pl-0" : ""} ${
+                  i === testimonials.length - 1 ? "md:pr-0" : ""
+                } ${i < testimonials.length - 1 ? "border-b border-[var(--line-soft)] md:border-b-0 md:border-r" : ""}`}
               >
                 <p className="text-[1.05rem] font-medium leading-7 text-[#2C2C2C]">
                   &ldquo;{testimonial.quote}&rdquo;
