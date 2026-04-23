@@ -161,21 +161,31 @@ export default function SingingWaitersScotlandPage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Singing Waiters and Surprise Singers",
+    "@id": "https://www.theclooneys.co.uk/singing-waiters-scotland#service",
+    name: "Singing Waiters and Surprise Singers in Scotland",
+    serviceType: "Singing Waiters and Surprise Singers",
+    description:
+      "Reveal-led singing waiter and surprise singer performances for weddings and events in Glasgow, Edinburgh and across Scotland, with live vocals and real guest interaction.",
+    url: "https://www.theclooneys.co.uk/singing-waiters-scotland",
     provider: {
       "@type": "MusicGroup",
+      "@id": "https://www.theclooneys.co.uk/#organization",
       name: "The Clooneys",
-      url: "https://www.theclooneys.co.uk",
     },
     areaServed: [
       { "@type": "City", name: "Glasgow" },
+      { "@type": "City", name: "Edinburgh" },
       { "@type": "AdministrativeArea", name: "Scotland" },
       { "@type": "Country", name: "United Kingdom" },
     ],
-    serviceType: "Singing waiters and surprise singers for weddings and events",
-    url: "https://www.theclooneys.co.uk/singing-waiters-scotland",
-    description:
-      "Interactive singing waiter and surprise singer performances for weddings, private parties and corporate events in Glasgow and across Scotland.",
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Surprise Singers",
+        price: "950",
+        priceCurrency: "GBP",
+      },
+    ],
   };
 
   return (

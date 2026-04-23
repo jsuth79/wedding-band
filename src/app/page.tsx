@@ -85,47 +85,8 @@ const serviceHighlights = [
 const homeVideos = allVideos;
 
 export default function Home() {
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    name: "The Clooneys",
-    url: "https://www.theclooneys.co.uk",
-    telephone: "+447740360678",
-    email: "info@theclooneys.co.uk",
-    description:
-      "Award-winning wedding and events band based in Scotland providing live music with signature vocal harmonies for ceremonies, drinks receptions and evening parties.",
-    image: "https://www.theclooneys.co.uk/images/the-clooneys-web.jpg",
-    areaServed: [
-      { "@type": "City", name: "Glasgow" },
-      { "@type": "City", name: "Edinburgh" },
-      { "@type": "AdministrativeArea", name: "Scotland" },
-      { "@type": "Country", name: "United Kingdom" },
-    ],
-    sameAs: [
-      "https://www.instagram.com/theclooneys",
-      "https://www.facebook.com/profile.php?id=61552003414629",
-      "https://www.tiktok.com/@theclooneys",
-      "https://www.youtube.com/channel/UCVXe27VHQ7ILNg5CF0bplQQ",
-    ],
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "GBP",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        minPrice: "695",
-        priceCurrency: "GBP",
-      },
-      description: "Wedding and events packages from £695",
-    },
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-
       {/* HERO */}
       <HeroSection />
 

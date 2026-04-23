@@ -128,7 +128,54 @@ function DarkCta({
 }
 
 export default function WeddingsPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.theclooneys.co.uk/weddings#service",
+    name: "Wedding Singers in Scotland",
+    serviceType: "Live Wedding Music",
+    description:
+      "Acoustic wedding singers for ceremony, drinks reception and evening party across Scotland, with close three-part harmony vocals and a warm live sound.",
+    url: "https://www.theclooneys.co.uk/weddings",
+    provider: {
+      "@type": "MusicGroup",
+      "@id": "https://www.theclooneys.co.uk/#organization",
+      name: "The Clooneys",
+    },
+    areaServed: [
+      { "@type": "City", name: "Glasgow" },
+      { "@type": "City", name: "Edinburgh" },
+      { "@type": "AdministrativeArea", name: "Scotland" },
+      { "@type": "Country", name: "United Kingdom" },
+    ],
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Special Offer – Surprise Singer Trio and Room Turnover",
+        price: "750",
+        priceCurrency: "GBP",
+      },
+      {
+        "@type": "Offer",
+        name: "Ceremony + Drinks",
+        price: "950",
+        priceCurrency: "GBP",
+      },
+      {
+        "@type": "Offer",
+        name: "Ceremony to Early Evening",
+        price: "1500",
+        priceCurrency: "GBP",
+      },
+    ],
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
     <div className="pt-20">
       <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter">
@@ -263,5 +310,6 @@ export default function WeddingsPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }
