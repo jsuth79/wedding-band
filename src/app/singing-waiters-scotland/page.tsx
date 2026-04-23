@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Singing Waiters & Secret Singers in Scotland | The Clooneys",
   description:
-    "Singing waiters, surprise singers and secret singers for weddings and events in Glasgow, Edinburgh and across Scotland, with high-impact live vocals and real guest reaction.",
+    "Singing waiters, surprise singers and secret singers in Glasgow, Edinburgh and across Scotland. High-impact live vocals and real guest reaction.",
   keywords: [
     "singing waiters Glasgow",
     "singing waiters Scotland",
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     siteName: "The Clooneys",
     title: "Singing Waiters & Secret Singers in Scotland | The Clooneys",
     description:
-      "Singing waiters, surprise singers and secret singers for weddings and events in Glasgow, Edinburgh and across Scotland, with high-impact live vocals and real guest reaction.",
+      "Singing waiters, surprise singers and secret singers in Glasgow, Edinburgh and across Scotland. High-impact live vocals and real guest reaction.",
     url: "https://www.theclooneys.co.uk/singing-waiters-scotland",
     images: [
       {
         url: "/images/the-clooneys-surprise-singers-sq.webp",
         width: 1200,
         height: 1200,
-        alt: "The Clooneys surprise singers performing at a wedding in Scotland",
+        alt: "The Clooneys performing as surprise singers at a wedding in Scotland",
       },
     ],
   },
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Singing Waiters & Secret Singers in Scotland | The Clooneys",
     description:
-      "Singing waiters, surprise singers and secret singers for weddings and events in Glasgow, Edinburgh and across Scotland, with high-impact live vocals and real guest reaction.",
-    images: ["/images/the-clooneys-surprise-singers-sq.webp"],
+      "Singing waiters, surprise singers and secret singers in Glasgow, Edinburgh and across Scotland. High-impact live vocals and real guest reaction.",
+    images: [{ url: "/images/the-clooneys-surprise-singers-sq.webp", alt: "The Clooneys performing as surprise singers at a wedding in Scotland" }],
   },
 };
 
@@ -199,7 +199,7 @@ export default function SingingWaitersScotlandPage() {
               </h1>
             </div>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(260px,0.65fr)] lg:items-start">
-              <div className="max-w-3xl">
+              <div id="intro" className="max-w-3xl">
                 <p className="section-copy text-lg">
                   If you are looking for singing waiters, surprise singers or
                   secret singers in Glasgow, Edinburgh, Central Scotland or

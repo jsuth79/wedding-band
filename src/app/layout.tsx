@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: "Wedding Singers, Singing Waiters & Corporate Entertainment | The Clooneys",
     description:
       "Award-winning vocal harmony trio for wedding singers, singing waiters, surprise singers and corporate entertainment across Scotland.",
-    images: ["/images/the-clooneys-web.jpg"],
+    images: [{ url: "/images/the-clooneys-web.jpg", alt: "The Clooneys vocal harmony trio performing live" }],
   },
 };
 

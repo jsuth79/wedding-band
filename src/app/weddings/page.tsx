@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     description:
       "Acoustic wedding singers in Scotland for ceremonies, drinks receptions and early evening celebrations, with close harmony vocals and a warm live sound.",
     url: "https://www.theclooneys.co.uk/weddings",
-    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys Wedding Band performing live" }],
+    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys performing close harmony wedding vocals at a Scottish ceremony" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Wedding Singers in Scotland for Ceremony, Drinks & Evening | The Clooneys",
     description:
       "Acoustic wedding singers in Scotland for ceremonies, drinks receptions and early evening celebrations, with close harmony vocals and a warm live sound.",
-    images: ["/images/the-clooneys-web.jpg"],
+    images: [{ url: "/images/the-clooneys-web.jpg", alt: "The Clooneys performing close harmony wedding vocals at a Scottish ceremony" }],
   },
 };
 
@@ -139,7 +139,7 @@ export default function WeddingsPage() {
             </h1>
           </div>
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(260px,0.65fr)] lg:items-start">
-            <div className="max-w-3xl">
+            <div id="intro" className="max-w-3xl">
               <p className="section-copy text-lg">
                 The Clooneys are a vocal harmony trio based in Scotland,
                 providing live wedding music and acoustic wedding singers for

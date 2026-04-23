@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     description:
       "Close-harmony wedding singers, singing waiters and corporate entertainment across Scotland. See videos, packages and availability for The Clooneys.",
     url: "https://www.theclooneys.co.uk",
-    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys Wedding Band performing live" }],
+    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys vocal harmony trio performing live at a Scottish wedding" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Wedding Singers, Singing Waiters & Corporate Entertainment | The Clooneys",
     description:
       "Close-harmony wedding singers, singing waiters and corporate entertainment across Scotland. See videos, packages and availability for The Clooneys.",
-    images: ["/images/the-clooneys-web.jpg"],
+    images: [{ url: "/images/the-clooneys-web.jpg", alt: "The Clooneys vocal harmony trio performing live at a Scottish wedding" }],
   },
 };
 
@@ -55,6 +55,7 @@ const serviceHighlights = [
     title: "Live wedding vocals that carry the day",
     copy: "From the aisle walk to the evening party, The Clooneys bring close harmonies, warmth and the kind of live music that becomes part of the memory of the day itself.",
     image: "/images/the-clooneys-ceremony-sq.webp",
+    imageAlt: "The Clooneys performing close harmony vocals at a Scottish wedding ceremony",
     href: "/weddings",
     cta: "Explore Weddings",
   },
@@ -64,6 +65,7 @@ const serviceHighlights = [
     title: "Atmosphere with polish and real presence",
     copy: "For corporate events, private parties and celebrations, live vocals change how a room feels — people relax into it, conversations open up and the night takes on a different shape.",
     image: "/images/the-clooneys-corporate-l-2.webp",
+    imageAlt: "The Clooneys performing live vocals at a corporate event in Scotland",
     href: "/events",
     cta: "Explore Events",
   },
@@ -73,6 +75,7 @@ const serviceHighlights = [
     title: "A reveal guests talk about long after",
     copy: "Surprise singers and singing waiter-style performances create the sharpest shift in energy — the moment people stop, laugh, sing, film and remember exactly where they were when it started.",
     image: "/images/the-clooneys-roaming-singers-l.webp",
+    imageAlt: "The Clooneys performing as roaming surprise singing waiters at a Scottish event",
     href: "/singing-waiters-scotland",
     cta: "Find Out More",
   },
@@ -270,7 +273,7 @@ export default function Home() {
                 <div className="relative mt-4 aspect-[4/3] overflow-hidden rounded-[18px]">
                   <Image
                     src={item.image}
-                    alt={`The Clooneys — ${item.label}`}
+                    alt={item.imageAlt}
                     fill
                     className="object-cover object-top"
                   />
