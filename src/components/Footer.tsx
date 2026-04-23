@@ -17,8 +17,8 @@ export default function Footer() {
           <p className="text-sm leading-relaxed text-center max-w-2xl">
             The Clooneys are a professional wedding and events band providing
             live music with signature vocal harmonies across Scotland and the UK,
-            bringing unforgettable entertainment to every celebration from
-            ceremony to dance floor.
+            bringing close harmonies and a warm live sound to every celebration
+            from ceremony to dance floor.
           </p>
 
           {/* Social Links - Right */}

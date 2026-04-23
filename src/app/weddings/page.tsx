@@ -128,7 +128,54 @@ function DarkCta({
 }
 
 export default function WeddingsPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.theclooneys.co.uk/weddings#service",
+    name: "Wedding Singers in Scotland",
+    serviceType: "Live Wedding Music",
+    description:
+      "Acoustic wedding singers for ceremony, drinks reception and evening party across Scotland, with close three-part harmony vocals and a warm live sound.",
+    url: "https://www.theclooneys.co.uk/weddings",
+    provider: {
+      "@type": "MusicGroup",
+      "@id": "https://www.theclooneys.co.uk/#organization",
+      name: "The Clooneys",
+    },
+    areaServed: [
+      { "@type": "City", name: "Glasgow" },
+      { "@type": "City", name: "Edinburgh" },
+      { "@type": "AdministrativeArea", name: "Scotland" },
+      { "@type": "Country", name: "United Kingdom" },
+    ],
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Special Offer – Surprise Singer Trio and Room Turnover",
+        price: "750",
+        priceCurrency: "GBP",
+      },
+      {
+        "@type": "Offer",
+        name: "Ceremony + Drinks",
+        price: "950",
+        priceCurrency: "GBP",
+      },
+      {
+        "@type": "Offer",
+        name: "Ceremony to Early Evening",
+        price: "1500",
+        priceCurrency: "GBP",
+      },
+    ],
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
     <div className="pt-20">
       <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter">
@@ -236,6 +283,45 @@ export default function WeddingsPage() {
         </div>
       </section>
 
+      <section className="bg-[var(--page-ivory)] py-12 md:py-20">
+        <div className="section-shell page-gutter">
+          <div className="section-intro mb-10">
+            <p className="eyebrow mb-4">How It Sounds</p>
+            <h2 className="section-title section-heading">
+              Close harmonies on a wedding day.
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-2xl">
+            <div>
+              <div className="relative aspect-[9/16] overflow-hidden rounded-[20px] bg-stone-200">
+                <iframe
+                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1527356838341959%2F&show_text=false"
+                  title="I Can’t Help Falling in Love"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full"
+                />
+              </div>
+              <p className="mt-3 text-sm font-semibold leading-snug text-[#2C2C2C]">I Can&apos;t Help Falling in Love</p>
+              <p className="mt-1 text-xs text-[#545454]">Acoustic</p>
+            </div>
+            <div>
+              <div className="relative aspect-[9/16] overflow-hidden rounded-[20px] bg-stone-200">
+                <iframe
+                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F3963547593955808%2F&show_text=false"
+                  title="Lover — Taylor Swift"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full"
+                />
+              </div>
+              <p className="mt-3 text-sm font-semibold leading-snug text-[#2C2C2C]">Lover — Taylor Swift</p>
+              <p className="mt-1 text-xs text-[#545454]">Acoustic</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <DarkCta
         heading="Looking for live wedding music in Scotland?"
         copy="Send your date, venue and the parts of the day you want covered, and we’ll come back with availability and the live wedding music that fits best."
@@ -263,5 +349,6 @@ export default function WeddingsPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

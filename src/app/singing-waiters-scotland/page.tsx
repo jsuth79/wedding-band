@@ -161,21 +161,31 @@ export default function SingingWaitersScotlandPage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Singing Waiters and Surprise Singers",
+    "@id": "https://www.theclooneys.co.uk/singing-waiters-scotland#service",
+    name: "Singing Waiters and Surprise Singers in Scotland",
+    serviceType: "Singing Waiters and Surprise Singers",
+    description:
+      "Reveal-led singing waiter and surprise singer performances for weddings and events in Glasgow, Edinburgh and across Scotland, with live vocals and real guest interaction.",
+    url: "https://www.theclooneys.co.uk/singing-waiters-scotland",
     provider: {
       "@type": "MusicGroup",
+      "@id": "https://www.theclooneys.co.uk/#organization",
       name: "The Clooneys",
-      url: "https://www.theclooneys.co.uk",
     },
     areaServed: [
       { "@type": "City", name: "Glasgow" },
+      { "@type": "City", name: "Edinburgh" },
       { "@type": "AdministrativeArea", name: "Scotland" },
       { "@type": "Country", name: "United Kingdom" },
     ],
-    serviceType: "Singing waiters and surprise singers for weddings and events",
-    url: "https://www.theclooneys.co.uk/singing-waiters-scotland",
-    description:
-      "Interactive singing waiter and surprise singer performances for weddings, private parties and corporate events in Glasgow and across Scotland.",
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Surprise Singers",
+        price: "950",
+        priceCurrency: "GBP",
+      },
+    ],
   };
 
   return (
@@ -282,6 +292,44 @@ export default function SingingWaitersScotlandPage() {
                     </article>
                   ))}
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[var(--page-ivory)] py-12 md:py-20">
+          <div className="section-shell page-gutter">
+            <div className="section-intro mb-10">
+              <p className="eyebrow mb-4">How It Sounds</p>
+              <h2 className="section-title section-heading">
+                The reveal in action.
+              </h2>
+            </div>
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-2xl">
+              <div>
+                <div className="relative aspect-[9/16] overflow-hidden rounded-[20px] bg-stone-200">
+                  <iframe
+                    src="https://www.instagram.com/reel/DNyfT92WHtM/embed/"
+                    title="Red Light Spells Danger"
+                    allowFullScreen
+                    className="absolute inset-0 h-full w-full"
+                  />
+                </div>
+                <p className="mt-3 text-sm font-semibold leading-snug text-[#2C2C2C]">Red Light Spells Danger</p>
+                <p className="mt-1 text-xs text-[#545454]">Singing Waiters</p>
+              </div>
+              <div>
+                <div className="relative aspect-[9/16] overflow-hidden rounded-[20px] bg-stone-200">
+                  <iframe
+                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F698668756491902%2F&show_text=false"
+                    title="Reach — S Club 7"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="absolute inset-0 h-full w-full"
+                  />
+                </div>
+                <p className="mt-3 text-sm font-semibold leading-snug text-[#2C2C2C]">Reach — S Club 7</p>
+                <p className="mt-1 text-xs text-[#545454]">Singing Waiters</p>
               </div>
             </div>
           </div>

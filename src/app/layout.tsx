@@ -55,6 +55,48 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": ["MusicGroup", "LocalBusiness"],
+  "@id": "https://www.theclooneys.co.uk/#organization",
+  name: "The Clooneys",
+  url: "https://www.theclooneys.co.uk",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://www.theclooneys.co.uk/images/the-clooneys-web.jpg",
+    width: 1200,
+    height: 630,
+  },
+  image: "https://www.theclooneys.co.uk/images/the-clooneys-web.jpg",
+  telephone: "+447740360678",
+  email: "info@theclooneys.co.uk",
+  description:
+    "Award-winning vocal harmony trio providing wedding singers, singing waiters and corporate entertainment across Scotland and the UK.",
+  address: {
+    "@type": "PostalAddress",
+    addressRegion: "Scotland",
+    addressCountry: "GB",
+  },
+  areaServed: [
+    { "@type": "City", name: "Glasgow" },
+    { "@type": "City", name: "Edinburgh" },
+    { "@type": "City", name: "Stirling" },
+    { "@type": "City", name: "Perth" },
+    { "@type": "AdministrativeArea", name: "Scotland" },
+    { "@type": "Country", name: "United Kingdom" },
+  ],
+  priceRange: "£695–£1500",
+  // Add Google Business Profile URL to sameAs once available: "https://g.page/..."
+  sameAs: [
+    "https://www.instagram.com/theclooneys",
+    "https://www.facebook.com/profile.php?id=61552003414629",
+    "https://www.tiktok.com/@theclooneys",
+    "https://www.youtube.com/channel/UCVXe27VHQ7ILNg5CF0bplQQ",
+  ],
+  // aggregateRating: once review count is confirmed, add:
+  // { "@type": "AggregateRating", ratingValue: "5", reviewCount: "XX", bestRating: "5" }
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -66,6 +108,10 @@ export default function RootLayout({
         <script defer src="https://umami-three-smoky.vercel.app/script.js" data-website-id="27623460-856a-45ce-ae66-3198efb09b08"></script>
       </head>
       <body className={`${sans.className} ${sans.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <Navbar />
         <main>{children}</main>
         <Footer />

@@ -117,7 +117,54 @@ function DarkCta({
 }
 
 export default function EventsPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.theclooneys.co.uk/events#service",
+    name: "Corporate Event Singers and Live Entertainment in Scotland",
+    serviceType: "Corporate Entertainment",
+    description:
+      "Polished live vocals for corporate events, private parties and awards nights across Scotland, from acoustic background sets to high-energy party formats.",
+    url: "https://www.theclooneys.co.uk/events",
+    provider: {
+      "@type": "MusicGroup",
+      "@id": "https://www.theclooneys.co.uk/#organization",
+      name: "The Clooneys",
+    },
+    areaServed: [
+      { "@type": "City", name: "Glasgow" },
+      { "@type": "City", name: "Edinburgh" },
+      { "@type": "AdministrativeArea", name: "Scotland" },
+      { "@type": "Country", name: "United Kingdom" },
+    ],
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Acoustic Event Set",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          minPrice: "695",
+          priceCurrency: "GBP",
+        },
+      },
+      {
+        "@type": "Offer",
+        name: "Party Trio",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          minPrice: "950",
+          priceCurrency: "GBP",
+        },
+      },
+    ],
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
     <div className="pt-20">
       <section className="bg-[var(--page-ivory)] py-12 md:py-20">
         <div className="section-shell page-gutter">
@@ -208,6 +255,45 @@ export default function EventsPage() {
         </div>
       </section>
 
+      <section className="bg-[var(--page-ivory)] py-12 md:py-20">
+        <div className="section-shell page-gutter">
+          <div className="section-intro mb-10">
+            <p className="eyebrow mb-4">How It Sounds</p>
+            <h2 className="section-title section-heading">
+              Live vocals in the room.
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-2xl">
+            <div>
+              <div className="relative aspect-[9/16] overflow-hidden rounded-[20px] bg-stone-200">
+                <iframe
+                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1284114416974597%2F&show_text=false"
+                  title="Man I Need — Olivia Dean"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full"
+                />
+              </div>
+              <p className="mt-3 text-sm font-semibold leading-snug text-[#2C2C2C]">Man I Need — Olivia Dean</p>
+              <p className="mt-1 text-xs text-[#545454]">Party</p>
+            </div>
+            <div>
+              <div className="relative aspect-[9/16] overflow-hidden rounded-[20px] bg-stone-200">
+                <iframe
+                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F616681694666317%2F&show_text=false"
+                  title="Pink Pony Club — Chappell Roan"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full"
+                />
+              </div>
+              <p className="mt-3 text-sm font-semibold leading-snug text-[#2C2C2C]">Pink Pony Club — Chappell Roan</p>
+              <p className="mt-1 text-xs text-[#545454]">Party</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <DarkCta
         heading="Planning live music for an event in Scotland?"
         copy="Tell us the date, venue and the kind of atmosphere you want, and we’ll point you towards the corporate entertainment or live event singer setup that fits best."
@@ -235,5 +321,6 @@ export default function EventsPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }
