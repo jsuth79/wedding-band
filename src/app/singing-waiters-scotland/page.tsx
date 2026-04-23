@@ -297,6 +297,44 @@ export default function SingingWaitersScotlandPage() {
           </div>
         </section>
 
+        <section className="bg-[var(--page-ivory)] py-12 md:py-20">
+          <div className="section-shell page-gutter">
+            <div className="section-intro mb-10">
+              <p className="eyebrow mb-4">How It Sounds</p>
+              <h2 className="section-title section-heading">
+                The reveal in action.
+              </h2>
+            </div>
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-2xl">
+              <div>
+                <div className="relative aspect-[9/16] overflow-hidden rounded-[20px] bg-stone-200">
+                  <iframe
+                    src="https://www.instagram.com/reel/DNyfT92WHtM/embed/"
+                    title="Red Light Spells Danger"
+                    allowFullScreen
+                    className="absolute inset-0 h-full w-full"
+                  />
+                </div>
+                <p className="mt-3 text-sm font-semibold leading-snug text-[#2C2C2C]">Red Light Spells Danger</p>
+                <p className="mt-1 text-xs text-[#545454]">Singing Waiters</p>
+              </div>
+              <div>
+                <div className="relative aspect-[9/16] overflow-hidden rounded-[20px] bg-stone-200">
+                  <iframe
+                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F698668756491902%2F&show_text=false"
+                    title="Reach — S Club 7"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="absolute inset-0 h-full w-full"
+                  />
+                </div>
+                <p className="mt-3 text-sm font-semibold leading-snug text-[#2C2C2C]">Reach — S Club 7</p>
+                <p className="mt-1 text-xs text-[#545454]">Singing Waiters</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <DarkCta
           heading="Looking for singing waiters in Glasgow or Scotland?"
           copy="Send the date, venue and the point in the day you want to transform, and we’ll tell you quickly whether singing waiters, surprise singers or secret singers are the right fit."
