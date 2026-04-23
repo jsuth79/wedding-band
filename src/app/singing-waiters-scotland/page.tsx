@@ -261,7 +261,7 @@ export default function SingingWaitersScotlandPage() {
                     the energy in the room from the first note.
                   </p>
                 </div>
-                <div className="grid gap-6 md:grid-cols-2">
+                <div className="grid gap-6">
                   {surpriseCards.map((card) => (
                     <article
                       key={card.title}
