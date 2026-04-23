@@ -43,6 +43,17 @@ export const metadata: Metadata = {
 
 const surpriseCards = [
   {
+    title: "Special Offer - Surprise Singer Trio and Room Turnover",
+    included: [
+      "Three surprise singers with rich 3-part harmony and a bigger live vocal sound.",
+      "A high-impact set delivered as singing waiters or glam roaming singers.",
+      "A reveal-led performance that catches guests when they least expect it and changes the energy instantly.",
+      "Room turnover entertainment that keeps the atmosphere alive while the evening space is being prepared.",
+      "Available on selected wedding dates in April and May, and from September 1st to November 15th.",
+    ],
+    price: "£750",
+  },
+  {
     title: "Surprise Singers",
     included: [
       "A reveal-led singing waiters or surprise singers performance at exactly the right point in the day.",
@@ -250,9 +261,21 @@ export default function SingingWaitersScotlandPage() {
                     the energy in the room from the first note.
                   </p>
                 </div>
-                <div className="grid gap-6 max-w-2xl">
+                <div className="grid gap-6 md:grid-cols-2">
                   {surpriseCards.map((card) => (
-                    <article key={card.title} className="info-card p-6 md:p-7">
+                    <article
+                      key={card.title}
+                      className={`p-6 md:p-7 ${
+                        card.title === "Special Offer - Surprise Singer Trio and Room Turnover"
+                          ? "rounded-[28px] border border-[var(--color-brand-gold)] bg-[linear-gradient(180deg,rgba(212,175,55,0.14),rgba(255,255,255,0.92))] shadow-[0_18px_44px_rgba(44,44,44,0.08)]"
+                          : "info-card"
+                      }`}
+                    >
+                      {card.title === "Special Offer - Surprise Singer Trio and Room Turnover" && (
+                        <p className="mb-4 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[var(--color-brand-gold-dark)]">
+                          Limited Dates
+                        </p>
+                      )}
                       <h3 className="section-subheading text-[1.25rem]">{card.title}</h3>
                       <ul className="mt-4 space-y-3">
                         {card.included.map((item) => (
