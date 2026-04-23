@@ -291,9 +291,9 @@ export default function WeddingsPage() {
               Close harmonies on a wedding day.
             </h2>
           </div>
-          <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-2xl">
+          <div className="grid gap-6 md:grid-cols-2">
             <div>
-              <div className="relative aspect-[9/16] overflow-hidden rounded-[20px] bg-stone-200">
+              <div className="relative aspect-video overflow-hidden rounded-[20px] bg-stone-200">
                 <iframe
                   src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1527356838341959%2F&show_text=false"
                   title="I Can’t Help Falling in Love"
@@ -306,16 +306,16 @@ export default function WeddingsPage() {
               <p className="mt-1 text-xs text-[#545454]">Acoustic</p>
             </div>
             <div>
-              <div className="relative aspect-[9/16] overflow-hidden rounded-[20px] bg-stone-200">
+              <div className="relative aspect-video overflow-hidden rounded-[20px] bg-stone-200">
                 <iframe
-                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F3963547593955808%2F&show_text=false"
-                  title="Lover — Taylor Swift"
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  src="https://www.youtube.com/embed/XKc-6xf8_mQ"
+                  title="This Will Be — Natalie Cole"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="absolute inset-0 h-full w-full"
                 />
               </div>
-              <p className="mt-3 text-sm font-semibold leading-snug text-[#2C2C2C]">Lover — Taylor Swift</p>
+              <p className="mt-3 text-sm font-semibold leading-snug text-[#2C2C2C]">This Will Be — Natalie Cole</p>
               <p className="mt-1 text-xs text-[#545454]">Acoustic</p>
             </div>
           </div>
