@@ -33,18 +33,33 @@ export const metadata: Metadata = {
 const testimonials = [
   {
     quote:
-      "We had the Clooneys surprise our wedding guests after dinner with a Just Eat delivery entrance. It was absolutely fantastic and everyone was up dancing.",
-    source: "Carrieann Smith",
+      "Contemplating renewing my wedding vows — just so I can book these guys. You'll have to search far and wide to find the smooth and assured vocal harmonies these guys provide.",
+    source: "Iain Fraser",
   },
   {
     quote:
-      "Walking down the aisle and signing the register I had goosebumps. Every song they did was amazing.",
+      "Walking down the aisle and as I signed the register I had goosebumps. Every song they did was amazing.",
     source: "Danielle Burns",
   },
   {
     quote:
-      "They have gorgeous harmonies, real charisma and know how to engage with an audience. Highly recommended.",
+      "They had everyone joining in and up doing a conga round the room. They have wonderful voices and made our day even more special.",
+    source: "Christine Cosgrove",
+  },
+  {
+    quote:
+      "It was absolutely fantastic — everyone was up dancing and having a brilliant time. All our guests have been raving about how good they were.",
+    source: "Carrieann Smith",
+  },
+  {
+    quote:
+      "Gorgeous harmonies, carried with such charisma. The lead singer really knows how to engage with the audience. Highly recommended.",
     source: "Lisa Rose",
+  },
+  {
+    quote:
+      "Learning our first dance and father of the bride song days before, and they did every song to perfection. Every one of our guests commented on how truly amazing they were.",
+    source: "Beth Williams",
   },
 ];
 
@@ -276,13 +291,11 @@ export default function Home() {
               What clients say about The Clooneys.
             </h2>
           </div>
-          <div className="mt-10 grid lg:grid-cols-3">
-            {testimonials.map((testimonial, i) => (
+          <div className="mt-10 grid gap-x-8 md:grid-cols-2 lg:grid-cols-3">
+            {testimonials.map((testimonial) => (
               <blockquote
-                key={testimonial.quote}
-                className={`py-5 md:py-6 md:px-6 ${i === 0 ? "md:pl-0" : ""} ${
-                  i === testimonials.length - 1 ? "md:pr-0" : ""
-                } ${i < testimonials.length - 1 ? "border-b border-[var(--line-soft)] md:border-b-0 md:border-r" : ""}`}
+                key={testimonial.source}
+                className="border-t border-[var(--line-soft)] py-6"
               >
                 <p className="text-[1.05rem] font-medium leading-7 text-[#2C2C2C]">
                   &ldquo;{testimonial.quote}&rdquo;
