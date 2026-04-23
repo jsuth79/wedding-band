@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     description:
       "Acoustic wedding singers in Scotland for ceremonies, drinks receptions and early evening celebrations, with close harmony vocals and a warm live sound.",
     url: "https://www.theclooneys.co.uk/weddings",
-    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys performing close harmony wedding vocals at a Scottish ceremony" }],
+    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys Wedding Band performing live" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Wedding Singers in Scotland for Ceremony, Drinks & Evening | The Clooneys",
     description:
       "Acoustic wedding singers in Scotland for ceremonies, drinks receptions and early evening celebrations, with close harmony vocals and a warm live sound.",
-    images: [{ url: "/images/the-clooneys-web.jpg", alt: "The Clooneys performing close harmony wedding vocals at a Scottish ceremony" }],
+    images: ["/images/the-clooneys-web.jpg"],
   },
 };
 
@@ -131,16 +131,11 @@ export default function WeddingsPage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://www.theclooneys.co.uk/weddings#service",
-    name: "Wedding Singers in Scotland",
-    serviceType: "Live Wedding Music",
-    description:
-      "Acoustic wedding singers for ceremony, drinks reception and evening party across Scotland, with close three-part harmony vocals and a warm live sound.",
-    url: "https://www.theclooneys.co.uk/weddings",
+    name: "Wedding Singers Scotland",
     provider: {
       "@type": "MusicGroup",
-      "@id": "https://www.theclooneys.co.uk/#organization",
       name: "The Clooneys",
+      url: "https://www.theclooneys.co.uk",
     },
     areaServed: [
       { "@type": "City", name: "Glasgow" },
@@ -148,13 +143,11 @@ export default function WeddingsPage() {
       { "@type": "AdministrativeArea", name: "Scotland" },
       { "@type": "Country", name: "United Kingdom" },
     ],
+    serviceType: "Wedding singers for ceremonies, drinks receptions and evening parties",
+    url: "https://www.theclooneys.co.uk/weddings",
+    description:
+      "Close harmony wedding singers in Scotland for ceremonies, drinks receptions and evening parties, with acoustic vocal trio and curated playlists.",
     offers: [
-      {
-        "@type": "Offer",
-        name: "Special Offer – Surprise Singer Trio and Room Turnover",
-        price: "750",
-        priceCurrency: "GBP",
-      },
       {
         "@type": "Offer",
         name: "Ceremony + Drinks",
@@ -186,7 +179,7 @@ export default function WeddingsPage() {
             </h1>
           </div>
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(260px,0.65fr)] lg:items-start">
-            <div id="intro" className="max-w-3xl">
+            <div className="max-w-3xl">
               <p className="section-copy text-lg">
                 The Clooneys are a vocal harmony trio based in Scotland,
                 providing live wedding music and acoustic wedding singers for
@@ -279,76 +272,6 @@ export default function WeddingsPage() {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[var(--page-ivory)] py-12 md:py-20">
-        <div className="section-shell page-gutter">
-          <div className="section-intro mb-10">
-            <p className="eyebrow mb-4">How It Sounds</p>
-            <h2 className="section-title section-heading">
-              Close harmonies on a wedding day.
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-2xl">
-            <div>
-              <div className="relative aspect-[9/16] overflow-hidden rounded-[20px] bg-stone-200">
-                <iframe
-                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1527356838341959%2F&show_text=false"
-                  title="I Can’t Help Falling in Love"
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 h-full w-full"
-                />
-              </div>
-              <p className="mt-3 text-sm font-semibold leading-snug text-[#2C2C2C]">I Can&apos;t Help Falling in Love</p>
-              <p className="mt-1 text-xs text-[#545454]">Acoustic</p>
-            </div>
-            <div>
-              <div className="relative aspect-[9/16] overflow-hidden rounded-[20px] bg-stone-200">
-                <iframe
-                  src="https://www.youtube.com/embed/XKc-6xf8_mQ"
-                  title="This Will Be — Natalie Cole"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 h-full w-full"
-                />
-              </div>
-              <p className="mt-3 text-sm font-semibold leading-snug text-[#2C2C2C]">This Will Be — Natalie Cole</p>
-              <p className="mt-1 text-xs text-[#545454]">Acoustic</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[var(--page-stone)] py-12 md:py-20">
-        <div className="section-shell page-gutter">
-          <div className="section-intro mb-10">
-            <p className="eyebrow mb-4">What People Said</p>
-            <h2 className="section-title section-heading">
-              Kind words from couples.
-            </h2>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2">
-            <blockquote className="soft-card p-6 md:p-7">
-              <div className="flex gap-1 text-[var(--color-brand-gold)]" aria-label="5 stars">
-                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-              </div>
-              <p className="mt-4 text-[1.05rem] font-medium leading-7 text-[#2C2C2C]">
-                &ldquo;Walking down the aisle and as I signed the register I had goosebumps. Every song they did was amazing.&rdquo;
-              </p>
-              <p className="mt-4 text-sm uppercase tracking-[0.18em] text-[#777777]">Danielle Burns</p>
-            </blockquote>
-            <blockquote className="soft-card p-6 md:p-7">
-              <div className="flex gap-1 text-[var(--color-brand-gold)]" aria-label="5 stars">
-                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-              </div>
-              <p className="mt-4 text-[1.05rem] font-medium leading-7 text-[#2C2C2C]">
-                &ldquo;They learned our first dance and father of the bride song days before, and performed every song to perfection. Every one of our guests commented on how truly amazing they were.&rdquo;
-              </p>
-              <p className="mt-4 text-sm uppercase tracking-[0.18em] text-[#777777]">Beth Williams</p>
-            </blockquote>
           </div>
         </div>
       </section>

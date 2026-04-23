@@ -1,28 +1,9 @@
-"use client";
-
-import { useEffect } from "react";
 import { allVideos, getOrientation } from "@/lib/videos";
 import type { VideoItem } from "@/lib/videos";
 
 export type { VideoItem };
 export { allVideos };
 
-declare global {
-  interface Window {
-    YT: {
-      Player: new (
-        id: string,
-        options: {
-          events: {
-            onStateChange: (event: { data: number }) => void;
-          };
-        }
-      ) => void;
-      PlayerState: { PLAYING: number };
-    };
-    onYouTubeIframeAPIReady: () => void;
-  }
-}
 
 interface YouTubeGridProps {
   videos?: VideoItem[];
@@ -56,7 +37,7 @@ function VideoEmbed({ video, className }: { video: VideoItem; className?: string
   return (
     <iframe
       id={`yt-player-${video.id}`}
-      src={`https://www.youtube.com/embed/${video.id}?enablejsapi=1`}
+      src={`https://www.youtube.com/embed/${video.id}`}
       title={video.title}
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
@@ -87,27 +68,6 @@ export default function YouTubeGrid({
       name: "The Clooneys",
     },
   }));
-
-  useEffect(() => {
-    function initPlayers() {
-      ytVideos.forEach((video) => {
-        new window.YT.Player(`yt-player-${video.id}`, {
-          events: { onStateChange: () => {} },
-        });
-      });
-    }
-
-    if (window.YT && window.YT.Player) {
-      initPlayers();
-    } else {
-      window.onYouTubeIframeAPIReady = initPlayers;
-      if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
-        const tag = document.createElement("script");
-        tag.src = "https://www.youtube.com/iframe_api";
-        document.head.appendChild(tag);
-      }
-    }
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const portraitVideos = videos.filter((v) => getOrientation(v) === "portrait");
   const landscapeVideos = videos.filter((v) => getOrientation(v) === "landscape");

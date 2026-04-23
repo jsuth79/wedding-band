@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Corporate Event Singers & Live Entertainment in Scotland | The Clooneys",
   description:
-    "Polished live vocals for corporate events, private parties and awards nights across Scotland. Live entertainment that reads the room and fits the occasion.",
+    "Corporate event singers and live entertainment in Scotland for awards nights, launches, client events and private parties, with polished live vocals and real atmosphere.",
   alternates: {
     canonical: "/events",
   },
@@ -13,16 +13,16 @@ export const metadata: Metadata = {
     siteName: "The Clooneys",
     title: "Corporate Event Singers & Live Entertainment in Scotland | The Clooneys",
     description:
-      "Polished live vocals for corporate events, private parties and awards nights across Scotland. Live entertainment that reads the room and fits the occasion.",
+      "Corporate event singers and live entertainment in Scotland for awards nights, launches, client events and private parties, with polished live vocals and real atmosphere.",
     url: "https://www.theclooneys.co.uk/events",
-    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys performing live vocals at a corporate event in Scotland" }],
+    images: [{ url: "/images/the-clooneys-web.jpg", width: 1200, height: 630, alt: "The Clooneys Wedding Band performing live" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Corporate Event Singers & Live Entertainment in Scotland | The Clooneys",
     description:
-      "Polished live vocals for corporate events, private parties and awards nights across Scotland. Live entertainment that reads the room and fits the occasion.",
-    images: [{ url: "/images/the-clooneys-web.jpg", alt: "The Clooneys performing live vocals at a corporate event in Scotland" }],
+      "Corporate event singers and live entertainment in Scotland for awards nights, launches, client events and private parties, with polished live vocals and real atmosphere.",
+    images: ["/images/the-clooneys-web.jpg"],
   },
 };
 
@@ -120,16 +120,11 @@ export default function EventsPage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://www.theclooneys.co.uk/events#service",
-    name: "Corporate Event Singers and Live Entertainment in Scotland",
-    serviceType: "Corporate Entertainment",
-    description:
-      "Polished live vocals for corporate events, private parties and awards nights across Scotland, from acoustic background sets to high-energy party formats.",
-    url: "https://www.theclooneys.co.uk/events",
+    name: "Corporate Event Singers Scotland",
     provider: {
       "@type": "MusicGroup",
-      "@id": "https://www.theclooneys.co.uk/#organization",
       name: "The Clooneys",
+      url: "https://www.theclooneys.co.uk",
     },
     areaServed: [
       { "@type": "City", name: "Glasgow" },
@@ -137,24 +132,22 @@ export default function EventsPage() {
       { "@type": "AdministrativeArea", name: "Scotland" },
       { "@type": "Country", name: "United Kingdom" },
     ],
+    serviceType: "Corporate event singers and live entertainment for awards nights, parties and private events",
+    url: "https://www.theclooneys.co.uk/events",
+    description:
+      "Polished live vocal entertainment for corporate events, private parties and celebrations across Scotland, with acoustic and full party trio formats.",
     offers: [
       {
         "@type": "Offer",
         name: "Acoustic Event Set",
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          minPrice: "695",
-          priceCurrency: "GBP",
-        },
+        price: "695",
+        priceCurrency: "GBP",
       },
       {
         "@type": "Offer",
         name: "Party Trio",
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          minPrice: "950",
-          priceCurrency: "GBP",
-        },
+        price: "950",
+        priceCurrency: "GBP",
       },
     ],
   };
@@ -175,7 +168,7 @@ export default function EventsPage() {
             </h1>
           </div>
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(260px,0.65fr)] lg:items-start">
-            <div id="intro" className="max-w-3xl">
+            <div className="max-w-3xl">
               <p className="section-copy text-lg">
                 The Clooneys provide polished live vocals for corporate events,
                 private parties and celebrations across Scotland.
@@ -251,76 +244,6 @@ export default function EventsPage() {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[var(--page-ivory)] py-12 md:py-20">
-        <div className="section-shell page-gutter">
-          <div className="section-intro mb-10">
-            <p className="eyebrow mb-4">How It Sounds</p>
-            <h2 className="section-title section-heading">
-              Live vocals in the room.
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-2xl">
-            <div>
-              <div className="relative aspect-[9/16] overflow-hidden rounded-[20px] bg-stone-200">
-                <iframe
-                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1284114416974597%2F&show_text=false"
-                  title="Man I Need — Olivia Dean"
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 h-full w-full"
-                />
-              </div>
-              <p className="mt-3 text-sm font-semibold leading-snug text-[#2C2C2C]">Man I Need — Olivia Dean</p>
-              <p className="mt-1 text-xs text-[#545454]">Party</p>
-            </div>
-            <div>
-              <div className="relative aspect-[9/16] overflow-hidden rounded-[20px] bg-stone-200">
-                <iframe
-                  src="https://www.youtube.com/embed/4cXKL3oPLNA?enablejsapi=1"
-                  title="Leave the Door Open — Silk Sonic"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 h-full w-full"
-                />
-              </div>
-              <p className="mt-3 text-sm font-semibold leading-snug text-[#2C2C2C]">Leave the Door Open — Silk Sonic</p>
-              <p className="mt-1 text-xs text-[#545454]">Party</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[var(--page-stone)] py-12 md:py-20">
-        <div className="section-shell page-gutter">
-          <div className="section-intro mb-10">
-            <p className="eyebrow mb-4">What People Said</p>
-            <h2 className="section-title section-heading">
-              Kind words from clients.
-            </h2>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2">
-            <blockquote className="soft-card p-6 md:p-7">
-              <div className="flex gap-1 text-[var(--color-brand-gold)]" aria-label="5 stars">
-                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-              </div>
-              <p className="mt-4 text-[1.05rem] font-medium leading-7 text-[#2C2C2C]">
-                &ldquo;They had everyone out their seats and on a dance floor that didn&apos;t even exist. I couldn&apos;t recommend them enough for any event.&rdquo;
-              </p>
-              <p className="mt-4 text-sm uppercase tracking-[0.18em] text-[#777777]">Elizabeth Quayle</p>
-            </blockquote>
-            <blockquote className="soft-card p-6 md:p-7">
-              <div className="flex gap-1 text-[var(--color-brand-gold)]" aria-label="5 stars">
-                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-              </div>
-              <p className="mt-4 text-[1.05rem] font-medium leading-7 text-[#2C2C2C]">
-                &ldquo;Absolutely fantastic from start to finish. Great to hear so much positive feedback from guests who attended my event.&rdquo;
-              </p>
-              <p className="mt-4 text-sm uppercase tracking-[0.18em] text-[#777777]">Stephen McGeever</p>
-            </blockquote>
           </div>
         </div>
       </section>
