@@ -183,6 +183,7 @@ export default function Home() {
                 src="/images/the-clooneys-corporate-l-2.webp"
                 alt="The Clooneys wedding and events band Scotland"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover object-top"
               />
             </div>
@@ -232,6 +233,7 @@ export default function Home() {
                   src="/images/the-clooneys-award-sq-2.webp"
                   alt="Confetti Awards 2026 — The Clooneys"
                   fill
+                  sizes="288px"
                   className="object-cover"
                 />
               </div>
@@ -268,6 +270,7 @@ export default function Home() {
                     src={item.image}
                     alt={`The Clooneys — ${item.label}`}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover object-top"
                   />
                 </div>
